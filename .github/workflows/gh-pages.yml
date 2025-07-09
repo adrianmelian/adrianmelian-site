@@ -27,10 +27,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies (optional)
-        run: |
-          npm install
-
       - name: Build site
         run: hugo --minify
 
