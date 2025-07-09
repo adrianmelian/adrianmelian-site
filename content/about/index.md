@@ -1,6 +1,7 @@
 +++
 title = "About"
 layout = "profile"
+date = "2025-07-09"
 +++
 ADRIAN MELIAN | TECHNICAL ARTIST
 

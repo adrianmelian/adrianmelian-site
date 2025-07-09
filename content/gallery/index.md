@@ -1,5 +1,6 @@
 +++
 title = "Art Gallery"
+date = "2025-07-09"
 +++
 A collection of my creations. I love to work in many mediums. From pencil and paper, to paints, to digital, to work-working.
 

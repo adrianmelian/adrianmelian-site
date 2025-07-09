@@ -5,7 +5,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/configuration/#theme-parameters
 
-colorScheme = "fire" # valid options: avocado, blowfish, dark, default, forest, light, mint, ocean, pink, purple, red, sunset
+colorScheme = "avocado" # valid options: avocado, blowfish, dark, default, forest, light, mint, ocean, pink, purple, red, sunset
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = false
 
