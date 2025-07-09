@@ -1,0 +1,80 @@
+[[main]]
+none = "none"
+
+[[main]]
+name = "About"
+pageRef = "about"
+identifier = "eItN4aD3i5"
+weight = 1
+
+[[main]]
+name = "Gallery"
+pageRef = "gallery"
+weight = 2
+
+[[main]]
+name = "Projects"
+pageRef = "projects"
+weight = 3
+
+[[main]]
+name = "Krazy Kaiju"
+parent = "Projects"
+pageRef = "krazy_kaiju"
+weight = 3
+
+[[main]]
+name = "Call of Duty - MW3"
+parent = "Projects"
+pageRef = "mw3"
+weight = 3
+
+[[main]]
+name = "Call of Duty - Vanguard"
+parent = "Projects"
+pageRef = "vanguard"
+weight = 3
+
+[[main]]
+name = "South Park - Fractured But Whole"
+parent = "Projects"
+pageRef = "south_park"
+weight = 3
+
+[[main]]
+name = "Costume Quest"
+parent = "Projects"
+pageRef = "costume_quest"
+weight = 3
+
+[[main]]
+name = "Tools"
+pageRef = "tools"
+weight = 4
+
+[[main]]
+name = "Rig Authoring Framework"
+parent = "Tools"
+pageRef = "rig_authoring_framework"
+weight = 4
+
+[[main]]
+identifier = "linkedin"
+pre = "linkedin"
+url = "https://www.linkedin.com/in/adrian-melian-33066423"
+weight = 100
+
+[[main]]
+identifier = "github"
+pre = "github"
+url = "https://github.com/adrianmelian"
+weight = 200
+
+[[main]]
+identifier = "youtube"
+pre = "youtube"
+url = "https://www.youtube.com/@age914"
+weight = 300
+
+[[footer]]
+none = "none"

@@ -1,0 +1,25 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Adrian Melian"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "adrianmelian_logo_72px.png"
+secondaryLogo = "adrianmelian_logo_512px.png"
+description = "Adrian Melian - Technical Artst - Portfolio Site"
+
+["params.author"]
+name = "Adrian Melian"
+email = "Adrian@AdrianMelian.com"
+headline = "Animator - Technical Artist - Maker of Things"
+image = "adrianmelian_logo_512px.png"
+links = [
+    { LinkedIn = "https://www.linkedin.com/in/adrian-melian-33066423" },
+    { GitHub = "https://github.com/adrianmelian" },
+    { YouTube = "https://www.youtube.com/@age914" },
+]
