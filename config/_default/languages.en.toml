@@ -15,7 +15,7 @@ description = "Adrian Melian - Technical Artst - Portfolio Site"
 
 [params.author]
 name = "Adrian Melian"
-email = "Adrian@AdrianMelian.com"
+email = "AdrianMelian123@gmail.com"
 headline = "Animator - Technical Artist - Maker of Things"
 bio = "Adrian Melian is a Technical Artist and Animator with over 15 years of experience in the video game industry. He has worked on various high-profile projects, including Call of Duty, South Park, and Broken Age. Adrian is passionate about creating engaging and visually stunning experiences for players."
 image = "adrianmelian_logo_512px.png"
@@ -24,7 +24,3 @@ links = [
     { GitHub = "https://github.com/adrianmelian" },
     { YouTube = "https://www.youtube.com/@age914" },
 ]
-
-[[params.social]]
-name = "email"
-url = "mailto:AdrianMelian123@gmail.com"

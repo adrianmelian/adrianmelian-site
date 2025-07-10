@@ -2,103 +2,113 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adrian Melian</title>
-    <link>//localhost:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Adrian Melian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>Adrian@AdrianMelian.com (Adrian Melian)</managingEditor>
-    <webMaster>Adrian@AdrianMelian.com (Adrian Melian)</webMaster>
+    <managingEditor>AdrianMelian123@gmail.com (Adrian Melian)</managingEditor>
+    <webMaster>AdrianMelian123@gmail.com (Adrian Melian)</webMaster>
     <copyright>© 2025 Adrian Melian</copyright>
-    <lastBuildDate>Wed, 09 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>//localhost:1313/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/about/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/about/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/about/featured.png" />
     </item>
     
     <item>
       <title>Art Gallery</title>
-      <link>//localhost:1313/gallery/</link>
+      <link>http://localhost:1313/gallery/</link>
       <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/gallery/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/gallery/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Call of Duty - MW3</title>
-      <link>//localhost:1313/projects/mw3/</link>
-      <pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/projects/mw3/</guid>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/contact/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/projects/mw3/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/contact/featured.png" />
+    </item>
+    
+    <item>
+      <title>Call of Duty - MW3</title>
+      <link>http://localhost:1313/projects/mw3/</link>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/projects/mw3/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/mw3/featured.png" />
     </item>
     
     <item>
       <title>Call of Duty - Vanguard</title>
-      <link>//localhost:1313/projects/vanguard/</link>
+      <link>http://localhost:1313/projects/vanguard/</link>
       <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/projects/vanguard/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/projects/vanguard/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/projects/vanguard/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/vanguard/featured.png" />
     </item>
     
     <item>
       <title>Krazy Kaiju!</title>
-      <link>//localhost:1313/projects/krazy_kaiju/</link>
+      <link>http://localhost:1313/projects/krazy_kaiju/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/projects/krazy_kaiju/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/projects/krazy_kaiju/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/projects/krazy_kaiju/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/krazy_kaiju/featured.png" />
     </item>
     
     <item>
       <title>EZ Riggin&#39;!</title>
-      <link>//localhost:1313/tools/rig_authoring_framework/</link>
+      <link>http://localhost:1313/tools/rig_authoring_framework/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/tools/rig_authoring_framework/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/tools/rig_authoring_framework/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/tools/rig_authoring_framework/featured.PNG" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/tools/rig_authoring_framework/featured.PNG" />
     </item>
     
     <item>
       <title>South Park - Fractured But Whole</title>
-      <link>//localhost:1313/projects/south_park/</link>
+      <link>http://localhost:1313/projects/south_park/</link>
       <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/projects/south_park/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/projects/south_park/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/projects/south_park/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/south_park/featured.png" />
     </item>
     
     <item>
       <title>Broken Age</title>
-      <link>//localhost:1313/projects/broken_age/</link>
+      <link>http://localhost:1313/projects/broken_age/</link>
       <pubDate>Fri, 22 Jan 2016 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/projects/broken_age/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/projects/broken_age/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/projects/broken_age/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/broken_age/featured.jpg" />
     </item>
     
     <item>
       <title>Costume Quest</title>
-      <link>//localhost:1313/projects/costume_quest/</link>
+      <link>http://localhost:1313/projects/costume_quest/</link>
       <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
-      <author>Adrian@AdrianMelian.com (Adrian Melian)</author>
-      <guid>//localhost:1313/projects/costume_quest/</guid>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/projects/costume_quest/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/projects/costume_quest/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/costume_quest/featured.jpg" />
     </item>
     
   </channel>

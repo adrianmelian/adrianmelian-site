@@ -3,48 +3,37 @@ title = "About"
 layout = "profile"
 date = "2025-07-09"
 +++
-ADRIAN MELIAN | TECHNICAL ARTIST
-
-914.874.3390 | Denver, CO | AdrianMelian123@gmail.com | AdrianMelian.com 
-<div style="display: flex; align-items: center; gap: 15px; font-size: 1.1em; font-weight: bold;">
-  <span>Download Resume:</span>
-
+<div style="display: flex; align-items: center; gap: 15px; font-size: 1.1em;">
+  <span>Resume:</span>
   <!-- PDF Button -->
   <a href="/adrianmelian_resume.pdf" download title="Download PDF" style="text-decoration: none;">
     <img src="https://img.icons8.com/ios-filled/30/000000/pdf.png" alt="PDF" />
   </a>
-
-  <!-- Word Button -->
-  <a href="/adrianmelian_resume.docx" download title="Download Word Doc" style="text-decoration: none;">
-    <img src="https://img.icons8.com/ios-filled/30/000000/ms-word.png" alt="Word" />
-  </a>
 </div>
+ADRIAN MELIAN | TECHNICAL ARTIST
 
+914.874.3390 | Denver, CO | AdrianMelian123@gmail.com | AdrianMelian.com 
 {{< timeline >}}
 
 {{< timelineItem icon="star" header="Summary" badge="about me"  >}}
-Vision driven Technical Artist and creative leader with a uniquely blended
-background in animation, design, and programming. Bridging visual creativity
-with technical execution. Over 14 years of game industry experience, with over 10
-shipped titles. Leads teams towards building tools and pipelines that elevate
-production efficiency and artistic integrity. Equally adept at prototyping VR games
-or refining animation rigs for blockbuster titles, with a passion for empowering
-artists through intuitive, design-conscious systems
+Vision driven Technical Artist and creative leader with a uniquely blended background in animation,
+design, and programming. Bridging visual creativity with technical execution. Over 14 years of game
+industry experience, with over 10 shipped titles. Leads teams towards building tools and pipelines that
+elevate production efficiency and artistic integrity.
 {{< /timelineItem >}}
 
 {{< timelineItem icon="star" header="Skills & Abilities" badge="about me"  >}}
 Disciplines
 <ul>
-  <li>Technical Art, rigging, animation, modeling, tools, pipeline, scripting,
-graphic design, game design.</li>
+  <li>Rigging, animation, modeling, tools, scripting, game-design, gameplay-programming, graphic design..</li>
 </ul>
 SOFTWARE
 <ul>
-  <li>Maya, Unity, Unreal, Unity, ZBrush, Painter, Git, Perforce.</li>
+  <li>Maya, Unreal, Unity, ZBrush, Painter, Git, Perforce.</li>
 </ul>
 LANGUAGES
 <ul>
-  <li>Python, MEL, Qt, C++, C#, Lua, Hugo.</li>
+  <li>Python, PyQt, C++, C#, Lua, Hugo.</li>
 </ul>
 
 {{< /timelineItem >}}
