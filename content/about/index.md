@@ -3,13 +3,14 @@ title = "About"
 layout = "profile"
 date = "2025-07-09"
 +++
-<div style="display: flex; align-items: center; gap: 15px; font-size: 1.1em;">
-  <span>Resume:</span>
-  <!-- PDF Button -->
-  <a href="/adrianmelian_resume.pdf" download title="Download PDF" style="text-decoration: none;">
-    <img src="https://img.icons8.com/ios-filled/30/000000/pdf.png" alt="PDF" />
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+  <strong>Resume:</strong>
+
+  <a href="/adrianmelian_resume.pdf" target="_blank" rel="noopener" style="display: flex; align-items: center; text-decoration: none;">
+    <span>View PDF</span>
   </a>
 </div>
+
 ADRIAN MELIAN | TECHNICAL ARTIST
 
 914.874.3390 | Denver, CO | AdrianMelian123@gmail.com | AdrianMelian.com 
