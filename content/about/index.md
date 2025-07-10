@@ -5,7 +5,7 @@ date = "2025-07-09"
 +++
 ADRIAN MELIAN | TECHNICAL ARTIST
 
-914.874.3390 | Denver, CO | Adrian@AdrianMelian.com | AdrianMelian.com 
+914.874.3390 | Denver, CO | AdrianMelian123@gmail.com | AdrianMelian.com 
 <div style="display: flex; align-items: center; gap: 15px; font-size: 1.1em; font-weight: bold;">
   <span>Download Resume:</span>
 
@@ -23,34 +23,30 @@ ADRIAN MELIAN | TECHNICAL ARTIST
 {{< timeline >}}
 
 {{< timelineItem icon="star" header="Summary" badge="about me"  >}}
-Vision-driven Technical Artist and creative leader with a uniquely blended background in animation, design, and programming. Bridging visual creativity with technical execution. Over 14 years of experience translating artistic intent into high-performance, studio-wide solutions across AAA game development. Leads teams with empathy and technical rigor, building tools and pipelines that elevate both production efficiency and artistic integrity. Equally adept at prototyping VR rigs or refining animation exports for blockbuster titles, with a passion for empowering artists through intuitive, design-conscious systems. 
+Vision driven Technical Artist and creative leader with a uniquely blended
+background in animation, design, and programming. Bridging visual creativity
+with technical execution. Over 14 years of game industry experience, with over 10
+shipped titles. Leads teams towards building tools and pipelines that elevate
+production efficiency and artistic integrity. Equally adept at prototyping VR games
+or refining animation rigs for blockbuster titles, with a passion for empowering
+artists through intuitive, design-conscious systems
 {{< /timelineItem >}}
 
 {{< timelineItem icon="star" header="Skills & Abilities" badge="about me"  >}}
-Technical Art & Tools Development
+Disciplines
 <ul>
-  <li>Pipeline design and automation for rigging, animation, and character workflows. Custom tool development in Python, PyQt, PyMEL, and MEL. Batch processing, naming conventions, rig templates, and export utilities. Integration with Unity and Unreal pipelines, performance optimization.</li>
+  <li>Technical Art, rigging, animation, modeling, tools, pipeline, scripting,
+graphic design, game design.</li>
 </ul>
-Rigging & Skinning
+SOFTWARE
 <ul>
-  <li>Biped and quadruped rigging (manual and auto-rig systems). Skinning refinement, deformation correction, helper joint setup. Space switching, IK/FK matching, modular rig components. Havok Cloth authoring, simulation setup, and debugging.</li>
+  <li>Maya, Unity, Unreal, Unity, ZBrush, Painter, Git, Perforce.</li>
 </ul>
-Gameplay Implementation & Prototyping
+LANGUAGES
 <ul>
-  <li>Full ownership of in-game assets from concept to implementation (e.g., glasses: modeling, texturing, rigging, animating, and hooking into gameplay triggers). Animation event hookups, state machine triggers, and physics/simulation authoring. Rapid prototyping of features and visual effects for gameplay clarity and feel.</li>
+  <li>Python, MEL, Qt, C++, C#, Lua, Hugo.</li>
 </ul>
-Artistic Skills
-<ul>
-  <li>Strong foundation in graphic design and visual hierarchy. Modeling, UVs, and texturing with clean topology and engine-ready optimization. Deep understanding of animation principles, timing, and stylization. Shader tuning, character lookdev, and visual polish.</li>
-</ul>
-Collaboration & Leadership
-<ul>
-  <li>Cross-discipline communication between art, design, and engineering. Team leadership, mentoring, and documentation (style guides, wikis, onboarding). Proven ability to build scalable systems that serve both artists and production goals. </li>
-</ul>
-Software & Tools
-<ul>
-  <li>Maya, Unity, Unreal Engine, ZBrush, Substance Painter, Photoshop, Figma, OptiTrack/Motive, Git, Perforce, JIRA, Confluence, VS Code, Hugo</li>
-</ul>
+
 {{< /timelineItem >}}
 
 
