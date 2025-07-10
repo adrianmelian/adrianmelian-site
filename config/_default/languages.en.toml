@@ -13,7 +13,7 @@ logo = "adrianmelian_logo_72px.png"
 secondaryLogo = "adrianmelian_logo_512px.png"
 description = "Adrian Melian - Technical Artst - Portfolio Site"
 
-["params.author"]
+[params.author]
 name = "Adrian Melian"
 email = "Adrian@AdrianMelian.com"
 headline = "Animator - Technical Artist - Maker of Things"
