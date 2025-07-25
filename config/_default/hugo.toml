@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-baseURL = "https://adrianmelian.com/"
+baseURL = "https://www.adrianmelian.com/"
 defaultContentLanguage = "en"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
@@ -17,6 +17,10 @@ buildFuture = false
 enableEmoji = true
 
 # googleAnalytics = "G-XXXXXXXXX"
+[params.social]
+LinkedIn = "https://www.linkedin.com/in/adrian-melian-33066423" 
+GitHub = "https://github.com/adrianmelian"
+YouTube = "https://www.youtube.com/@age914"
 
 [pagination]
   pagerSize = 100
