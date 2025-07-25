@@ -4,16 +4,20 @@ date = "2025-07-09"
 +++
 A collection of my creations. I love to work in many mediums. From pencil and paper, to paints, to digital, to work-working.
 
+{{< carousel images="gallery/*" interval="2500" >}}
+
+
+
 {{< gallery >}}
+  <img src="gallery/ufo.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/02.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/03.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/06.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/07.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/06.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/08.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/09.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/02.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/010.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/011.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/012.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
@@ -42,6 +46,7 @@ A collection of my creations. I love to work in many mediums. From pencil and pa
   <img src="gallery/035.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/036.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/037.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/03.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/038.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/039.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/040.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
