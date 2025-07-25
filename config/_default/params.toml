@@ -47,7 +47,7 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "gallery/012.jpg" # used in: hero, and card
+  homepageImage = "gallery/ufo.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 6
   showMoreLink = true
