@@ -4,10 +4,6 @@ date = "2025-07-09"
 +++
 A collection of my creations. I love to work in many mediums. From pencil and paper, to paints, to digital, to work-working.
 
-{{< carousel images="gallery/*" interval="2500" >}}
-
-
-
 {{< gallery >}}
   <img src="gallery/ufo.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
