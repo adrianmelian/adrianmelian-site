@@ -12,13 +12,13 @@
     <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>EZ Riggin&#39;!</title>
+      <title>Rig Authoring Framework</title>
       <link>http://localhost:1313/tools/rig_authoring_framework/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
       <guid>http://localhost:1313/tools/rig_authoring_framework/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/tools/rig_authoring_framework/featured.PNG" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/tools/rig_authoring_framework/featured.jpg" />
     </item>
     
   </channel>
