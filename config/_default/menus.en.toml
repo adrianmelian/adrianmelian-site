@@ -59,6 +59,12 @@ pageRef = "rig_authoring_framework"
 weight = 4
 
 [[main]]
+name = "ML Skinning Framework"
+parent = "Tools"
+pageRef = "ml_skinning_framework"
+weight = 4
+
+[[main]]
 name = "About"
 pageRef = "about"
 identifier = "eItN4aD3i5"

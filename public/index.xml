@@ -72,6 +72,16 @@
     </item>
     
     <item>
+      <title>ML Skinning Framework</title>
+      <link>http://localhost:1313/tools/ml_skinning_framework/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      <author>AdrianMelian123@gmail.com (Adrian Melian)</author>
+      <guid>http://localhost:1313/tools/ml_skinning_framework/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/tools/ml_skinning_framework/featured.png" />
+    </item>
+    
+    <item>
       <title>Rig Authoring Framework</title>
       <link>http://localhost:1313/tools/rig_authoring_framework/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
