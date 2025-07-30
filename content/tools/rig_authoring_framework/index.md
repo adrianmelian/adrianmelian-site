@@ -1,7 +1,7 @@
 +++
 title = "Rig Authoring Framework"
 description = "A Modular Non-linear Auto Rigging and Animation System"
-date = "2020-11-15"
+date = "2025-04-15"
 +++
 {{< lead >}}
 "Rigging is the Art of Articulation. Not the Art of Naming Attributes or Setting Driven Keys"  --Somebody, somewhere
