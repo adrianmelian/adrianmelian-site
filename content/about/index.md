@@ -12,8 +12,8 @@ date = "2025-07-09"
 </div>
 
 ADRIAN MELIAN | TECHNICAL ARTIST
-
 914.874.3390 | Denver, CO | AdrianMelian123@gmail.com | AdrianMelian.com 
+
 {{< timeline >}}
 
 {{< timelineItem icon="star" header="Summary" badge="about me"  >}}
@@ -40,10 +40,20 @@ LANGUAGES
 {{< /timelineItem >}}
 
 
-{{< timelineItem icon="code" header="Sledgehammer Games" badge="date - present" subheader="Expert Technical Artist" >}}
+{{< timelineItem icon="facebook" header="Camouflaj @ Meta" badge="Remote | Sep 2025 – Present" subheader="Technical Artist" >}}
+Titles: Unannounced Title (2026)
+<ul>
+  <li>Designed and implemented advanced Maya tools, studio preference systems, and asset stubbing frameworks to streamline setup, prototyping, and daily artist workflows.</li>
+  <li>Partnered with Meta Horizon internal teams to troubleshoot complex pipeline challenges</li>
+  <li>Contributed through a period of organizational transition; role concluded due to full studio closure as part of company-wide layoffs</li>
+</ul>
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="Sledgehammer Games" badge="Remote | Jan 2021 - Sep 2025" subheader="Lead Technical Artist" >}}
 Titles: Vanguard (2021), MW3 (2023), Unannounced Title (2026)
 <ul>
   <li>Led the Character Tech Art team; trained and managed internal and OS artists</li>
+  <li>Led the Weaapons Tech Art team; trained and managed internal and OS artists and built a Modular Rigging Solution</li>
   <li>Developed and maintained character, animation, and rigging workflows</li>
   <li>Created proprietary tools for animation, rigging, and cloth simulation</li>
   <li>Skinned high-fidelity characters, including celebrity likenesses like Snoop Dogg</li>
@@ -52,7 +62,7 @@ Titles: Vanguard (2021), MW3 (2023), Unannounced Title (2026)
 {{< /timelineItem >}}
 
 {{< timelineItem icon="facebook" header="Meta" badge="Menlo Park | Nov 2018 – Dec 2020" subheader="Technical Artist" >}}
-Titles: Vanguard (2021), MW3 (2023), Unannounced Title (2026)
+Titles: Horizon VR
 <ul>
   <li>Created artist-facing tools and animation exporters</li>
   <li>Built performance-optimized workflows for VR</li>
