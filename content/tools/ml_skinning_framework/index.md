@@ -3,14 +3,10 @@ title = "ML Skinning Framework"
 description = "A Modular Non-linear Auto Rigging and Animation System"
 date = "2025-07-01"
 +++
-{{< lead >}}
-"Rigging is the Art of Articulation. Not the Art of Naming Attributes or Setting Driven Keys"  --Somebody, somewhere
-{{< /lead >}}
 
 Welcome to the ML Skinning Framework — where skinning gets a fresh twist!
 
 What started as a small research project into the world of ML turned into something quite incredible.
-
 
 {{< timeline >}}
 
@@ -23,7 +19,7 @@ I started by batching about 15 assets, gathering data about each vertex influenc
 {{< /timelineItem >}}
 
 {{< timelineItem icon="youtube" header="Second Model" badge="" subheader="Improving Predictions by Adding Features" >}}
-The initial result were not perfect but they showed there was potential.
+The initial results were not perfect but they showed there was potential.
 The initial model was limited to only vertex position as input.
 I began exporting additional features per vertex. Vertex normal, blend weights, joint matrices, etc.
 The model’s input vector expanded from 3 to 12 dimensions which allowed the model to better understand spatial relationships in the context of deformation.

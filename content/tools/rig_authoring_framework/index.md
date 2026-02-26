@@ -7,7 +7,7 @@ date = "2025-04-15"
 "Rigging is the Art of Articulation. Not the Art of Naming Attributes or Setting Driven Keys"  --Somebody, somewhere
 {{< /lead >}}
 
-Welcome to the Rig Authoring Framework — where rigging gets a fresh twist!
+Welcome to the Rig Authoring Framework, where rigging gets a fresh twist!
 
 This isn’t your typical framework; it’s a Non-Linear, Non-Destructive, Object-Oriented, Data-Driven, Modular Rigging Framework that’s designed to make your life easier.
 
