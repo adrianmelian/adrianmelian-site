@@ -48,6 +48,18 @@ pageRef = "broken_age"
 weight = 3
 
 [[main]]
+name = "Happy Action Theater"
+parent = "Projects"
+pageRef = "happy_action_theater"
+weight = 3
+
+[[main]]
+name = "Amnesia Fortnight"
+parent = "Projects"
+pageRef = "amnesia_fortnight"
+weight = 3
+
+[[main]]
 name = "Tools"
 pageRef = "tools"
 weight = 4
