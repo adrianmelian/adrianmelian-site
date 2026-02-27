@@ -6,7 +6,7 @@ date = "2020-12-01"
 
 Krazy Kaiju! is a personal VR game project I’ve been building in my free time using **Unreal Engine**. The vibe is playful, weird, and slightly unhinged (the best kind): a lonely farmer defending his farm from an alien invasion.
 
-This is a true from-scratch project — I built **everything**: concepting, modeling, texturing, rigging, animation, gameplay engineering, and a full **end-to-end production pipeline** to keep the project scalable as it grows.
+This is a true from-scratch project. I built **everything**: concepting, modeling, texturing, rigging, animation, gameplay engineering, and a full **end-to-end production pipeline** to keep the project scalable as it grows.
 
 While I prototyped occasionally in Blueprints, the systems were **finalized in C++** (because I like sleeping at night knowing things are solid 😄). Oh, and I made the music too.
 
