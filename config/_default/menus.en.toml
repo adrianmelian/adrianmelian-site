@@ -13,19 +13,19 @@ pageRef = "krazy_kaiju"
 weight = 10
 
 [[main]]
-name = "Call of Duty - MW3"
+name = "Call of Duty: MW3"
 parent = "Projects"
 pageRef = "mw3"
 weight = 10
 
 [[main]]
-name = "Call of Duty - Vanguard"
+name = "Call of Duty: Vanguard"
 parent = "Projects"
 pageRef = "vanguard"
 weight = 10
 
 [[main]]
-name = "South Park - Fractured But Whole"
+name = "South Park: The Fractured But Whole"
 parent = "Projects"
 pageRef = "south_park"
 weight = 10
@@ -99,6 +99,12 @@ weight = 25
 name = "Tools Reel 2014"
 parent = "Tools"
 pageRef = "reel_2014"
+weight = 25
+
+[[main]]
+name = "Demo Reel 2010"
+parent = "Tools"
+pageRef = "reel_2010"
 weight = 25
 
 [[main]]
