@@ -72,6 +72,17 @@ pageRef = "arizona_sunshine"
 weight = 3
 
 [[main]]
+name = "Reels"
+pageRef = "reels"
+weight = 3.5
+
+[[main]]
+name = "Demo Reel 2014"
+parent = "Reels"
+pageRef = "reel_2014"
+weight = 3.5
+
+[[main]]
 name = "Tools"
 pageRef = "tools"
 weight = 4
