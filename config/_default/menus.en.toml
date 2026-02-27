@@ -49,7 +49,7 @@ pageRef = "happy_action_theatre"
 weight = 10
 
 [[main]]
-name = "Amnesia Fortnight - 2012"
+name = "Amnesia Fortnight 2012"
 parent = "Projects"
 pageRef = "amnesia_fortnight_2012"
 weight = 10
