@@ -5,12 +5,13 @@ date = "2025-07-09"
 A collection of my creations. I love to work in many mediums. From pencil and paper, to traditional paints, digital, and wood-working.
 
 {{< gallery >}}
+{{< figure src="gallery/ufo.jpg" alt="Gallery image 1" caption="Krazy Kaiju! Acrylic on canvas" figureClass="grid-w33" >}}
   <img src="gallery/ufo.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/_01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/_02.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/_03.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/_04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/_05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/048.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/049.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/050.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/051.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/052.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/07.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
