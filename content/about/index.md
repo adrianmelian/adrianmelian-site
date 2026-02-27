@@ -11,8 +11,11 @@ date = "2025-07-09"
   </a>
 </div>
 
-ADRIAN MELIAN | TECHNICAL ARTIST
-914.874.3390 | Denver, CO | AdrianMelian123@gmail.com | AdrianMelian.com 
+**ADRIAN MELIAN | TECHNICAL ARTIST**
+
+914.874.3390 | Denver, CO 
+
+AdrianMelian123@gmail.com | [adrianmelian.com]({{< ref "index.md" >}})
 
 {{< timeline >}}
 
