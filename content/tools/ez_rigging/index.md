@@ -2,7 +2,7 @@
 title = "EZ Rigging"
 date = "2017-08-01"
 +++
-*Note: This page showcases an earlier version of the system. A newer iteration of this tool is also featured here: [Rig Authoring Framework]({{< ref "content/tools/rig_authoring_framework/index.md" >}}).*
+*Note: This page showcases an earlier version of the system. A newer iteration of this tool is also featured here: [Rig Authoring Framework]({{< ref "tools/rig_authoring_framework/index.md" >}}).*
 
 **EZ Rigging — a modular, non-linear, non-destructive auto-rigging + animation system**
 
