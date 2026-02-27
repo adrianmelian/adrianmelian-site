@@ -50,7 +50,7 @@ weight = 3
 [[main]]
 name = "Happy Action Theater"
 parent = "Projects"
-pageRef = "happy_action_theater"
+pageRef = "happy_action_theatre"
 weight = 3
 
 [[main]]
