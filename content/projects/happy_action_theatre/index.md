@@ -12,6 +12,9 @@ As a **Technical Artist**, I bounced between **modeling, rigging, animation, gam
 Happy Action Theater
 {{< youtubeLite id="YdNnVqvXk2Y" label="Happy Action Theater" >}} 
 
+Showing off Happy Action Theatre at Giant Bomb!
+{{< youtubeLite id="oEcYdtq9yFY" label="Quick Look: Double Fine Happy Action Theater Sequel" >}} 
+
 25 Years of Double Fine
 {{< youtubeLite id="08QPY7bn-Z0" label="25 Years of Double Fine" >}}
 
