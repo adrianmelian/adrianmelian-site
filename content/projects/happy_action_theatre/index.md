@@ -20,7 +20,7 @@ Showing off Happy Action Theatre at Giant Bomb!
 
 Team NOVA!
 {{< gallery >}}
-  <img src="gallery/045.jpg" class="grid-w33" />
-  <img src="gallery/046.jpg" class="grid-w33" />
-  <img src="gallery/047.jpg" class="grid-w33" />
+  <img src="/gallery/045.jpg" class="grid-w33" />
+  <img src="/gallery/046.jpg" class="grid-w33" />
+  <img src="/gallery/047.jpg" class="grid-w33" />
 {{< /gallery >}}
