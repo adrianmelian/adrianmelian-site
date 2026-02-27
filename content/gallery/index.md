@@ -5,7 +5,8 @@ date = "2025-07-09"
 A collection of my creations. I love to work in many mediums. From pencil and paper, to traditional paints, digital, and wood-working.
 
 {{< gallery >}}
-{{< figure src="gallery/ufo.jpg" alt="Gallery image 1" caption="Krazy Kaiju! Acrylic on canvas" figureClass="grid-w33" >}}
+  {{< figure src="gallery/ufo.jpg" alt="Krazy Kaiju" caption="Krazy Kaiju! Acrylic on canvas" figureClass="grid-w33" >}}
+  {{< figure src="gallery/048.jpg" alt="Krazy Kaiju" caption="Krazy Kaiju! Acrylic on canvas" figureClass="grid-w33" >}}
   <img src="/gallery/ufo.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="/gallery/048.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="/gallery/049.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
