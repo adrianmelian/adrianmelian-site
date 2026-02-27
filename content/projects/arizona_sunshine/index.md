@@ -5,7 +5,7 @@ date = "2019-02-01"
 
 Arizona Sunshine: Contagion Z (2019) | Nomadic VR
 
-This was a **location-based VR experience**, which means the game didn’t stop at the headset, it reached into the real world too.
+This was a **location-based VR experience**, where users use advanced, tetherless headsets, haptic gear, and motion tracking to explore virtual worlds.
 
 As a **Technical Artist**, I contributed across **modeling, rigging, animation, and 3D scanning**, supporting rapid iteration and keeping assets production-ready for VR performance constraints.
 
