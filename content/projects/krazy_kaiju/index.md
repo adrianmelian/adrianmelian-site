@@ -1,6 +1,6 @@
 +++
 title = "Krazy Kaiju! (Unreal)"
-description = "A VR game made in Unreal where a lonely farmer protects hif farm from an alien invasion!"
+description = "A VR game made in Unreal where a lonely farmer protects his farm from an alien invasion!"
 date = "2020-12-01"
 +++
 This is a personal project I have been working on in my free time.

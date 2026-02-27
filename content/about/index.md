@@ -40,7 +40,7 @@ LANGUAGES
 {{< /timelineItem >}}
 
 
-{{< timelineItem icon="facebook" header="Camouflaj @ Meta" badge="Remote | Sep 2025 – Present" subheader="Technical Artist" >}}
+{{< timelineItem icon="facebook" header="Camouflaj @ Meta" badge="Remote | Sep 2025 – Present" subheader="Expert Technical Artist" >}}
 Titles: Unannounced Title (2026)
 <ul>
   <li>Designed and implemented advanced Maya tools, studio preference systems, and asset stubbing frameworks to streamline setup, prototyping, and daily artist workflows.</li>
@@ -62,7 +62,7 @@ Titles: Vanguard (2021), MW3 (2023), Unannounced Title (2026)
 {{< /timelineItem >}}
 
 {{< timelineItem icon="facebook" header="Meta" badge="Menlo Park | Nov 2018 – Dec 2020" subheader="Technical Artist" >}}
-Titles: Horizon VR
+Titles: Meta Horizon Worlds (2021)
 <ul>
   <li>Created artist-facing tools and animation exporters</li>
   <li>Built performance-optimized workflows for VR</li>
@@ -71,7 +71,7 @@ Titles: Horizon VR
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Nomadic VR" badge="San Rafael | Dec 2017 – Nov 2018" subheader="Senior Technical Artist" >}}
-<ul>
+Titles: Arizona Sunshine: Rampage (2018)
   <li>Integrated LEAP Motion VR</li>
   <li>Calibrated OptiTrack & Motive systems</li>
   <li>Prototyped LBE VR experiences and digital-physical rigs</li>
@@ -79,6 +79,7 @@ Titles: Horizon VR
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="NCSoft" badge="San Mateo | Jan 2017 – Dec 2017" subheader="Senior Technical Artist" >}}
+Unannounced Title (2018)
 <ul>
   <li>Built main character rigs and batch rigging tools</li>
   <li>Developed a modular auto-rigging system and animation retargeting tools</li>
@@ -94,7 +95,8 @@ Title: South Park : The Fractured but Whole (2017)
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="Pullstring" badge="San Francisco | Oct 2015 – Jul 2016" subheader="Senior Technical Artist" >}}
+{{< timelineItem icon="code" header="ToyTalk Inc. (now Pullstring Inc.)" badge="San Francisco | Oct 2015 – Jul 2016" subheader="Senior Technical Artist" >}}
+Unannounced Title (2016)
 <ul>
   <li>Rigged all characters across multiple projects</li>
   <li>Built a pose/animation library, Trax editor pipeline, lip-sync tools, and Maya–Unity exporters</li>
@@ -103,6 +105,7 @@ Title: South Park : The Fractured but Whole (2017)
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Perfect World Entertainment" badge="Redwood City | Mar 2015 – Oct 2015" subheader="Technical Artist" >}}
+Unannounced Title (2016)
 <ul>
   <li>Rigged and animated characters, props, and buildings for mobile games</li>
   <li>Built Maya to Unity export tools</li>

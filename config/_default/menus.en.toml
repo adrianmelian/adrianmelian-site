@@ -60,6 +60,18 @@ pageRef = "amnesia_fortnight"
 weight = 3
 
 [[main]]
+name = "My Alien Buddy"
+parent = "Projects"
+pageRef = "my_alien_buddy"
+weight = 3
+
+[[main]]
+name = "Arizona Sunshine: Contagion Z"
+parent = "Projects"
+pageRef = "arizona_sunshine"
+weight = 3
+
+[[main]]
 name = "Tools"
 pageRef = "tools"
 weight = 4

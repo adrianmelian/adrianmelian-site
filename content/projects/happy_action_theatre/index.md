@@ -4,5 +4,7 @@ description = "This was one of the most fun projects I ever worked on. I contrib
 date = "2012-02-01"
 +++
 Happy Action Theatre | Double Fine Productions | Technical Artist | 2012
+
 {{< youtubeLite id="YdNnVqvXk2Y" label="Happy Action Theatre" >}} 
+
 {{< youtubeLite id="08QPY7bn-Z0" label="25 Years of Double Fine" >}}
