@@ -102,10 +102,16 @@ pageRef = "reel_2014"
 weight = 25
 
 [[main]]
+name = "Tools Reel 2011"
+parent = "Tools"
+pageRef = "reel_2011"
+weight = 25
+
+[[main]]
 name = "Demo Reel 2010"
 parent = "Tools"
 pageRef = "reel_2010"
-weight = 25
+weight = 23
 
 [[main]]
 name = "Gallery"
