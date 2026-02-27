@@ -11,6 +11,11 @@ A collection of my creations. I love to work in many mediums. From pencil and pa
   {{< figure src="/gallery/050.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/051.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/052.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
+  {{< figure src="/gallery/039.jpg" caption="Space Arcade! From Maya 3D to Real World." class="grid-w50 md:grid-w33 xl:grid-w25" >}}
+  {{< figure src="/gallery/037.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
+  {{< figure src="/gallery/035.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
+  {{< figure src="/gallery/036.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
+  {{< figure src="/gallery/038.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/07.jpg" caption="Chicken Run & Coop. From Maya 3D to Real World." class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/06.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
@@ -40,11 +45,6 @@ A collection of my creations. I love to work in many mediums. From pencil and pa
   {{< figure src="/gallery/026.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/025.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/024.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-  {{< figure src="/gallery/039.jpg" caption="Space Arcade! From Maya 3D to Real World." class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-  {{< figure src="/gallery/037.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-  {{< figure src="/gallery/035.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-  {{< figure src="/gallery/036.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-  {{< figure src="/gallery/038.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/08.jpg" caption="Miniature painting. Acrylic on models." class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/09.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
 {{< /gallery >}}
