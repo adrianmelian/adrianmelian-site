@@ -16,7 +16,7 @@ Happy Action Theater
 {{< youtubeLite id="08QPY7bn-Z0" label="25 Years of Double Fine" >}}
 
 {{< gallery >}}
-  <img src="gallery/team_nova.jpg" class="grid-w33" />
-  <img src="gallery/team_nova2.jpg" class="grid-w33" />
-  <img src="gallery/team_nova3.jpg" class="grid-w33" />
+  <img src="gallery/team_nova.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/team_nova2.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  <img src="gallery/team_nova3.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
 {{< /gallery >}}
