@@ -6,15 +6,12 @@ A collection of my creations. I love to work in many mediums. From pencil and pa
 
 {{< gallery >}}
   {{< figure src="/gallery/ufo.jpg" caption="Krazy Kaiju! Acrylic on canvas" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-  {{< figure src="/gallery/048.jpg" caption="Krazy Kaiju! Acrylic on canvas" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-\
-  <img src="/gallery/ufo.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="/gallery/048.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  {{< figure src="/gallery/048.jpg" caption="Kaiju Racing Livery. Airbrush on polycarbonate" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   <img src="/gallery/049.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="/gallery/050.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="/gallery/051.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="/gallery/052.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="/gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+  {{< figure src="/gallery/01.jpg" caption="Sagan (my dog). Wacom in Photoshop" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   <img src="/gallery/07.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="/gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
   <img src="/gallery/04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
