@@ -17,7 +17,7 @@ Happy Action Theater
 
 Team NOVA!
 {{< gallery >}}
-  <img src="gallery/01.jpg" class="grid-w33" />
+  <img src="gallery/team_nova.jpg" class="grid-w33" />
   <img src="gallery/02.jpg" class="grid-w33" />
   <img src="gallery/03.jpg" class="grid-w33" />
 {{< /gallery >}}
