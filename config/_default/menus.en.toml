@@ -67,6 +67,12 @@ pageRef = "arizona_sunshine"
 weight = 10
 
 [[main]]
+name = "Meta Horizon Worlds"
+parent = "Projects"
+pageRef = "horizon_worlds"
+weight = 10
+
+[[main]]
 name = "Tools"
 pageRef = "tools"
 weight = 20
@@ -82,6 +88,12 @@ name = "ML Skinning Framework"
 parent = "Tools"
 pageRef = "ml_skinning_framework"
 weight = 20
+
+[[main]]
+name = "EZ Rigging!"
+parent = "Tools"
+pageRef = "ez_rigging"
+weight = 25
 
 [[main]]
 name = "Tools Reel 2014"
