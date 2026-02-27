@@ -93,13 +93,13 @@ weight = 20
 name = "EZ Rigging!"
 parent = "Tools"
 pageRef = "ez_rigging"
-weight = 25
+weight = 23
 
 [[main]]
 name = "Tools Reel 2014"
 parent = "Tools"
 pageRef = "reel_2014"
-weight = 25
+weight = 24
 
 [[main]]
 name = "Tools Reel 2011"
@@ -111,7 +111,7 @@ weight = 25
 name = "Demo Reel 2010"
 parent = "Tools"
 pageRef = "reel_2010"
-weight = 23
+weight = 26
 
 [[main]]
 name = "Gallery"
