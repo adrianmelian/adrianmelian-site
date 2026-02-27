@@ -11,7 +11,7 @@ As a Technical Artist, I contributed to multiple projects, including: Little Pin
 The entire jam was captured as a documentary series, which is both inspiring and a fun snapshot of how the sausage gets made.
 
 Amnesia Fortnight Doc Series
-{{< youtubeLite id="srgSknlDpcU=95s" label="Amnesia Fortnight Doc Series" >}} 
+{{< youtubeLite id="srgSknlDpcU" label="Amnesia Fortnight Doc Series" >}} 
 
 Little Pink Best Buds
 {{< youtubeLite id="v_iBS36r-sM" label="Little Pink Best Buds" >}}
