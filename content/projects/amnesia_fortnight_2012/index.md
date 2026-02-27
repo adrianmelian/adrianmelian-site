@@ -12,12 +12,16 @@ The entire jam was captured as a documentary series, which is both inspiring and
 
 Amnesia Fortnight Doc Series
 {{< youtubeLite id="srgSknlDpcU" label="Amnesia Fortnight Doc Series" >}} 
+
 Little Pink Best Buds
 {{< youtubeLite id="v_iBS36r-sM" label="Little Pink Best Buds" >}}
+
 White Birch
 {{< youtubeLite id="2mGjI80x_eo" label="White Birch" >}}
+
 Black Lake
 {{< youtubeLite id="QswpWvPKBds" label="Black Lake" >}}
+
 Spacebase DF-9
 {{< youtubeLite id="fsaBYCBx7Jk" label="Spacebase DF-9" >}}
 
