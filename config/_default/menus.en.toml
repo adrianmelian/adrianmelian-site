@@ -61,6 +61,12 @@ pageRef = "my_alien_buddy"
 weight = 10
 
 [[main]]
+name = "Massive Chalice"
+parent = "Projects"
+pageRef = "massive_chalice"
+weight = 10
+
+[[main]]
 name = "Arizona Sunshine: Contagion Z"
 parent = "Projects"
 pageRef = "arizona_sunshine"
