@@ -3,6 +3,7 @@ title = "About"
 layout = "profile"
 date = "2025-07-09"
 +++
+
 <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
   <strong>Resume:</strong>
 
@@ -13,50 +14,47 @@ date = "2025-07-09"
 
 **ADRIAN MELIAN | TECHNICAL ARTIST**
 
-914.874.3390 | Denver, CO 
+914.874.3390 | Denver, CO
 
-AdrianMelian123@gmail.com | [adrianmelian.com]({{< ref "index.md" >}})
+adrianmelian123@gmail.com | [adrianmelian.com]({{< ref "index.md" >}})
 
 {{< timeline >}}
 
-{{< timelineItem icon="star" header="Summary" badge="about me"  >}}
-Vision driven Technical Artist and creative leader with a uniquely blended background in animation,
-design, and programming. Bridging visual creativity with technical execution. Over 14 years of game
-industry experience, with over 10 shipped titles. Leads teams towards building tools and pipelines that
-elevate production efficiency and artistic integrity.
+{{< timelineItem icon="star" header="Summary" badge="about me" >}}
+Vision-driven Technical Artist and creative leader with a uniquely blended background in animation, design, and programming. I bridge visual creativity with technical execution. Over 14 years of game industry experience with 10+ shipped titles. I lead teams toward building tools and pipelines that elevate production efficiency and artistic integrity.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="star" header="Skills & Abilities" badge="about me"  >}}
-Disciplines
+{{< timelineItem icon="star" header="Skills & Abilities" badge="about me" >}}
+**Disciplines**
 <ul>
-  <li>Rigging, animation, modeling, tools, scripting, game-design, gameplay-programming, graphic design..</li>
-</ul>
-SOFTWARE
-<ul>
-  <li>Maya, Unreal, Unity, ZBrush, Painter, Git, Perforce.</li>
-</ul>
-LANGUAGES
-<ul>
-  <li>Python, PyQt, C++, C#, Lua, Hugo.</li>
+  <li>Rigging, animation, modeling, tools, scripting, game-design, gameplay-programming, graphic design</li>
 </ul>
 
+**Software**
+<ul>
+  <li>Maya, Unreal, Unity, ZBrush, Painter, Git, Perforce</li>
+</ul>
+
+**Languages**
+<ul>
+  <li>Python, PyQt, C++, C#, Lua, Hugo</li>
+</ul>
 {{< /timelineItem >}}
-
 
 {{< timelineItem icon="facebook" header="Camouflaj @ Meta" badge="Remote | Sep 2025 – Present" subheader="Expert Technical Artist" >}}
 Titles: Unannounced Title (2026)
 <ul>
-  <li>Designed and implemented advanced Maya tools, studio preference systems, and asset stubbing frameworks to streamline setup, prototyping, and daily artist workflows.</li>
-  <li>Partnered with Meta Horizon internal teams to troubleshoot complex pipeline challenges</li>
-  <li>Contributed through a period of organizational transition; role concluded due to full studio closure as part of company-wide layoffs</li>
+  <li>Designed and implemented advanced Maya tools, studio preference systems, and asset stubbing frameworks to streamline setup, prototyping, and daily artist workflows</li>
+  <li>Partnered with Meta internal teams to troubleshoot complex pipeline challenges</li>
+  <li>Contributed during a period of organizational transition, supporting the team through shifting priorities</li>
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="Sledgehammer Games" badge="Remote | Jan 2021 - Sep 2025" subheader="Lead Technical Artist" >}}
+{{< timelineItem icon="code" header="Sledgehammer Games" badge="Remote | Jan 2021 – Sep 2025" subheader="Lead Technical Artist" >}}
 Titles: Vanguard (2021), MW3 (2023), Unannounced Title (2026)
 <ul>
   <li>Led the Character Tech Art team; trained and managed internal and OS artists</li>
-  <li>Led the Weaapons Tech Art team; trained and managed internal and OS artists and built a Modular Rigging Solution</li>
+  <li>Led the Weapons Tech Art team; trained and managed internal and OS artists and built a modular rigging solution</li>
   <li>Developed and maintained character, animation, and rigging workflows</li>
   <li>Created proprietary tools for animation, rigging, and cloth simulation</li>
   <li>Skinned high-fidelity characters, including celebrity likenesses like Snoop Dogg</li>
@@ -75,6 +73,7 @@ Titles: Meta Horizon Worlds (2021)
 
 {{< timelineItem icon="code" header="Nomadic VR" badge="San Rafael | Dec 2017 – Nov 2018" subheader="Senior Technical Artist" >}}
 Titles: Arizona Sunshine: Rampage (2018)
+<ul>
   <li>Integrated LEAP Motion VR</li>
   <li>Calibrated OptiTrack & Motive systems</li>
   <li>Prototyped LBE VR experiences and digital-physical rigs</li>
@@ -91,7 +90,7 @@ Unannounced Title (2018)
 {{< /timelineItem >}}
 
 {{< timelineItem icon="code" header="Ubisoft" badge="San Francisco | Aug 2016 – Dec 2016" subheader="Senior Technical Artist" >}}
-Title: South Park : The Fractured but Whole (2017)
+Title: South Park: The Fractured But Whole (2017)
 <ul>
   <li>Rigged 2D/3D characters</li>
   <li>Authored pipeline and 2D flipbook animation tools</li>
@@ -132,28 +131,28 @@ Titles:
 <ul>
   <li>Created MEL-based auto-rigging tools for bipeds and quadrupeds</li>
   <li>Managed outsourcing teams, tracked production, and maintained quality</li>
-  <li>Authored style guides, tutorials, and assignments for external partners </li>
+  <li>Authored style guides, tutorials, and assignments for external partners</li>
   <li>Worked across various social and browser-based games (Zoo World 2, Legacy of a Thousand Suns, Vegas City, etc.)</li>
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="Art Institute of California - San Francisco" badge="Sep 2006 – Dec 2010" subheader="B.S. in Media Arts & Animation" >}}
+{{< timelineItem icon="graduation-cap" header="Art Institute of California – San Francisco" badge="Sep 2006 – Dec 2010" subheader="B.S. in Media Arts & Animation" >}}
 <ul>
   <li>Best Portfolio Award 2010</li>
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="Suny Sullivan - New York" badge="Aug 2004 – Aug 2006" subheader="A.S. in Graphic Design" >}}
+{{< timelineItem icon="graduation-cap" header="SUNY Sullivan – New York" badge="Aug 2004 – Aug 2006" subheader="A.S. in Graphic Design" >}}
 <ul>
-  <li>Best Portfolio Award 2010</li>
+  <li>Coursework focused on graphic design fundamentals</li>
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="star" header="Communication" badge="about me"  >}}
+{{< timelineItem icon="star" header="Communication" badge="about me" >}}
 Authored internal style guides, tech tutorials, training documents, and pipeline documentation. Frequently collaborated with cross-discipline teams, from art to engineering. Delivered presentations, live demos, and 1-on-1 training to onboard artists and support adoption of new tools.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="star" header="Leadership" badge="about me"  >}}
+{{< timelineItem icon="star" header="Leadership" badge="about me" >}}
 Led Sledgehammer’s Character Tech Art team on three Call of Duty titles. Managed, trained, and art-directed internal and offshore artists. Oversaw large-scale rigging and skinning pipelines with consistent quality control. Delegated tasks, reviewed work, and maintained consistency across complex multi-project pipelines.
 {{< /timelineItem >}}
 
