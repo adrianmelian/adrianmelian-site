@@ -3,11 +3,11 @@ title = "Happy Action Theater"
 date = "2012-02-01"
 +++
 
-Happy Action Theater | Double Fine Productions | Technical Artist | 2012
+**Happy Action Theater | Double Fine Productions | Technical Artist | 2012**
 
-This was one of the most fun projects I’ve ever worked on — and it was also the **first game I ever shipped**. 🎉
+This was one of the most fun projects I’ve ever worked on and it was also the **first game I ever shipped!**
 
-As a **Technical Artist**, I bounced between **modeling, rigging, animation, gameplay systems, and prototyping**, doing whatever was needed to keep the project moving (and yes, having fun was absolutely part of the job description).
+As a **Technical Artist**, I bounced between **modeling, rigging, animation, gameplay systems, and gameplay prototyping**, doing whatever was needed to keep the project moving.
 
 Happy Action Theater
 {{< youtubeLite id="YdNnVqvXk2Y" label="Happy Action Theater" >}} 

@@ -3,7 +3,7 @@ title = "Broken Age"
 date = "2016-01-22"
 +++
 
-Broken Age | Double Fine Productions | Technical Artist | 2016
+**Broken Age | Double Fine Productions | Technical Artist | 2016**
 
 On Broken Age, I created the **Flip Book Animation System** used for *all* character animation in the game.
 

@@ -2,7 +2,7 @@
 title = "Art Gallery"
 date = "2025-07-09"
 +++
-A collection of my creations. I love to work in many mediums. From pencil and paper, to traditional paints, digital, and wood-working.
+A collection of my creations. I love exploring ideas across mediums. From sketchbook to canvas, digital to hands-on builds.
 
 {{< gallery >}}
   {{< figure src="/gallery/ufo.jpg" caption="Krazy Kaiju! Acrylic on canvas." class="grid-w50 md:grid-w33 xl:grid-w25" >}}
@@ -14,6 +14,7 @@ A collection of my creations. I love to work in many mediums. From pencil and pa
   {{< figure src="/gallery/039.jpg" caption="Space Arcade! From Maya 3D to Real World." class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/037.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/035.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
+  {{< figure src="/gallery/011.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/036.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/038.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/07.jpg" caption="Chicken Run & Coop. From Maya 3D to Real World." class="grid-w50 md:grid-w33 xl:grid-w25" >}}

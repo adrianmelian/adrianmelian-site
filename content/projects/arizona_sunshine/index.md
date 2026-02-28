@@ -3,7 +3,7 @@ title = "Arizona Sunshine: Contagion Z"
 date = "2019-02-01"
 +++
 
-Arizona Sunshine: Contagion Z (2019) | Nomadic VR
+**Arizona Sunshine: Contagion Z (2019) | Nomadic VR**
 
 This was a **location-based VR experience**, where users use advanced, tetherless headsets, haptic gear, and motion tracking to explore virtual worlds.
 

@@ -4,7 +4,7 @@ description = "A Modular Non-linear Auto Rigging and Animation System"
 date = "2025-07-01"
 +++
 
-Welcome to the ML Skinning Framework — where skinning gets a fresh twist!
+Welcome to the **ML Skinning Framework**: Where skinning gets a fresh twist!
 
 What started as a small research project into the world of ML turned into something quite incredible.
 

@@ -4,7 +4,7 @@ description = "Senior Technical Artist on Costume Quest 2 video game."
 date = "2014-09-08"
 +++
 
-Costume Quest 2 | Double Fine Productions | Technical Artist | 2014
+**Costume Quest 2 | Double Fine Productions | Technical Artist | 2014**
 
 Costume Quest 2 had an **extremely short production cycle** and a bit of a **skeleton crew** but it ended up being one of the most rewarding games I’ve worked on.
 

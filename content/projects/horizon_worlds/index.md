@@ -3,7 +3,7 @@ title = "Meta Horizon Worlds"
 date = "2021-12-09"
 +++
 
-Meta Horizon Worlds | Meta | Technical Artist | 2021
+**Meta Horizon Worlds | Meta | Technical Artist | 2021**
 
 On Meta Horizon Worlds, I worked as a **Technical Artist** focused on building tools and workflows that helped teams ship faster, especially under the unique constraints of **VR performance** and a rapidly changing environment.
 
