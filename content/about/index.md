@@ -22,12 +22,8 @@ adrianmelian123@gmail.com | [adrianmelian.com]({{< ref "index.md" >}})
 
 {{< timelineItem icon="star" header="Summary" badge="about me" >}}
 I’m a Technical Artist with a passion for building robust pipelines, intuitive tools, and high-quality animation rigs for characters, creatures, and props. With experience across industry-leading studios like Sledgehammer Games, Double Fine, Meta, and Ubisoft, I’ve contributed to AAA productions across a range of genres and platforms.
-
-Recently, I’ve been exploring the intersection of machine learning and rigging—developing AI-driven solutions to accelerate skin weighting and automate rig setup. This research is aimed at cutting costs, improving consistency, and unlocking new creative possibilities in artist pipelines.
-
+Recently, I’ve been exploring the intersection of machine learning and rigging. Developing AI-driven solutions to accelerate skin weighting and automate rig setup. This research is aimed at cutting costs, improving consistency, and unlocking new creative possibilities in artist pipelines.
 My approach blends technical precision with artistic sensibility, and I thrive in cross-functional environments where collaboration, iteration, and R&D drive innovation.
-
-Feel free to reach out! I’m always excited to connect with others passionate about technical art, animation, or the future of game production.
 
 {{< /timelineItem >}}
 
@@ -52,8 +48,7 @@ Feel free to reach out! I’m always excited to connect with others passionate a
 Titles: Unannounced Title (2026)
 <ul>
   <li>Designed and implemented advanced Maya tools, studio preference systems, and asset stubbing frameworks to streamline setup, prototyping, and daily artist workflows</li>
-  <li>Partnered with Meta internal teams to troubleshoot complex pipeline challenges</li>
-  <li>Contributed during a period of organizational transition, supporting the team through shifting priorities</li>
+  <li>Partnered with Meta internal teams to troubleshoot complex Horizon engine challenges</li>
 </ul>
 {{< /timelineItem >}}
 
