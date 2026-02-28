@@ -45,5 +45,4 @@ A collection of my creations. I love exploring ideas across mediums. From sketch
   {{< figure src="/gallery/027.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/026.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
   {{< figure src="/gallery/025.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
-  {{< figure src="/gallery/024.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" >}}
 {{< /gallery >}}
