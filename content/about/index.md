@@ -37,7 +37,7 @@ Vision-driven Technical Artist and creative leader with a uniquely blended backg
 
 **Languages**
 <ul>
-  <li>Python, PyQt, C++, C#, Lua, Hugo</li>
+  <li>Python, PyQt, PyTorch, C++, C#, Lua, Hugo</li>
 </ul>
 {{< /timelineItem >}}
 
