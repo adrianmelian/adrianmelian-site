@@ -14,7 +14,7 @@ date = "2025-07-09"
 
 **ADRIAN MELIAN | TECHNICAL ARTIST**
 
-914.874.3390 | Denver, CO
+914.874.3390 | Denver, CO / California (Relocation Ready)
 
 adrianmelian123@gmail.com | [adrianmelian.com]({{< ref "index.md" >}})
 
