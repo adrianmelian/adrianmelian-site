@@ -28,9 +28,11 @@
       {{ with $p.recent_studios }}<dt>Recent</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
     </dl>
 
+    {{ with $p.status_label }}
     <div class="hero__status">
-      {{ partial "status-pill.html" (dict "variant" "live" "label" $p.status_label "blink" $p.status_blink) }}
+      {{ partial "status-pill.html" (dict "variant" "live" "label" . "blink" $p.status_blink) }}
     </div>
+    {{ end }}
 
     {{ with $p.quick_links }}
     <div class="hero__links">

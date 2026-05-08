@@ -9,13 +9,11 @@ availability = "Open to relocation · contract or full-time"
 currently = "Camouflaj @ Meta"
 recent_studios = ["Sledgehammer Games", "Meta", "Nomadic VR"]
 featured_project = "krazy_kaiju"
-status_label = "AVAILABLE"
-status_blink = true
 
 [[params.quick_links]]
 label = "Resume"
 href = "/adrianmelian_resume.pdf"
-download = true
+external = true
 
 [[params.quick_links]]
 label = "Reel"
