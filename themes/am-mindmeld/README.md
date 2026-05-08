@@ -26,3 +26,9 @@ design system from AM_MayaTools. Not intended for redistribution.
 - **Phase 3:** project / tool list + detail templates
 - **Phase 4:** about + contact + 404 + accessibility polish
 - **Phase 5:** cleanup, Blowfish removal, content backfill
+
+## Known gaps (to be addressed in later phases)
+
+- **Mobile primary navigation** — at viewport widths ≤ 720px, the desktop nav is hidden via `display: none` with no replacement (no hamburger, no drawer, no bottom nav). Mobile users currently have no path to Projects/Tools/Gallery/About/Contact except by typing URLs directly. Phase 4 (about + contact + a11y polish) should add a mobile nav strategy.
+- **Project page templates** — non-homepage pages render via the minimal `single.html` / `list.html` fallback templates. Final detail-page treatment (terminal frame hero, metadata strip, image grid, credits panel) lands in Phase 3.
+- **Gallery / about / contact templates** — same situation; Phases 2 and 4 own them.

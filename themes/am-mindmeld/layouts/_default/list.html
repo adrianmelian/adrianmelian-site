@@ -1,11 +1,13 @@
 {{ define "main" }}
-<main>
+<article class="container fallback-page">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
-  <ul>
-    {{ range .Pages }}
+  {{ with .Pages }}
+  <ul class="fallback-page__list">
+    {{ range . }}
       <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
   </ul>
-</main>
+  {{ end }}
+</article>
 {{ end }}
