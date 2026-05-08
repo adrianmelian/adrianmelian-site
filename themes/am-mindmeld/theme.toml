@@ -1,0 +1,10 @@
+name = "am-mindmeld"
+license = "All rights reserved"
+description = "Mindmeld portfolio theme for adrianmelian.com"
+homepage = "https://adrianmelian.com/"
+tags = ["portfolio", "dark", "monospace", "mindmeld"]
+min_version = "0.120.0"
+
+[author]
+  name = "Adrian Melian"
+  homepage = "https://adrianmelian.com/"

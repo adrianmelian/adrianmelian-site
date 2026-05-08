@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title | default "Adrian Melian" }}{{ else }}{{ .Title }} · {{ .Site.Title | default "Adrian Melian" }}{{ end }}</title>
+  {{ with .Description | default .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+</head>
+<body>
+{{ block "main" . }}{{ end }}
+</body>
+</html>
