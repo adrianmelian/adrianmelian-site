@@ -1,0 +1,39 @@
+/* themes/am-mindmeld/assets/css/components/statusbar.css */
+.statusbar {
+  background: var(--iron-2);
+  border-top: 1px solid var(--iron-3);
+  height: var(--footer-h);
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  letter-spacing: 0.06em;
+}
+.statusbar__inner {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  padding: 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+.statusbar__seg {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0 var(--sp-3);
+  border-right: 1px solid var(--iron-3);
+  color: var(--bone-dim);
+  text-transform: uppercase;
+}
+.statusbar__seg:last-child { border-right: none; }
+.statusbar__seg--spacer { flex: 1; border-right: none; }
+.statusbar__seg--ok { color: var(--plasma); }
+.statusbar__seg--muted { color: var(--bone-faint); }
+.statusbar__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--plasma);
+  box-shadow: 0 0 6px var(--plasma);
+  border-radius: 0;
+  flex-shrink: 0;
+}

@@ -1,1 +1,12 @@
-<!-- footer stub -->
+{{- /* themes/am-mindmeld/layouts/partials/footer.html */ -}}
+<footer class="statusbar">
+  <div class="statusbar__inner container">
+    <span class="statusbar__seg statusbar__seg--ok">
+      <span class="statusbar__dot" aria-hidden="true"></span>
+      ONLINE
+    </span>
+    <span class="statusbar__seg">BUILD {{ now.Format "2006.01.02" }}</span>
+    <span class="statusbar__seg statusbar__seg--spacer"></span>
+    <span class="statusbar__seg statusbar__seg--muted">© {{ now.Format "2006" }} ADRIAN MELIAN</span>
+  </div>
+</footer>
