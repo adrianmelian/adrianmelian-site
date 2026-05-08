@@ -1,1 +1,14 @@
-{{- /* Emergency shim — content references {{< vimeo ... >}} (reel_2010, reel_2014, ez_rigging, my_alien_buddy). Replace with a real implementation in Task 13. */ -}}
+{{- /* themes/am-mindmeld/layouts/shortcodes/vimeo.html */ -}}
+{{- /* args: id (required), title (optional) — mimics Hugo built-in vimeo argument shape */ -}}
+{{- $id := .Get "id" | default (.Get 0) -}}
+{{- $title := .Get "title" | default (printf "Vimeo video %s" $id) -}}
+<div class="video-embed">
+  <iframe
+    src="https://player.vimeo.com/video/{{ $id }}?dnt=1"
+    title="{{ $title }}"
+    loading="lazy"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+    allowfullscreen
+    style="width: 100%; aspect-ratio: 16/9; border: 1px solid var(--iron-3); background: var(--carbon);">
+  </iframe>
+</div>

@@ -1,2 +1,5 @@
-{{- /* Emergency shim — content references {{< lead >}}. Replace with a real implementation in Task 13. */ -}}
-{{ .Inner }}
+{{- /* themes/am-mindmeld/layouts/shortcodes/lead.html */ -}}
+{{- /* Wraps a lead paragraph in slightly larger bone-colored type. Used in content to set off intro lines. */ -}}
+<div class="lead-shim" style="font-family: var(--font-body); font-size: var(--fs-18); color: var(--bone); line-height: 1.55; max-width: 70ch; margin: var(--sp-5) 0;">
+  {{ .Inner }}
+</div>

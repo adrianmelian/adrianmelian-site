@@ -1,1 +1,5 @@
-{{ .Inner }}
+{{- /* themes/am-mindmeld/layouts/shortcodes/gallery.html */ -}}
+{{- /* Renders inner figures in a simple grid. Phase 2 replaces this with the bento + masonry treatment. */ -}}
+<div class="gallery-shim" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: var(--sp-5) 0;">
+  {{ .Inner }}
+</div>

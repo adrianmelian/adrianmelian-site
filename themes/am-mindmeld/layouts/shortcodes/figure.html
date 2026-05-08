@@ -1,1 +1,10 @@
-{{- /* Shim — replaces Blowfish figure. Implement properly in Task 13 (gallery + figure templates). */ -}}
+{{- /* themes/am-mindmeld/layouts/shortcodes/figure.html */ -}}
+{{- /* args: src (required), caption (optional), class (optional, ignored — Phase 2 replaces) */ -}}
+{{- $src := .Get "src" -}}
+{{- $caption := .Get "caption" -}}
+<figure style="margin: 0; border: 1px solid var(--iron-3); background: var(--iron);">
+  <img src="{{ $src }}" alt="{{ $caption | default "" }}" loading="lazy" style="display: block; width: 100%; height: auto;">
+  {{ with $caption }}
+  <figcaption style="padding: 8px 12px; font-family: var(--font-body); font-size: var(--fs-11); color: var(--bone-dim); letter-spacing: 0.04em;">{{ . }}</figcaption>
+  {{ end }}
+</figure>

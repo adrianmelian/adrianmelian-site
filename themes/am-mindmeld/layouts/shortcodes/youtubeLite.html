@@ -1,1 +1,15 @@
-{{- /* Shim — replaces Blowfish youtubeLite. Implement properly in Task 13. */ -}}
+{{- /* themes/am-mindmeld/layouts/shortcodes/youtubeLite.html */ -}}
+{{- /* args: id (required), label (required) */ -}}
+{{- $id := .Get "id" -}}
+{{- $label := .Get "label" -}}
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/{{ $id }}"
+    title="{{ $label }}"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    style="width: 100%; aspect-ratio: 16/9; border: 1px solid var(--iron-3); background: var(--carbon);">
+  </iframe>
+</div>
