@@ -82,3 +82,14 @@
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; gap: var(--sp-6); padding-top: var(--sp-6); padding-bottom: var(--sp-6); }
 }
+
+.hp-recent { padding-bottom: var(--sp-7); }
+.hp-recent__more { margin-top: var(--sp-4); text-align: right; }
+.hp-more-link {
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  letter-spacing: 0.1em;
+  color: var(--plasma);
+  text-transform: uppercase;
+}
+.hp-more-link:hover { text-decoration: underline; }

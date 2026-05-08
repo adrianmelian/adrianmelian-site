@@ -58,4 +58,15 @@
     {{ end }}
   </div>
 </section>
+
+<section class="container hp-recent">
+  {{ partial "section-heading.html" (dict "number" "01" "title" "Recent projects" "id" "recent") }}
+  {{ $recent := first 6 (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
+  {{ range $i, $page := $recent }}
+    {{ partial "project-card-zig.html" (dict "page" $page "index" $i) }}
+  {{ end }}
+  <div class="hp-recent__more">
+    <a href="{{ "/projects/" | relURL }}" class="hp-more-link">More projects →</a>
+  </div>
+</section>
 {{ end }}

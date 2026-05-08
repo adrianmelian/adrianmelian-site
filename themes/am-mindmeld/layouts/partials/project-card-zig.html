@@ -1,0 +1,30 @@
+{{- /* themes/am-mindmeld/layouts/partials/project-card-zig.html */ -}}
+{{- /* params: page (Hugo Page object), index (int, 0-based — even rows are image-left) */ -}}
+{{- $p := .page -}}
+{{- $i := .index | default 0 -}}
+{{- $imageLeft := eq (mod $i 2) 0 -}}
+{{- $image := "" -}}
+{{- with $p.Resources.GetMatch "featured*" -}}
+  {{- $image = .RelPermalink -}}
+{{- end -}}
+<article class="card-zig {{ if $imageLeft }}card-zig--img-left{{ else }}card-zig--img-right{{ end }}">
+  <a href="{{ $p.RelPermalink }}" class="card-zig__link">
+    {{ if $image }}
+    <div class="card-zig__media">
+      <img src="{{ $image }}" alt="{{ $p.Title }}" loading="lazy" class="card-zig__img">
+    </div>
+    {{ end }}
+    <div class="card-zig__body">
+      <h3 class="card-zig__title">{{ $p.Title }}</h3>
+      {{ with $p.Params.role | default $p.Params.studio }}
+        <dl class="metadata-list card-zig__meta">
+          {{ with $p.Params.role }}<dt>Role</dt><dd>{{ . }}</dd>{{ end }}
+          {{ with $p.Params.studio }}<dt>Studio</dt><dd>{{ . }}</dd>{{ end }}
+          {{ with $p.Params.shipped_year | default ($p.Date.Format "2006") }}<dt>Year</dt><dd>{{ . }}</dd>{{ end }}
+        </dl>
+      {{ end }}
+      {{ with $p.Description }}<p class="card-zig__blurb">{{ . }}</p>{{ end }}
+      <span class="card-zig__cta">View project →</span>
+    </div>
+  </a>
+</article>
