@@ -1,0 +1,34 @@
+/* themes/am-mindmeld/assets/css/components/section-heading.css */
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+.section-heading__num {
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  color: var(--ember);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.section-heading__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  color: var(--bone);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0;
+}
+.section-heading__rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--iron-3), transparent);
+  margin-bottom: 6px;
+}
+
+@media (max-width: 720px) {
+  .section-heading__num { font-size: var(--fs-24); }
+  .section-heading__title { font-size: var(--fs-24); }
+}

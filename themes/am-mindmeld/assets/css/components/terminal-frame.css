@@ -1,0 +1,42 @@
+/* themes/am-mindmeld/assets/css/components/terminal-frame.css */
+.term-frame {
+  border: 1px solid var(--iron-3);
+  background: var(--carbon);
+}
+.term-frame__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 6px var(--sp-4);
+  background: var(--iron);
+  border-bottom: 1px solid var(--iron-3);
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  color: var(--bone-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.term-frame__lights {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.term-frame__lights span {
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--iron-3);
+}
+.term-frame__lights span:nth-child(1) { background: var(--ember); }
+.term-frame__lights span:nth-child(2) { background: var(--plasma-dim); }
+.term-frame__lights span:nth-child(3) { background: var(--bone-dim); }
+
+.term-frame__title { color: var(--bone); }
+.term-frame__meta {
+  margin-left: auto;
+  color: var(--bone-faint);
+  font-size: var(--fs-11);
+}
+.term-frame__body { padding: var(--sp-5); }
+
+.term-frame--titlebar { border-bottom: none; }
+.term-frame--titlebar .term-frame__bar { border-bottom: none; }

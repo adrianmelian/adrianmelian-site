@@ -1,0 +1,28 @@
+/* themes/am-mindmeld/assets/css/components/quick-link.css */
+.quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--plasma);
+  border: 1px solid var(--plasma-dim);
+  background: transparent;
+  transition: background var(--t-base) var(--ease-out),
+              border-color var(--t-base) var(--ease-out),
+              box-shadow var(--t-base) var(--ease-out);
+}
+.quick-link:hover {
+  background: var(--plasma-glow);
+  border-color: var(--plasma);
+  box-shadow: 0 0 0 1px var(--plasma), 0 0 12px var(--plasma-glow);
+  text-decoration: none;
+}
+.quick-link:active {
+  transform: scale(0.98);
+  transition-duration: var(--t-active);
+}

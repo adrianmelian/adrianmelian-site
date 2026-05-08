@@ -1,0 +1,12 @@
+{{- /* themes/am-mindmeld/layouts/partials/quick-link.html */ -}}
+{{- /* params: href, label, external (bool), download (bool) */ -}}
+{{- $href := .href | default "#" -}}
+{{- $label := .label | default "" -}}
+{{- $external := .external | default false -}}
+{{- $download := .download | default false -}}
+<a class="quick-link" href="{{ $href }}"
+   {{ if $external }}rel="noopener" target="_blank"{{ end }}
+   {{ if $download }}download{{ end }}>
+  {{ $label | upper }}
+  {{ if $external }}<span aria-hidden="true">↗</span>{{ end }}
+</a>

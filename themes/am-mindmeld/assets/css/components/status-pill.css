@@ -1,0 +1,34 @@
+/* themes/am-mindmeld/assets/css/components/status-pill.css */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 2px var(--sp-2);
+  border: 1px solid;
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.status-pill__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+}
+.status-pill__label { white-space: nowrap; }
+
+.status-pill--live    { color: var(--bone);     border-color: var(--bone-dim); }
+.status-pill--live    .status-pill__dot { background: var(--plasma); box-shadow: 0 0 6px var(--plasma); }
+
+.status-pill--ok      { color: var(--plasma);   border-color: var(--plasma-dim); }
+.status-pill--ok      .status-pill__dot { background: var(--plasma); }
+
+.status-pill--warn    { color: var(--ember);    border-color: var(--ember-dim); }
+.status-pill--warn    .status-pill__dot { background: var(--ember); }
+
+.status-pill--idle    { color: var(--bone-dim); border-color: var(--iron-3); }
+.status-pill--idle    .status-pill__dot { background: var(--bone-dim); }
+
+.status-pill--shipped { color: var(--plasma);   border-color: var(--plasma-dim); }
+.status-pill--shipped .status-pill__dot { background: var(--plasma); }

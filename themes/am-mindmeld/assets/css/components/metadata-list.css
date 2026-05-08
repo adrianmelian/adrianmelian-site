@@ -1,0 +1,18 @@
+/* themes/am-mindmeld/assets/css/components/metadata-list.css */
+.metadata-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--sp-4);
+  row-gap: var(--sp-2);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  letter-spacing: 0.08em;
+}
+.metadata-list dt {
+  color: var(--ember);
+  text-transform: uppercase;
+}
+.metadata-list dd {
+  color: var(--bone);
+  margin: 0;
+}

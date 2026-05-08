@@ -1,0 +1,23 @@
+{{- /* themes/am-mindmeld/layouts/partials/terminal-frame.html */ -}}
+{{- /* params:
+       title (string)         — left side of titlebar
+       meta (string)          — right side of titlebar (e.g., timestamp)
+       variant (full|titlebar) — full has body content; titlebar is bar only
+       inner (HTML)           — body content for full variant
+*/ -}}
+{{- $title := .title | default "" -}}
+{{- $meta := .meta | default "" -}}
+{{- $variant := .variant | default "full" -}}
+{{- $inner := .inner | default "" -}}
+<div class="term-frame term-frame--{{ $variant }}">
+  <div class="term-frame__bar">
+    <div class="term-frame__lights" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    {{ with $title }}<span class="term-frame__title">{{ . }}</span>{{ end }}
+    {{ with $meta }}<span class="term-frame__meta">{{ . }}</span>{{ end }}
+  </div>
+  {{ if eq $variant "full" }}
+  <div class="term-frame__body">{{ $inner | safeHTML }}</div>
+  {{ end }}
+</div>
