@@ -1,6 +1,61 @@
+{{- /* themes/am-mindmeld/layouts/index.html */ -}}
 {{ define "main" }}
-<main>
-  <h1>Adrian Melian</h1>
-  <p>am-mindmeld theme scaffold — Phase 1 in progress.</p>
-</main>
+{{- $p := .Params -}}
+{{- /* Resolve featured project: explicit slug → fallback to most recent in /projects/ */ -}}
+{{- $featuredSlug := $p.featured_project -}}
+{{- $featured := "" -}}
+{{- with $featuredSlug -}}
+  {{- $featured = $.Site.GetPage (printf "/projects/%s" .) -}}
+{{- end -}}
+{{- if not $featured -}}
+  {{- range first 1 (where $.Site.RegularPages "Section" "projects").ByDate.Reverse -}}
+    {{- $featured = . -}}
+  {{- end -}}
+{{- end -}}
+
+<section class="hero container">
+  <div class="hero__left fade-up">
+    <div class="hero__logo">{{ partial "pixel-mark.html" (dict "size" 120 "title" "Adrian Melian") }}</div>
+    <h1 class="hero__name">
+      ADRIAN <span class="hero__name-accent">MELIAN</span>
+    </h1>
+    {{ with $p.tagline }}<p class="hero__tagline">{{ . }}</p>{{ end }}
+
+    <dl class="metadata-list hero__meta">
+      {{ with $p.location }}<dt>Location</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with $p.availability }}<dt>Status</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with $p.currently }}<dt>Currently</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with $p.recent_studios }}<dt>Recent</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
+    </dl>
+
+    <div class="hero__status">
+      {{ partial "status-pill.html" (dict "variant" "live" "label" $p.status_label "blink" $p.status_blink) }}
+    </div>
+
+    {{ with $p.quick_links }}
+    <div class="hero__links">
+      {{ range . }}
+        {{ partial "quick-link.html" . }}
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="hero__right fade-up delay-2">
+    {{ if $featured }}
+      {{ $title := printf "featured.project / %s.session" $featured.File.ContentBaseName }}
+      {{ $image := "" }}
+      {{ with $featured.Resources.GetMatch "featured*" }}
+        {{ $image = .RelPermalink }}
+      {{ end }}
+      {{ $inner := "" }}
+      {{ if $image }}
+        {{ $inner = printf `<a href="%s" class="hero__featured-link"><img src="%s" alt="%s — featured project" class="hero__featured-img" /><div class="hero__featured-meta"><div class="hero__featured-title">%s</div><p class="hero__featured-blurb">%s</p></div></a>` $featured.RelPermalink $image $featured.Title $featured.Title $featured.Description }}
+      {{ else }}
+        {{ $inner = printf `<a href="%s" class="hero__featured-link"><div class="hero__featured-meta"><div class="hero__featured-title">%s</div><p class="hero__featured-blurb">%s</p></div></a>` $featured.RelPermalink $featured.Title $featured.Description }}
+      {{ end }}
+      {{ partial "terminal-frame.html" (dict "title" $title "variant" "full" "inner" $inner) }}
+    {{ end }}
+  </div>
+</section>
 {{ end }}
