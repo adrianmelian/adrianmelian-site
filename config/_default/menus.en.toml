@@ -1,81 +1,7 @@
-[[main]]
-none = "none"
-
+# Main navigation — flat 5 items
 [[main]]
 name = "Projects"
 pageRef = "projects"
-weight = 10
-
-[[main]]
-name = "Krazy Kaiju"
-parent = "Projects"
-pageRef = "krazy_kaiju"
-weight = 10
-
-[[main]]
-name = "Call of Duty: MW3"
-parent = "Projects"
-pageRef = "mw3"
-weight = 10
-
-[[main]]
-name = "Call of Duty: Vanguard"
-parent = "Projects"
-pageRef = "vanguard"
-weight = 10
-
-[[main]]
-name = "South Park: The Fractured But Whole"
-parent = "Projects"
-pageRef = "south_park"
-weight = 10
-
-[[main]]
-name = "Costume Quest 2"
-parent = "Projects"
-pageRef = "costume_quest"
-weight = 10
-
-[[main]]
-name = "Broken Age"
-parent = "Projects"
-pageRef = "broken_age"
-weight = 10
-
-[[main]]
-name = "Happy Action Theater"
-parent = "Projects"
-pageRef = "happy_action_theatre"
-weight = 10
-
-[[main]]
-name = "Amnesia Fortnight 2012"
-parent = "Projects"
-pageRef = "amnesia_fortnight_2012"
-weight = 10
-
-[[main]]
-name = "My Alien Buddy"
-parent = "Projects"
-pageRef = "my_alien_buddy"
-weight = 10
-
-[[main]]
-name = "Massive Chalice"
-parent = "Projects"
-pageRef = "massive_chalice"
-weight = 10
-
-[[main]]
-name = "Arizona Sunshine: Contagion Z"
-parent = "Projects"
-pageRef = "arizona_sunshine"
-weight = 10
-
-[[main]]
-name = "Meta Horizon Worlds"
-parent = "Projects"
-pageRef = "horizon_worlds"
 weight = 10
 
 [[main]]
@@ -84,74 +10,35 @@ pageRef = "tools"
 weight = 20
 
 [[main]]
-name = "Rig Authoring Framework"
-parent = "Tools"
-pageRef = "rig_authoring_framework"
-weight = 20
-
-[[main]]
-name = "ML Skinning Framework"
-parent = "Tools"
-pageRef = "ml_skinning_framework"
-weight = 20
-
-[[main]]
-name = "EZ Rigging!"
-parent = "Tools"
-pageRef = "ez_rigging"
-weight = 23
-
-[[main]]
-name = "Tools Reel 2014"
-parent = "Tools"
-pageRef = "reel_2014"
-weight = 24
-
-[[main]]
-name = "Tools Reel 2011"
-parent = "Tools"
-pageRef = "reel_2011"
-weight = 25
-
-[[main]]
-name = "Demo Reel 2010"
-parent = "Tools"
-pageRef = "reel_2010"
-weight = 26
-
-[[main]]
 name = "Gallery"
 pageRef = "gallery"
-weight = 40
+weight = 30
 
 [[main]]
 name = "About"
 pageRef = "about"
-identifier = "eItN4aD3i5"
-weight = 50
+weight = 40
 
 [[main]]
 name = "Contact"
 pageRef = "contact"
-weight = 60
+weight = 50
 
-[[main]]
+# Social links — rendered as icons in the header
+[[social]]
 identifier = "linkedin"
-pre = "linkedin"
+name = "LinkedIn"
 url = "https://www.linkedin.com/in/adrian-melian-33066423"
-weight = 100
+weight = 10
 
-[[main]]
+[[social]]
 identifier = "github"
-pre = "github"
+name = "GitHub"
 url = "https://github.com/adrianmelian"
-weight = 200
+weight = 20
 
-[[main]]
+[[social]]
 identifier = "youtube"
-pre = "youtube"
+name = "YouTube"
 url = "https://www.youtube.com/@age914"
-weight = 1000
-
-[[footer]]
-none = "none"
+weight = 30
