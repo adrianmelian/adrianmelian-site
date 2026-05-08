@@ -69,4 +69,17 @@
     <a href="{{ "/projects/" | relURL }}" class="hp-more-link">More projects →</a>
   </div>
 </section>
+
+<section class="container hp-tools">
+  {{ partial "section-heading.html" (dict "number" "02" "title" "Tools" "id" "tools") }}
+  <div class="tools-rail">
+    {{ $tools := first 8 (where .Site.RegularPages "Section" "tools").ByDate.Reverse }}
+    {{ range $tools }}
+      {{ partial "tool-card-rail.html" (dict "page" .) }}
+    {{ end }}
+  </div>
+  <div class="hp-tools__more">
+    <a href="{{ "/tools/" | relURL }}" class="hp-more-link">More tools →</a>
+  </div>
+</section>
 {{ end }}

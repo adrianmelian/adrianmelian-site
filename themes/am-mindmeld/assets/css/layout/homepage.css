@@ -93,3 +93,6 @@
   text-transform: uppercase;
 }
 .hp-more-link:hover { text-decoration: underline; }
+
+.hp-tools { padding-bottom: var(--sp-7); }
+.hp-tools__more { margin-top: var(--sp-4); text-align: right; }

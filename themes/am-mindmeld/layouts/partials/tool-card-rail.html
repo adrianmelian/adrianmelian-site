@@ -1,0 +1,25 @@
+{{- /* themes/am-mindmeld/layouts/partials/tool-card-rail.html */ -}}
+{{- /* params: page (Hugo Page object) */ -}}
+{{- $p := .page -}}
+{{- $image := "" -}}
+{{- with $p.Resources.GetMatch "featured*" -}}
+  {{- $image = .RelPermalink -}}
+{{- end -}}
+<article class="card-rail">
+  <a href="{{ $p.RelPermalink }}" class="card-rail__link">
+    {{ if $image }}
+    <div class="card-rail__media">
+      <img src="{{ $image }}" alt="{{ $p.Title }}" loading="lazy" class="card-rail__img">
+    </div>
+    {{ else }}
+    <div class="card-rail__media card-rail__media--empty"></div>
+    {{ end }}
+    <div class="card-rail__body">
+      <h3 class="card-rail__title">{{ $p.Title }}</h3>
+      <div class="card-rail__meta">
+        {{ with $p.Params.role }}<span>{{ . }}</span>{{ end }}
+        {{ with $p.Params.shipped_year | default ($p.Date.Format "2006") }}<span class="card-rail__year">{{ . }}</span>{{ end }}
+      </div>
+    </div>
+  </a>
+</article>
