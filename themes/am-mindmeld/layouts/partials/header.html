@@ -1,1 +1,30 @@
-<!-- header stub -->
+{{- /* themes/am-mindmeld/layouts/partials/header.html */ -}}
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a class="site-header__logo" href="{{ "/" | relURL }}" aria-label="Adrian Melian — home">
+      {{ partial "pixel-mark.html" (dict "size" 24 "title" "Adrian Melian") }}
+      <span class="site-header__wordmark">ADRIAN MELIAN</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <ul>
+        {{ range .Site.Menus.main }}
+        {{ $active := or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}
+        <li>
+          <a href="{{ .URL | relURL }}" {{ if $active }}aria-current="page"{{ end }}>{{ .Name | upper }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    <ul class="site-header__social" aria-label="Social">
+      {{ range .Site.Menus.social }}
+      <li>
+        <a href="{{ .URL }}" rel="me noopener" target="_blank" aria-label="{{ .Name }}">
+          {{- partial (printf "icons/%s.html" .Identifier) . -}}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</header>
