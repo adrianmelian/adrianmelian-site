@@ -1,7 +1,7 @@
 {{- /* themes/am-mindmeld/layouts/shortcodes/vimeo.html */ -}}
 {{- /* args: id (required), title (optional) — mimics Hugo built-in vimeo argument shape */ -}}
 {{- $id := .Get "id" | default (.Get 0) -}}
-{{- $title := .Get "title" | default (printf "Vimeo video %s" $id) -}}
+{{- $title := .Get "title" | default (printf "Vimeo video %v" $id) -}}
 <div class="video-embed">
   <iframe
     src="https://player.vimeo.com/video/{{ $id }}?dnt=1"
