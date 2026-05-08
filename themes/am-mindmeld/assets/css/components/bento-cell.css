@@ -1,0 +1,47 @@
+/* themes/am-mindmeld/assets/css/components/bento-cell.css */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-3);
+}
+.bento-cell {
+  position: relative;
+  display: block;
+  border: 1px solid var(--iron-3);
+  background: var(--iron);
+  overflow: hidden;
+  transition: border-color var(--t-base) var(--ease-out);
+}
+.bento-cell:hover { border-color: var(--plasma); }
+.bento-cell:active { transform: scale(0.99); transition-duration: var(--t-active); }
+.bento-cell__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--t-base) var(--ease-out);
+}
+.bento-cell:hover .bento-cell__img { transform: scale(1.02); }
+.bento-cell__caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(11, 14, 16, 0.9), transparent);
+  padding: var(--sp-3);
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  color: var(--bone);
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transition: opacity var(--t-base) var(--ease-out);
+}
+.bento-cell:hover .bento-cell__caption { opacity: 1; }
+
+.bento-cell--span-1 { grid-column: span 2; }
+.bento-cell--span-2 { grid-column: span 3; }
+.bento-cell--span-3 { grid-column: span 4; }
+
+@media (max-width: 720px) {
+  .bento { grid-template-columns: repeat(2, 1fr); }
+  .bento-cell--span-1, .bento-cell--span-2, .bento-cell--span-3 { grid-column: span 1; }
+  .bento-cell--span-3 { grid-column: span 2; }
+}

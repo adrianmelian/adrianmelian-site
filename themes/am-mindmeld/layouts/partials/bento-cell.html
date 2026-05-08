@@ -1,0 +1,10 @@
+{{- /* themes/am-mindmeld/layouts/partials/bento-cell.html */ -}}
+{{- /* params: src (image URL), caption (optional), span (1|2|3 for grid-column-span), aspect (default 1) */ -}}
+{{- $src := .src -}}
+{{- $caption := .caption | default "" -}}
+{{- $span := .span | default 1 -}}
+{{- $aspect := .aspect | default 1 -}}
+<a class="bento-cell bento-cell--span-{{ $span }}" href="{{ $src }}" target="_blank" rel="noopener" style="aspect-ratio: {{ $aspect }};">
+  <img src="{{ $src }}" alt="{{ $caption }}" loading="lazy" class="bento-cell__img">
+  {{ with $caption }}<span class="bento-cell__caption">{{ . }}</span>{{ end }}
+</a>

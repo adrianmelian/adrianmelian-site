@@ -96,3 +96,6 @@
 
 .hp-tools { padding-bottom: var(--sp-7); }
 .hp-tools__more { margin-top: var(--sp-4); text-align: right; }
+
+.hp-selected { padding-bottom: var(--sp-7); }
+.hp-selected__more { margin-top: var(--sp-4); text-align: right; }

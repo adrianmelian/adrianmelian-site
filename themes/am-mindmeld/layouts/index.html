@@ -82,4 +82,16 @@
     <a href="{{ "/tools/" | relURL }}" class="hp-more-link">More tools →</a>
   </div>
 </section>
+
+<section class="container hp-selected">
+  {{ partial "section-heading.html" (dict "number" "03" "title" "Selected work" "id" "selected") }}
+  <div class="bento">
+    {{ partial "bento-cell.html" (dict "src" "/gallery/ufo.jpg" "caption" "Krazy Kaiju! · acrylic on canvas" "span" 3 "aspect" "16/10") }}
+    {{ partial "bento-cell.html" (dict "src" "/gallery/07.jpg" "caption" "Chicken Run & Coop · 3D to real world" "span" 2 "aspect" "1") }}
+    {{ partial "bento-cell.html" (dict "src" "/gallery/039.jpg" "caption" "Space Arcade · 3D to real world" "span" 1 "aspect" "1") }}
+  </div>
+  <div class="hp-selected__more">
+    <a href="{{ "/gallery/" | relURL }}" class="hp-more-link">View gallery →</a>
+  </div>
+</section>
 {{ end }}
