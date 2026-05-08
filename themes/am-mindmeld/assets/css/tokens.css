@@ -1,0 +1,76 @@
+/* themes/am-mindmeld/assets/css/tokens.css */
+:root {
+  /* ===== palette (5 core + derivatives) ===== */
+  --carbon: #0B0E10;
+  --iron:   #1C2126;
+  --iron-2: #262C33;
+  --iron-3: #353D45;
+  --bone:        #E8E0D0;
+  --bone-dim:    #8A8378;
+  --bone-faint:  #5A554D;
+  --plasma:      #7CFFB2;
+  --plasma-dim:  #4FB888;
+  --plasma-glow: rgba(124, 255, 178, 0.18);
+  --ember:       #FF7A3D;
+  --ember-dim:   #B5532A;
+  --ember-glow:  rgba(255, 122, 61, 0.22);
+
+  /* ===== typography ===== */
+  --font-display: 'VT323', 'Courier New', monospace;
+  --font-body:    'JetBrains Mono', 'Consolas', monospace;
+
+  --fs-11: 0.6875rem;  /* 11px */
+  --fs-12: 0.75rem;    /* 12px */
+  --fs-14: 0.875rem;   /* 14px */
+  --fs-15: 0.9375rem;  /* 15px — body base */
+  --fs-18: 1.125rem;   /* 18px */
+  --fs-24: 1.5rem;     /* 24px */
+  --fs-32: 2rem;       /* 32px */
+  --fs-48: 3rem;       /* 48px */
+  --fs-72: 4.5rem;     /* 72px — hero name */
+
+  --lh-tight:  0.95;
+  --lh-snug:   1.2;
+  --lh-body:   1.6;
+
+  /* ===== spacing scale ===== */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+
+  /* ===== layout ===== */
+  --container-max: 1240px;
+  --container-px:  40px;
+  --header-h:      52px;
+  --footer-h:      26px;
+
+  /* ===== motion ===== */
+  --t-instant: 0ms;
+  --t-active:  80ms;
+  --t-fast:    160ms;
+  --t-base:    200ms;
+  --t-load:    240ms;
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --container-px: 20px;
+    --fs-72: 3.25rem;  /* 52px on mobile */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-active:  1ms;
+    --t-fast:    1ms;
+    --t-base:    1ms;
+    --t-load:    1ms;
+  }
+}
