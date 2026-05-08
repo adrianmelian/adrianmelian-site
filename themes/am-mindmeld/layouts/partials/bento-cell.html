@@ -11,7 +11,7 @@
 {{- $span := .span | default 1 -}}
 {{- $aspect := .aspect | default 1 -}}
 {{- $href := .href | default ("/gallery/" | relURL) -}}
-<a class="bento-cell bento-cell--span-{{ $span }}" href="{{ $href }}" style="aspect-ratio: {{ $aspect }};">
+<a class="bento-cell bento-cell--span-{{ $span }}" href="{{ $href }}" style="aspect-ratio: {{ printf "%v" $aspect | safeCSS }};">
   <img src="{{ $src }}" alt="{{ $caption }}" loading="lazy" class="bento-cell__img">
   {{ with $caption }}<span class="bento-cell__caption">{{ . }}</span>{{ end }}
 </a>
