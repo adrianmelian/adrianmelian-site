@@ -1,0 +1,22 @@
+{{- /* themes/am-mindmeld/layouts/partials/head.html */ -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B0E10">
+
+<title>{{ if .IsHome }}{{ .Site.Title | default "Adrian Melian" }}{{ else }}{{ .Title }} · {{ .Site.Title | default "Adrian Melian" }}{{ end }}</title>
+{{ with .Description | default .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+
+{{- /* CSS bundle: concat all theme CSS files, minify, fingerprint */ -}}
+{{ $css := slice
+  (resources.Get "css/tokens.css")
+  (resources.Get "css/fonts.css")
+  (resources.Get "css/base.css")
+  | resources.Concat "css/main.css"
+  | resources.Minify
+  | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
