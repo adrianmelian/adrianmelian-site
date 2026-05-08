@@ -50,6 +50,7 @@
   color: inherit;
 }
 .hero__featured-link:hover { text-decoration: none; }
+.hero__featured-link:active { transform: scale(0.98); transition-duration: var(--t-active); }
 .hero__featured-img {
   width: 100%;
   height: auto;
@@ -93,6 +94,7 @@
   text-transform: uppercase;
 }
 .hp-more-link:hover { text-decoration: underline; }
+.hp-more-link:active { transform: scale(0.98); transition-duration: var(--t-active); }
 
 .hp-tools { padding-bottom: var(--sp-7); }
 .hp-tools__more { margin-top: var(--sp-4); text-align: right; }
