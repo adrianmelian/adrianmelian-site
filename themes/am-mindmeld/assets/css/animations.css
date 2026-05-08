@@ -1,0 +1,33 @@
+/* themes/am-mindmeld/assets/css/animations.css */
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fade-up var(--t-load) var(--ease-out) forwards;
+}
+.fade-up.delay-1 { animation-delay:  60ms; }
+.fade-up.delay-2 { animation-delay: 120ms; }
+.fade-up.delay-3 { animation-delay: 180ms; }
+.fade-up.delay-4 { animation-delay: 240ms; }
+.fade-up.delay-5 { animation-delay: 300ms; }
+
+.blink {
+  animation: blink 1s steps(2) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up, .fade-up.delay-1, .fade-up.delay-2, .fade-up.delay-3, .fade-up.delay-4, .fade-up.delay-5 {
+    opacity: 1;
+    animation: none;
+  }
+  .blink { animation: none; }
+}
