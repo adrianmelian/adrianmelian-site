@@ -27,10 +27,14 @@
       {{- $variants = $variants | append (dict "w" $w "url" $variant.RelPermalink) -}}
     {{- end -}}
   {{- end -}}
-  {{- /* Always include the original (clamped to max) as the largest source */ -}}
+  {{- /* Always compute the largest (used for src=) — but only add to srcset
+         if the loop didn't already include it. Loop adds widths < img.Width;
+         when img.Width > $max, the loop already added $max so we'd duplicate.  */ -}}
   {{- $largestW := math.Min $img.Width $max | int -}}
   {{- $largest := $img.Resize (printf "%dx q82" $largestW) -}}
-  {{- $variants = $variants | append (dict "w" $largestW "url" $largest.RelPermalink) -}}
+  {{- if le $img.Width $max -}}
+    {{- $variants = $variants | append (dict "w" $largestW "url" $largest.RelPermalink) -}}
+  {{- end -}}
 
   {{- /* Build srcset string */ -}}
   {{- $srcset := slice -}}
