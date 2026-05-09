@@ -10,9 +10,9 @@ resume    = "/adrianmelian_resume.pdf"
 portrait  = "featured.png"
 
 bio = [
-  "I'm a Technical Artist who designs the systems other artists ship through. Across 14 years at studios like Sledgehammer Games, Meta, Double Fine, and Ubisoft, I've shipped characters, rigs, and pipelines on Call of Duty, Horizon Worlds, South Park, and Broken Age — and as the work has scaled, so has my focus: from building individual tools to designing the architectures that let teams move fast without sacrificing quality.",
-  "My current focus has expanded from individual rigging tools into end-to-end pipeline architecture — watertight systems where every stage of the artist workflow talks cleanly to the next, prioritizing iteration speed and creative integrity over expensive manual handoffs. Rigging is part of that, but so are reactive authoring tools, validation layers, ML research into auto-skinning, and the connective tissue between disciplines that keeps a team in flow.",
-  "Alongside the pipeline work, I've been sharpening my gameplay-systems chops through hands-on C++ prototyping in Unreal — combat systems, ability components, and tuning workflows built from the ground up. My approach blends technical precision with artistic sensibility, and I thrive in cross-functional environments where engineering, design, and art share the same vocabulary."
+  "I'm a Technical Artist who designs the systems other artists ship through. 14 years across Sledgehammer Games, Meta, Double Fine, and Ubisoft. Characters, rigs, and pipelines on Call of Duty, Horizon Worlds, South Park, and Broken Age. The work has evolved with me: from individual tools to the architectures whole teams ship through.",
+  "Today I focus on end-to-end pipeline architecture: systems where artists move fast without losing quality between stages. Rigging is a piece of it. So are reactive authoring tools, validation that catches errors before they reach the engine, and ML research into auto-skinning. Every project shares the same outcome: shorter handoffs, fewer rebuilds, faster iteration.",
+  "In parallel, I've been deepening my gameplay-systems chops through hands-on C++ prototyping in Unreal, building combat systems, ability components, and designer-friendly tuning workflows. The pattern across all of this work: the best tools and pipelines disappear. Teams using them move faster, ship cleaner, and don't notice the architecture underneath."
 ]
 
 about_me = [
@@ -33,9 +33,9 @@ location    = "Denver, CO"
 year_range  = "Mar 2026 – Present"
 titles      = "Pipeline architecture, gameplay prototyping, ML research"
 bullets = [
-  "Designing end-to-end pipeline architecture — declarative rigging frameworks, reactive PySide6 authoring tools, validation layers, and the connective tissue between disciplines, all aimed at artist iteration speed and creative integrity",
-  "Sharpening gameplay-systems chops through hands-on C++ prototyping in Unreal Engine — combat systems, ability components, and designer-friendly tuning workflows built from the ground up",
-  "Continuing ML research into auto-skinning and rig-setup automation — exploring AI-augmented artist workflows aimed at cutting per-character cost while protecting deformation quality"
+  "Designing end-to-end pipeline architecture: declarative rigging frameworks, reactive PySide6 authoring tools, and validation that catches errors before they reach the engine",
+  "Sharpening gameplay-systems chops through hands-on C++ prototyping in Unreal, building combat systems, ability components, and designer-friendly tuning workflows",
+  "Continuing ML research into auto-skinning and rig-setup automation, exploring AI-augmented artist workflows aimed at cutting per-character cost while protecting deformation quality"
 ]
 
 [[params.experience]]
