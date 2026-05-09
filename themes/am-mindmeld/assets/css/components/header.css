@@ -69,7 +69,76 @@
 .site-header__social a:hover { color: var(--plasma); }
 .site-header__social a:active { transform: scale(0.94); transition-duration: var(--t-active); }
 
+/* hamburger toggle — hidden on desktop, shown on mobile */
+.site-header__menu-toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  color: var(--bone-dim);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: color var(--t-base) var(--ease-out), border-color var(--t-base) var(--ease-out);
+}
+.site-header__menu-toggle:hover { color: var(--plasma); }
+.site-header__menu-toggle:active { transform: scale(0.94); transition-duration: var(--t-active); }
+.site-header__menu-toggle[aria-expanded="true"] {
+  color: var(--plasma);
+  border-color: var(--plasma-dim);
+}
+.site-header__hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18px;
+  height: 14px;
+}
+.site-header__hamburger > span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+}
+
 @media (max-width: 720px) {
-  .site-header__nav { display: none; }
-  .site-header__inner { grid-template-columns: auto 1fr; }
+  /* layout: logo / spacer / social / hamburger toggle */
+  .site-header__inner { grid-template-columns: auto 1fr auto auto; gap: var(--sp-3); }
+  .site-header__menu-toggle { display: inline-flex; }
+
+  /* nav becomes a full-width dropdown below the header */
+  .site-header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--carbon);
+    border-top: 1px solid var(--iron-3);
+    border-bottom: 1px solid var(--plasma-dim);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    z-index: 99;
+    padding: var(--sp-3) 0;
+  }
+  .site-header__nav--open { display: block; }
+
+  /* vertical menu inside the dropdown */
+  .site-header__nav ul {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .site-header__nav li { width: 100%; }
+  .site-header__nav a {
+    display: block;
+    padding: var(--sp-3) var(--container-px);
+    border-bottom: none;
+    font-size: var(--fs-14);
+  }
+  .site-header__nav a[aria-current="page"] {
+    border-bottom-color: transparent;
+    border-left: 2px solid var(--plasma);
+    padding-left: calc(var(--container-px) - 2px);
+  }
 }

@@ -6,7 +6,7 @@
       <span class="site-header__wordmark">ADRIAN MELIAN</span>
     </a>
 
-    <nav class="site-header__nav" aria-label="Primary">
+    <nav id="primary-nav" class="site-header__nav" aria-label="Primary">
       <ul>
         {{ range .Site.Menus.main }}
         {{ $active := or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}
@@ -26,5 +26,39 @@
       </li>
       {{ end }}
     </ul>
+
+    <button class="site-header__menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Toggle navigation menu">
+      <span class="site-header__hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
   </div>
 </header>
+<script>
+  (function () {
+    var toggle = document.querySelector('.site-header__menu-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!toggle || !nav) return;
+    function setOpen(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('site-header__nav--open', open);
+    }
+    toggle.addEventListener('click', function () {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    nav.addEventListener('click', function (e) {
+      var t = e.target;
+      while (t && t !== nav) {
+        if (t.tagName === 'A') { setOpen(false); break; }
+        t = t.parentNode;
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+  })();
+</script>
