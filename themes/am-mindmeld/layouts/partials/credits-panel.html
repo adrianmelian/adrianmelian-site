@@ -1,0 +1,18 @@
+{{- /* themes/am-mindmeld/layouts/partials/credits-panel.html */ -}}
+{{- /* Receives a Hugo Page (the current detail page) as the dot context.
+       Reads .Params.role, .Params.studio, .Params.engine, .Params.platform,
+       .Params.team_size. Hides the panel entirely if all are missing. */ -}}
+{{- $p := .Params -}}
+{{- $hasAny := or $p.role (or $p.studio (or $p.engine (or $p.platform $p.team_size))) -}}
+{{- if $hasAny -}}
+<aside class="credits-panel" aria-labelledby="credits-heading">
+  {{ partial "section-heading.html" (dict "number" "" "title" "Credits" "id" "credits-heading") }}
+  <dl class="metadata-list credits-panel__list">
+    {{ with $p.role }}<dt>Role</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with $p.studio }}<dt>Studio</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with $p.engine }}<dt>Engine</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with $p.platform }}<dt>Platform</dt><dd>{{ . }}</dd>{{ end }}
+    {{ with $p.team_size }}<dt>Team</dt><dd>{{ . }}</dd>{{ end }}
+  </dl>
+</aside>
+{{- end -}}
