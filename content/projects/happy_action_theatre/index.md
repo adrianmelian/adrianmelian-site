@@ -23,10 +23,3 @@ Showing off Happy Action Theater at Giant Bomb!
 
 25 Years of Double Fine
 {{< youtubeLite id="08QPY7bn-Z0" label="25 Years of Double Fine" >}}
-
-Team NOVA!
-{{< gallery >}}
-  <img src="/gallery/045.jpg" class="grid-w33" />
-  <img src="/gallery/046.jpg" class="grid-w33" />
-  <img src="/gallery/047.jpg" class="grid-w33" />
-{{< /gallery >}}
