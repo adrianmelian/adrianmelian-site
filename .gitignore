@@ -1,1 +1,13 @@
 .worktrees/
+
+# Hugo build output — rebuilt fresh by GitHub Actions on every push,
+# no reason to track in source control
+public/
+
+# Hugo image-processing cache — auto-regenerated whenever an asset is touched
+resources/
+
+# OS / editor cruft
+.hugo_build.lock
+.DS_Store
+Thumbs.db
