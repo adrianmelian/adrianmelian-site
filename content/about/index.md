@@ -7,7 +7,7 @@ phone     = "914.874.3390"
 location  = "Denver, CO / California (Relocation Ready)"
 email     = "adrianmelian123@gmail.com"
 resume    = "/adrianmelian_resume.pdf"
-portrait  = "featured.jpg"
+portrait  = "featured.png"
 
 bio = [
   "I'm a Technical Artist with a passion for building robust pipelines, intuitive tools, and high-quality animation rigs for characters, creatures, and props. With experience across industry-leading studios like Sledgehammer Games, Double Fine, Meta, and Ubisoft, I've contributed to AAA productions across a range of genres and platforms.",
@@ -30,7 +30,7 @@ type        = "work"
 header      = "Camouflaj @ Meta"
 role        = "Expert Technical Artist"
 location    = "Remote"
-year_range  = "Sep 2025 – Present"
+year_range  = "Sep 2025 – Mar 2026"
 titles      = "Unannounced Title (2026)"
 bullets = [
   "Designed and implemented advanced Maya tools, studio preference systems, and asset stubbing frameworks to streamline setup, prototyping, and daily artist workflows",

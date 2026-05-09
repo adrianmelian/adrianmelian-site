@@ -6,8 +6,7 @@ description = "Adrian Melian — Senior Technical Artist. Rigging, pipeline, and
 tagline = "Senior Technical Artist · Rigging & Pipeline · 14 years shipping AAA"
 location = "Denver, CO"
 availability = "Open to relocation · contract or full-time"
-currently = "Camouflaj @ Meta"
-recent_studios = ["Sledgehammer Games", "Meta", "Nomadic VR"]
+studios = ["Sledgehammer Games", "Double Fine", "Meta", "Nomadic VR"]
 featured_project = "krazy_kaiju"
 
 [[params.quick_links]]

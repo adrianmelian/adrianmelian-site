@@ -24,8 +24,7 @@
     <dl class="metadata-list hero__meta">
       {{ with $p.location }}<dt>Location</dt><dd>{{ . }}</dd>{{ end }}
       {{ with $p.availability }}<dt>Status</dt><dd>{{ . }}</dd>{{ end }}
-      {{ with $p.currently }}<dt>Currently</dt><dd>{{ . }}</dd>{{ end }}
-      {{ with $p.recent_studios }}<dt>Recent</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
+      {{ with $p.studios }}<dt>Studios</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
     </dl>
 
     {{ with $p.status_label }}
