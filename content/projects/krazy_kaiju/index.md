@@ -2,6 +2,14 @@
 title = "Krazy Kaiju! (Unreal)"
 description = "A VR game made in Unreal where a lonely farmer protects his farm from an alien invasion!"
 date = "2020-12-01"
+
+[params]
+role = "Solo developer"
+studio = "Personal Project"
+shipped_year = "In progress"
+status = "in_development"
+engine = "Unreal Engine"
+platform = "VR"
 +++
 
 Krazy Kaiju! is a personal VR game project I’ve been building in my free time using **Unreal Engine**. The vibe is playful, weird, and totally goofy: a lonely farmer defending his farm from an alien invasion.

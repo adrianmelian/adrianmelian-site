@@ -27,6 +27,24 @@ design system from AM_MayaTools. Not intended for redistribution.
 - **Phase 4:** about + contact + 404 + accessibility polish
 - **Phase 5:** cleanup, Blowfish removal, content backfill
 
+## Project / tool front-matter
+
+Each project (`content/projects/*/index.md`) or tool (`content/tools/*/index.md`)
+supports these optional `[params]` fields. Templates degrade gracefully when
+any field is missing.
+
+| Field          | Used in                              | Example                       |
+|----------------|--------------------------------------|-------------------------------|
+| `role`         | Detail metadata strip + credits       | `"Lead Technical Artist"`     |
+| `studio`       | Detail metadata strip + credits       | `"Sledgehammer Games"`        |
+| `shipped_year` | Detail metadata strip (falls back to `.Date` year) | `"2023"`         |
+| `status`       | Detail metadata strip status pill     | `"shipped"` or `"in_development"` |
+| `engine`       | Credits panel                        | `"IW Engine"`                 |
+| `platform`     | Credits panel                        | `"PC, PS5, Xbox Series"`      |
+| `team_size`    | Credits panel                        | `"AAA scale"`                 |
+
+See `content/projects/krazy_kaiju/index.md` for a populated reference example.
+
 ## Known gaps (to be addressed in later phases)
 
 - **Project page templates** — non-homepage pages render via the minimal `single.html` / `list.html` fallback templates. Final detail-page treatment (terminal frame hero, metadata strip, image grid, credits panel) lands in Phase 3.
