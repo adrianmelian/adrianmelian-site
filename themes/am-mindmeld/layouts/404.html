@@ -1,0 +1,20 @@
+{{- /* themes/am-mindmeld/layouts/404.html */ -}}
+{{ define "main" }}
+<main class="error container">
+  <div class="error__frame">
+    <div class="term-frame term-frame--full">
+      <div class="term-frame__bar">
+        <div class="term-frame__lights" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="term-frame__title">error.404</span>
+      </div>
+      <div class="term-frame__body error__body">
+        <h1 class="error__title">SIGNAL LOST</h1>
+        <p class="error__message">The page you're looking for has drifted out of range.</p>
+        <a class="quick-link error__home" href="{{ "/" | relURL }}">Return home</a>
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}
