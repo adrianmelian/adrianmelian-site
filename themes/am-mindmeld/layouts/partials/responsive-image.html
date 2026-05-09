@@ -1,0 +1,61 @@
+{{- /* themes/am-mindmeld/layouts/partials/responsive-image.html */ -}}
+{{- /* Renders a responsive <picture> with srcset for an asset-pipeline image.
+       params (dict):
+         path     — asset path relative to assets/ (e.g., "gallery/ufo.jpg") — required
+         alt      — alt text — required (pass "" for decorative)
+         class    — class attribute on <img> — optional
+         sizes    — value for the sizes attribute — optional, defaults to "(min-width: 1200px) 33vw, (min-width: 720px) 50vw, 100vw"
+         loading  — "lazy" or "eager" — optional, default "lazy"
+         max      — max width for the largest variant in pixels — optional, default 1600
+
+       Falls back to a plain <img> with the original path if the asset cannot be resolved. */ -}}
+{{- $path := .path -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $sizes := .sizes | default "(min-width: 1200px) 33vw, (min-width: 720px) 50vw, 100vw" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $max := .max | default 1600 -}}
+
+{{- $img := resources.Get $path -}}
+{{- if $img -}}
+  {{- /* Build srcset entries — only generate widths smaller than the original */ -}}
+  {{- $widths := slice 480 800 1200 1600 -}}
+  {{- $variants := slice -}}
+  {{- range $w := $widths -}}
+    {{- if and (le $w $max) (lt $w $img.Width) -}}
+      {{- $variant := $img.Resize (printf "%dx q82" $w) -}}
+      {{- $variants = $variants | append (dict "w" $w "url" $variant.RelPermalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* Always include the original (clamped to max) as the largest source */ -}}
+  {{- $largestW := math.Min $img.Width $max | int -}}
+  {{- $largest := $img.Resize (printf "%dx q82" $largestW) -}}
+  {{- $variants = $variants | append (dict "w" $largestW "url" $largest.RelPermalink) -}}
+
+  {{- /* Build srcset string */ -}}
+  {{- $srcset := slice -}}
+  {{- range $variants -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" .url .w) -}}
+  {{- end -}}
+
+  {{- /* LQIP: 24-pixel-wide blur thumbnail as base64 */ -}}
+  {{- $lqip := $img.Resize "24x q40 webp" -}}
+  {{- $lqipData := printf "data:image/webp;base64,%s" ($lqip.Content | base64Encode) -}}
+  {{- $lqipStyle := printf "background-image: url(%s); background-size: cover; background-position: center;" $lqipData | safeCSS -}}
+
+  <img
+    src="{{ $largest.RelPermalink }}"
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="{{ $sizes }}"
+    width="{{ $largest.Width }}"
+    height="{{ $largest.Height }}"
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    decoding="async"
+    {{ with $class }}class="{{ . }}"{{ end }}
+    style="{{ $lqipStyle }}"
+  >
+{{- else -}}
+  {{- /* Fallback: asset not found, render plain <img> with the path as-is */ -}}
+  <img src="{{ $path }}" alt="{{ $alt }}" loading="{{ $loading }}"{{ with $class }} class="{{ . }}"{{ end }}>
+{{- end -}}
