@@ -2,6 +2,12 @@
 title = "Rig Authoring Framework"
 description = "A Modular Non-linear Auto Rigging and Animation System"
 date = "2025-04-15"
+
+[params]
+role = "Technical Artist"
+studio = "Personal"
+shipped_year = "2025"
+status = "in_development"
 +++
 {{< lead >}}
 "Rigging is the Art of Articulation. Not the Art of Naming Attributes or Setting Driven Keys"  --Somebody, somewhere

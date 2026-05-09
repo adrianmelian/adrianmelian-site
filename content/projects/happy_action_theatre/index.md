@@ -1,6 +1,12 @@
 +++
 title = "Happy Action Theater"
 date = "2012-02-01"
+
+[params]
+role = "Technical Artist"
+studio = "Double Fine Productions"
+shipped_year = "2012"
+status = "shipped"
 +++
 
 **Happy Action Theater | Double Fine Productions | Technical Artist | 2012**

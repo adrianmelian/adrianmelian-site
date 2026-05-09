@@ -1,6 +1,12 @@
 +++
 title = "Meta Horizon Worlds"
 date = "2021-12-09"
+
+[params]
+role = "Technical Artist"
+studio = "Meta"
+shipped_year = "2021"
+status = "shipped"
 +++
 
 **Meta Horizon Worlds | Meta | Technical Artist | 2021**

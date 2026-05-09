@@ -1,6 +1,12 @@
 +++
 title = "Massive Chalice"
 date = "2015-06-01"
+
+[params]
+role = "Technical Artist"
+studio = "Double Fine Productions"
+shipped_year = "2015"
+status = "shipped"
 +++
 
 **Massive Chalice | Double Fine Productions | Technical Artist | 2015**

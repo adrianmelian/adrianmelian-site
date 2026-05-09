@@ -1,6 +1,12 @@
 +++
 title = "South Park - Fractured But Whole"
 date = "2017-10-17"
+
+[params]
+role = "Senior Technical Artist"
+studio = "Ubisoft"
+shipped_year = "2017"
+status = "shipped"
 +++
 
 **South Park - Fractured But Whole | Ubisoft | Senior Technical Artist | 2017**

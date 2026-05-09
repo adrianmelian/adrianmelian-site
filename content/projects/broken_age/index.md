@@ -1,6 +1,12 @@
 +++
 title = "Broken Age"
 date = "2016-01-22"
+
+[params]
+role = "Technical Artist"
+studio = "Double Fine Productions"
+shipped_year = "2016"
+status = "shipped"
 +++
 
 **Broken Age | Double Fine Productions | Technical Artist | 2016**

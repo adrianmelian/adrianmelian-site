@@ -2,6 +2,12 @@
 title = "Call of Duty - Vanguard"
 description = "Senior Technical Artist on Call of Duty: Vanguard video game."
 date = "2022-08-19"
+
+[params]
+role = "Technical Artist"
+studio = "Sledgehammer Games"
+shipped_year = "2021"
+status = "shipped"
 +++
 **Call of Duty - Vanguard | Sledgehammer Games | Technical Artist | 2021**
 

@@ -1,6 +1,12 @@
 +++
 title = "Amnesia Fortnight - 2012"
 date = "2012-02-01"
+
+[params]
+role = "Technical Artist"
+studio = "Double Fine Productions"
+shipped_year = "2012"
+status = "shipped"
 +++
 **Amnesia Fortnight (2012) | Double Fine Productions**
 

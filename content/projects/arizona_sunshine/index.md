@@ -1,6 +1,12 @@
 +++
 title = "Arizona Sunshine: Contagion Z"
 date = "2019-02-01"
+
+[params]
+role = "Technical Artist"
+studio = "Nomadic VR"
+shipped_year = "2019"
+status = "shipped"
 +++
 
 **Arizona Sunshine: Contagion Z (2019) | Nomadic VR**

@@ -1,6 +1,12 @@
 +++
 title = "EZ Rigging"
 date = "2017-08-01"
+
+[params]
+role = "Technical Artist"
+studio = "Personal"
+shipped_year = "2017"
+status = "shipped"
 +++
 *Note: This page showcases an earlier version of the system. A newer iteration of this tool is also featured here: [Rig Authoring Framework]({{< ref "rig_authoring_framework/index.md" >}}).*
 

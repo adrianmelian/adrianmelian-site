@@ -1,6 +1,12 @@
 +++
 title = "My Alien Buddy. DLC for Playroom (PS4)"
 date = "2013-12-24"
+
+[params]
+role = "Technical Artist"
+studio = "Double Fine Productions"
+shipped_year = "2013"
+status = "shipped"
 +++
 
 **My Alien Buddy (DLC for Playroom PS4) | Double Fine Productions | Technical Artist | 2013**

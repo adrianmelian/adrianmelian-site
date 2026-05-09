@@ -2,6 +2,12 @@
 title = "ML Skinning Framework"
 description = "A Modular Non-linear Auto Rigging and Animation System"
 date = "2025-07-01"
+
+[params]
+role = "Technical Artist"
+studio = "Independent research"
+shipped_year = "2025"
+status = "in_development"
 +++
 
 Welcome to the **ML Skinning Framework**: Where skinning gets a fresh twist!

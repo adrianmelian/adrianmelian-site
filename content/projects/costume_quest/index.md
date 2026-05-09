@@ -2,6 +2,12 @@
 title = "Costume Quest 2"
 description = "Senior Technical Artist on Costume Quest 2 video game."
 date = "2014-09-08"
+
+[params]
+role = "Technical Artist"
+studio = "Double Fine Productions"
+shipped_year = "2014"
+status = "shipped"
 +++
 
 **Costume Quest 2 | Double Fine Productions | Technical Artist | 2014**

@@ -2,6 +2,12 @@
 title = "Call of Duty - MW3"
 description = "Lead Technical Artist on Call of Duty MW3 video game."
 date = "2023-08-17"
+
+[params]
+role = "Lead Technical Artist"
+studio = "Sledgehammer Games"
+shipped_year = "2023"
+status = "shipped"
 +++
 
 **Call of Duty - MW3 | Sledgehammer Games | Lead Technical Artist | 2023**
