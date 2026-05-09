@@ -1,10 +1,32 @@
 {{- /* themes/am-mindmeld/layouts/shortcodes/figure.html */ -}}
-{{- /* args: src (required), caption (optional), class (optional, ignored — Phase 2 replaces) */ -}}
+{{- /* args:
+         src     — asset path ("gallery/01.jpg") OR raw URL ("/gallery/01.jpg") — required
+         caption — optional
+         alt     — optional, defaults to caption
+         class   — optional class on the wrapping figure (Phase 5 may use)
+*/ -}}
 {{- $src := .Get "src" -}}
 {{- $caption := .Get "caption" -}}
-<figure style="margin: 0; border: 1px solid var(--iron-3); background: var(--iron);">
-  <img src="{{ $src }}" alt="{{ $caption | default "" }}" loading="lazy" style="display: block; width: 100%; height: auto;">
-  {{ with $caption }}
-  <figcaption style="padding: 8px 12px; font-family: var(--font-body); font-size: var(--fs-11); color: var(--bone-dim); letter-spacing: 0.04em;">{{ . }}</figcaption>
-  {{ end }}
+{{- $alt := (.Get "alt") | default $caption | default "" -}}
+
+{{- /* Detect raw URL (starts with "/" or "http") vs. asset path */ -}}
+{{- $isRawURL := or (hasPrefix $src "/") (hasPrefix $src "http") -}}
+{{- $assetPath := $src -}}
+{{- if $isRawURL -}}
+  {{- /* If it's a raw URL like "/gallery/01.jpg", strip the leading slash so resources.Get can find it under assets/ */ -}}
+  {{- $stripped := strings.TrimPrefix "/" $src -}}
+  {{- $maybeAsset := resources.Get $stripped -}}
+  {{- if $maybeAsset -}}
+    {{- $assetPath = $stripped -}}
+    {{- $isRawURL = false -}}
+  {{- end -}}
+{{- end -}}
+
+<figure class="figure-shim">
+  {{- if $isRawURL -}}
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+  {{- else -}}
+    {{ partial "responsive-image.html" (dict "path" $assetPath "alt" $alt) }}
+  {{- end -}}
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
 </figure>
