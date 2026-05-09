@@ -1,0 +1,29 @@
+{{- /* themes/am-mindmeld/layouts/partials/prev-next-pager.html */ -}}
+{{- /* Receives a Hugo Page (the current detail page) as the dot context. */ -}}
+{{- $prev := .PrevInSection -}}
+{{- $next := .NextInSection -}}
+{{- if or $prev $next -}}
+<nav class="prev-next-pager" aria-label="Within this section">
+  <div class="prev-next-pager__inner container">
+    {{- if $prev -}}
+    <a class="prev-next-pager__link prev-next-pager__link--prev" href="{{ $prev.RelPermalink }}" rel="prev">
+      <span class="prev-next-pager__arrow" aria-hidden="true">←</span>
+      <span class="prev-next-pager__direction">Previous</span>
+      <span class="prev-next-pager__title">{{ $prev.Title }}</span>
+    </a>
+    {{- else -}}
+    <span class="prev-next-pager__placeholder" aria-hidden="true"></span>
+    {{- end -}}
+
+    {{- if $next -}}
+    <a class="prev-next-pager__link prev-next-pager__link--next" href="{{ $next.RelPermalink }}" rel="next">
+      <span class="prev-next-pager__direction">Next</span>
+      <span class="prev-next-pager__title">{{ $next.Title }}</span>
+      <span class="prev-next-pager__arrow" aria-hidden="true">→</span>
+    </a>
+    {{- else -}}
+    <span class="prev-next-pager__placeholder" aria-hidden="true"></span>
+    {{- end -}}
+  </div>
+</nav>
+{{- end -}}
