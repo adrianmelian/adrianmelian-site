@@ -1,0 +1,183 @@
+/* themes/am-mindmeld/assets/css/layout/about.css */
+
+.about {
+  padding: var(--sp-7) 0 var(--sp-8);
+}
+
+/* ===== top section: portrait + bio ===== */
+.about__top {
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  gap: var(--sp-7);
+  margin-bottom: var(--sp-8);
+}
+
+.about__portrait-wrap {
+  border: 1px dashed var(--iron-3);
+  padding: var(--sp-3);
+}
+.about__portrait {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--iron-3);
+  filter: contrast(1.05) saturate(0.95);
+  mix-blend-mode: normal;
+}
+.about__contact-line {
+  margin-top: var(--sp-4);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  color: var(--bone-dim);
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+}
+.about__contact-line a { color: var(--plasma); }
+.about__contact-line a:hover { text-decoration: underline; }
+
+.about__bio { font-family: var(--font-body); }
+.about__bio p {
+  max-width: 65ch;
+  font-size: var(--fs-15);
+  line-height: var(--lh-body);
+  color: var(--bone);
+  margin-bottom: var(--sp-4);
+}
+.about__bio p:last-child { margin-bottom: 0; }
+
+/* ===== about-me sections (Communication, Leadership) ===== */
+.about__me {
+  margin-bottom: var(--sp-8);
+}
+.about__me-item {
+  margin-bottom: var(--sp-5);
+  max-width: 65ch;
+}
+.about__me-heading {
+  font-family: var(--font-display);
+  font-size: var(--fs-18);
+  color: var(--ember);
+  letter-spacing: 0.08em;
+  margin-bottom: var(--sp-2);
+}
+.about__me-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-14);
+  line-height: var(--lh-body);
+  color: var(--bone-dim);
+}
+
+/* ===== skills 3-column ===== */
+.about__skills {
+  margin-bottom: var(--sp-8);
+}
+.about__skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+.about__skills-group {}
+.about__skills-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: var(--sp-2);
+}
+.about__skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about__skills-list li {
+  font-family: var(--font-body);
+  font-size: var(--fs-14);
+  color: var(--bone);
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--iron-3);
+}
+.about__skills-list li:last-child { border-bottom: none; }
+
+/* ===== experience timeline ===== */
+.about__experience {}
+.about__experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about__exp-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--sp-5);
+  padding: var(--sp-5) 0;
+  border-bottom: 1px dashed var(--iron-3);
+}
+.about__exp-item:last-child { border-bottom: none; }
+
+.about__exp-year {
+  font-family: var(--font-display);
+  font-size: var(--fs-18);
+  color: var(--ember);
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.about__exp-body {}
+.about__exp-header {
+  font-family: var(--font-display);
+  font-size: var(--fs-24);
+  color: var(--bone);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-bottom: var(--sp-2);
+}
+.about__exp-meta {
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  color: var(--bone-dim);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--sp-2);
+}
+.about__exp-meta .role { color: var(--plasma); }
+.about__exp-meta .sep { color: var(--bone-faint); margin: 0 var(--sp-2); }
+.about__exp-titles {
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  color: var(--bone-dim);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--sp-3);
+  font-style: italic;
+}
+.about__exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about__exp-bullets li {
+  font-family: var(--font-body);
+  font-size: var(--fs-14);
+  color: var(--bone-dim);
+  line-height: var(--lh-body);
+  padding-left: var(--sp-4);
+  margin-bottom: var(--sp-2);
+  position: relative;
+}
+.about__exp-bullets li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--ember);
+  font-family: var(--font-display);
+}
+
+@media (max-width: 900px) {
+  .about__top { grid-template-columns: 1fr; }
+  .about__skills-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .about__skills-grid { grid-template-columns: 1fr; }
+  .about__exp-item { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .about__exp-header { font-size: var(--fs-18); }
+}
