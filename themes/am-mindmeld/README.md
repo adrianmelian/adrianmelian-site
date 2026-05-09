@@ -47,4 +47,4 @@ See `content/projects/krazy_kaiju/index.md` for a populated reference example.
 
 ## Known gaps (to be addressed in later phases)
 
-- **About / contact templates** — render via the minimal `single.html` fallback. Phase 4 builds the proper templates + an a11y audit.
+- *(none — all primary templates are in place. Phase 5 handles cleanup: Blowfish submodule removal, redundant `static/gallery/` files now that the image pipeline serves the gallery, optional content backfill on remaining project/tool pages, and a final Lighthouse pass.)*
