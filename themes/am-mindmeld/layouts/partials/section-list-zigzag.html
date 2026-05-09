@@ -9,6 +9,9 @@
 
 <div class="project-list container">
 
+  {{- /* Visually-hidden h1 for screen readers — the terminal-frame titlebar is decorative */ -}}
+  <h1 class="visually-hidden">{{ .Title }}</h1>
+
   {{- /* Page hero: titlebar-only terminal frame */ -}}
   {{ partial "terminal-frame.html" (dict "title" $titleBar "variant" "titlebar") }}
 
