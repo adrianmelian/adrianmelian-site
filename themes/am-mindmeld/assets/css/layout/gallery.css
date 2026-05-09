@@ -1,0 +1,76 @@
+/* themes/am-mindmeld/assets/css/layout/gallery.css */
+
+/* ===== page wrapper ===== */
+.gallery {
+  padding: var(--sp-7) 0 var(--sp-8);
+}
+.gallery__intro {
+  max-width: 65ch;
+  margin-bottom: var(--sp-7);
+  font-family: var(--font-body);
+  font-size: var(--fs-15);
+  color: var(--bone-dim);
+  line-height: var(--lh-body);
+}
+
+/* ===== bento section ===== */
+.gallery__bento-section { margin-bottom: var(--sp-7); }
+
+.gallery__bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-3);
+}
+
+/* ===== divider ===== */
+.gallery__divider {
+  border: none;
+  border-top: 1px dashed var(--iron-3);
+  margin: var(--sp-7) 0;
+}
+
+/* ===== masonry section ===== */
+.gallery__masonry-section {}
+
+.gallery__masonry-heading {
+  margin-bottom: var(--sp-5);
+}
+
+.gallery__masonry {
+  column-count: 2;
+  column-gap: var(--sp-3);
+}
+@media (min-width: 720px)  { .gallery__masonry { column-count: 3; } }
+@media (min-width: 1100px) { .gallery__masonry { column-count: 4; } }
+@media (min-width: 1400px) { .gallery__masonry { column-count: 5; } }
+
+.gallery__masonry-item {
+  break-inside: avoid;
+  margin-bottom: var(--sp-3);
+  border: 1px solid var(--iron-3);
+  background: var(--iron);
+  cursor: zoom-in;
+  display: block;
+  transition: border-color var(--t-base) var(--ease-out), transform var(--t-base) var(--ease-out);
+}
+.gallery__masonry-item:hover {
+  border-color: var(--plasma);
+}
+.gallery__masonry-item:active {
+  transform: scale(0.99);
+  transition-duration: var(--t-active);
+}
+.gallery__masonry-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: var(--iron);
+}
+.gallery__masonry-caption {
+  padding: 6px var(--sp-3) var(--sp-3);
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  color: var(--bone-dim);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
