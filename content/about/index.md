@@ -10,8 +10,8 @@ resume    = "/adrianmelian_resume.pdf"
 portrait  = "featured.png"
 
 bio = [
-  "I'm a Technical Artist who designs the systems other artists ship through. 14 years across Sledgehammer Games, Meta, Double Fine, and Ubisoft. Characters, rigs, and pipelines on Call of Duty, Horizon Worlds, South Park, and Broken Age. The work has evolved with me: from individual tools to the architectures whole teams ship through.",
-  "Today I focus on end-to-end pipeline architecture: systems where artists move fast without losing quality between stages. Rigging is a piece of it. So are reactive authoring tools, validation that catches errors before they reach the engine, and ML research into auto-skinning. Every project shares the same outcome: shorter handoffs, fewer rebuilds, faster iteration.",
+  "I'm a Technical Artist who designs the systems other artists ship through. 14 years across Sledgehammer Games, Meta, Double Fine, and Ubisoft. Worked on games such as Call of Duty, Horizon Worlds, South Park, and Broken Age.",
+  "The work has evolved with me: from individual tools to the architectures whole teams ship through. Today I focus on end-to-end pipeline architecture: systems where artists move fast without losing quality. From rigging systems to reactive authoring tools, validation that catches errors before they reach the engine, and ML research into automation. Every project shares the same outcome: shorter handoffs, fewer rebuilds, faster iteration.",
   "In parallel, I've been deepening my gameplay-systems chops through hands-on C++ prototyping in Unreal, building combat systems, ability components, and designer-friendly tuning workflows. The pattern across all of this work: the best tools and pipelines disappear. Teams using them move faster, ship cleaner, and don't notice the architecture underneath."
 ]
 
