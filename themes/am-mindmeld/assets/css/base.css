@@ -115,3 +115,16 @@ hr { border: none; border-top: 1px dashed var(--iron-3); margin: var(--sp-6) 0; 
 .fallback-page { padding: var(--sp-7) 0; }
 .fallback-page__list { margin-top: var(--sp-5); }
 .fallback-page__list li { margin-bottom: var(--sp-2); }
+
+/* a11y: visually hide while staying available to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

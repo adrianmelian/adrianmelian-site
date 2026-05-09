@@ -1,0 +1,45 @@
+{{- /* themes/am-mindmeld/layouts/gallery/single.html */ -}}
+{{ define "main" }}
+<article class="gallery container">
+  <h1 class="visually-hidden">{{ .Title }}</h1>
+
+  {{ with .Content }}
+  <div class="gallery__intro">{{ . }}</div>
+  {{ end }}
+
+  {{ with .Params.bento }}
+  <section class="gallery__bento-section" aria-labelledby="bento-heading">
+    {{ partial "section-heading.html" (dict "number" "01" "title" "Selected" "id" "bento-heading") }}
+    <div class="gallery__bento" data-lightbox-group="bento">
+      {{ range . }}
+      {{ partial "bento-cell.html" (dict
+          "path" .src
+          "caption" (.caption | default "")
+          "span" (.span | default 1)
+          "aspect" (.aspect | default 1)
+          "href" "#")
+      }}
+      {{ end }}
+    </div>
+  </section>
+
+  <hr class="gallery__divider">
+  {{ end }}
+
+  {{ with .Params.masonry }}
+  <section class="gallery__masonry-section" aria-labelledby="masonry-heading">
+    {{ partial "section-heading.html" (dict "number" "02" "title" "Archive" "id" "masonry-heading") }}
+    <div class="gallery__masonry" data-lightbox-group="masonry">
+      {{ range . }}
+      <a href="#" class="gallery__masonry-item" data-src="{{ (resources.Get .src).RelPermalink | default .src }}" data-caption="{{ .caption | default "" }}">
+        {{ partial "responsive-image.html" (dict "path" .src "alt" (.caption | default "")) }}
+        {{ with .caption }}<div class="gallery__masonry-caption">{{ . }}</div>{{ end }}
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</article>
+
+{{ partial "lightbox.html" . }}
+{{ end }}
