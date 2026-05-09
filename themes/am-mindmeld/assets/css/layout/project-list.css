@@ -1,0 +1,47 @@
+/* themes/am-mindmeld/assets/css/layout/project-list.css */
+
+.project-list {
+  padding: var(--sp-7) 0 var(--sp-8);
+}
+
+.project-list .term-frame {
+  margin-bottom: var(--sp-6);
+}
+
+.project-list__intro {
+  max-width: 65ch;
+  margin-bottom: var(--sp-7);
+  font-family: var(--font-body);
+  font-size: var(--fs-15);
+  color: var(--bone-dim);
+  line-height: var(--lh-body);
+}
+
+.project-list__year {
+  margin-bottom: var(--sp-8);
+}
+
+.project-list__year-heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+}
+.project-list__year-num {
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  color: var(--ember);
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+.project-list__year-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--iron-3), transparent);
+  margin-bottom: 6px;
+}
+
+@media (max-width: 720px) {
+  .project-list__year-num { font-size: var(--fs-24); }
+}
