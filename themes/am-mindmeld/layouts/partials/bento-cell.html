@@ -1,12 +1,5 @@
 {{- /* themes/am-mindmeld/layouts/partials/bento-cell.html */ -}}
-{{- /* params:
-         path    — asset path ("gallery/ufo.jpg") — preferred
-         src     — legacy raw URL ("/gallery/ufo.jpg") — supported for backward compat
-         caption — visible on hover (string)
-         span    — grid column span: 1, 2, or 3
-         aspect  — CSS aspect-ratio value (default 1)
-         href    — link target (default: gallery list page)
-*/ -}}
+{{- /* params: path, src, caption, span, aspect, href */ -}}
 {{- $path := .path -}}
 {{- $src := .src -}}
 {{- $caption := .caption | default "" -}}
@@ -14,20 +7,29 @@
 {{- $aspect := .aspect | default 1 -}}
 {{- $href := .href | default ("/gallery/" | relURL) -}}
 
-{{- /* Resolve which mode to use: asset path (preferred) or raw URL (legacy) */ -}}
 {{- $useAssetPath := false -}}
+{{- $resolvedFullSrc := "" -}}
 {{- if $path -}}
   {{- $useAssetPath = true -}}
+  {{- $img := resources.Get $path -}}
+  {{- if $img -}}{{- $resolvedFullSrc = $img.RelPermalink -}}{{- end -}}
 {{- else if $src -}}
   {{- $stripped := strings.TrimPrefix "/" $src -}}
   {{- $maybeAsset := resources.Get $stripped -}}
   {{- if $maybeAsset -}}
     {{- $path = $stripped -}}
     {{- $useAssetPath = true -}}
+    {{- $resolvedFullSrc = $maybeAsset.RelPermalink -}}
+  {{- else -}}
+    {{- $resolvedFullSrc = $src -}}
   {{- end -}}
 {{- end -}}
 
-<a class="bento-cell bento-cell--span-{{ $span }}" href="{{ $href }}" style="aspect-ratio: {{ printf "%v" $aspect | safeCSS }};">
+<a class="bento-cell bento-cell--span-{{ $span }}"
+   href="{{ $href }}"
+   data-src="{{ $resolvedFullSrc }}"
+   data-caption="{{ $caption }}"
+   style="aspect-ratio: {{ printf "%v" $aspect | safeCSS }};">
   {{- if $useAssetPath -}}
     {{ partial "responsive-image.html" (dict "path" $path "alt" $caption "class" "bento-cell__img") }}
   {{- else -}}

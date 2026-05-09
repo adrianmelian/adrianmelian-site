@@ -1,1 +1,114 @@
-{{- /* lightbox stub — full implementation lands in Task 7 */ -}}
+{{- /* themes/am-mindmeld/layouts/partials/lightbox.html */ -}}
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+  <button class="lightbox__btn lightbox__btn--close" type="button" aria-label="Close" data-lightbox-action="close">×</button>
+  <button class="lightbox__btn lightbox__btn--prev"  type="button" aria-label="Previous image" data-lightbox-action="prev">‹</button>
+  <button class="lightbox__btn lightbox__btn--next"  type="button" aria-label="Next image" data-lightbox-action="next">›</button>
+  <div class="lightbox__stage">
+    <img class="lightbox__img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox__caption"></div>
+  </div>
+  <div class="lightbox__counter" aria-live="polite"></div>
+</div>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox');
+  if (!lb) return;
+  var img = lb.querySelector('.lightbox__img');
+  var caption = lb.querySelector('.lightbox__caption');
+  var counter = lb.querySelector('.lightbox__counter');
+  var btnClose = lb.querySelector('[data-lightbox-action="close"]');
+  var btnPrev  = lb.querySelector('[data-lightbox-action="prev"]');
+  var btnNext  = lb.querySelector('[data-lightbox-action="next"]');
+
+  var items = [];
+  var current = 0;
+  var lastFocus = null;
+
+  function collect(group) {
+    var container = document.querySelector('[data-lightbox-group="' + group + '"]');
+    if (!container) return [];
+    return Array.prototype.slice.call(container.querySelectorAll('a')).map(function (a) {
+      var srcEl = a.querySelector('img');
+      var fullSrc = a.getAttribute('data-src') || (srcEl && srcEl.currentSrc) || (srcEl && srcEl.src) || a.getAttribute('href');
+      return {
+        src: fullSrc,
+        alt: (srcEl && srcEl.alt) || '',
+        caption: a.getAttribute('data-caption') || (srcEl && srcEl.alt) || ''
+      };
+    });
+  }
+
+  function show(idx) {
+    if (!items.length) return;
+    current = (idx + items.length) % items.length;
+    var it = items[current];
+    img.src = it.src;
+    img.alt = it.alt;
+    caption.textContent = it.caption;
+    counter.textContent = (current + 1) + ' / ' + items.length;
+  }
+
+  function open(group, startIdx) {
+    items = collect(group);
+    if (!items.length) return;
+    lastFocus = document.activeElement;
+    show(startIdx);
+    lb.hidden = false;
+    requestAnimationFrame(function () { lb.classList.add('lightbox--open'); });
+    document.body.style.overflow = 'hidden';
+    btnClose.focus();
+  }
+
+  function close() {
+    lb.classList.remove('lightbox--open');
+    setTimeout(function () {
+      lb.hidden = true;
+      img.src = '';
+      document.body.style.overflow = '';
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }, 240);
+  }
+
+  function prev() { show(current - 1); }
+  function next() { show(current + 1); }
+
+  // Click handlers on lightbox-group containers (event delegation)
+  document.querySelectorAll('[data-lightbox-group]').forEach(function (container) {
+    container.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a || !container.contains(a)) return;
+      e.preventDefault();
+      var group = container.getAttribute('data-lightbox-group');
+      var anchors = Array.prototype.slice.call(container.querySelectorAll('a'));
+      open(group, anchors.indexOf(a));
+    });
+  });
+
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener('click', next);
+
+  lb.addEventListener('click', function (e) {
+    // Close on backdrop click (target is lightbox itself, not a child)
+    if (e.target === lb) close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') prev();
+    else if (e.key === 'ArrowRight') next();
+    else if (e.key === 'Tab') {
+      // Trap focus inside the lightbox
+      var focusables = lb.querySelectorAll('button');
+      var first = focusables[0];
+      var last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    }
+  });
+})();
+</script>
