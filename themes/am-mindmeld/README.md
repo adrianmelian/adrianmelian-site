@@ -47,5 +47,4 @@ See `content/projects/krazy_kaiju/index.md` for a populated reference example.
 
 ## Known gaps (to be addressed in later phases)
 
-- **Project page templates** — non-homepage pages render via the minimal `single.html` / `list.html` fallback templates. Final detail-page treatment (terminal frame hero, metadata strip, image grid, credits panel) lands in Phase 3.
-- **About / contact templates** — same situation; Phase 4 owns them.
+- **About / contact templates** — render via the minimal `single.html` fallback. Phase 4 builds the proper templates + an a11y audit.
