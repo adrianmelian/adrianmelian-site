@@ -150,12 +150,12 @@ location    = "San Francisco"
 year_range  = "Jan 2012 – Nov 2014"
 titles      = "Multiple titles"
 bullets = [
-  "Costume Quest 2 — Rigged/skinned 26 of 28 characters, animated gameplay and cutscenes",
-  "Broken Age — Modeled, rigged/skinned 40+ characters, built flipbook animation system",
-  "Massive Chalice — Created map-editing and randomization tools based on CSV input",
-  "Spacebase DF-9 — Animation/Rigging",
-  "My Alien Buddy — Concepted and prototyped gameplay, created all characters, and wrote Lua scripts",
-  "Kinect Party — Updated tools, authored animation transfer tools",
+  "Costume Quest 2: rigged/skinned 26 of 28 characters, animated gameplay and cutscenes",
+  "Broken Age: modeled, rigged/skinned 40+ characters, built flipbook animation system",
+  "Massive Chalice: created map-editing and randomization tools based on CSV input",
+  "Spacebase DF-9: animation and rigging",
+  "My Alien Buddy: concepted and prototyped gameplay, created all characters, and wrote Lua scripts",
+  "Kinect Party: updated tools, authored animation transfer tools",
   "Worked on multiple Amnesia Fortnight titles (Little Pink Best Buds, Dear Leader, Black Lake, White Birch)"
 ]
 
@@ -174,7 +174,7 @@ bullets = [
 
 [[params.experience]]
 type        = "education"
-header      = "Art Institute of California — San Francisco"
+header      = "Art Institute of California, San Francisco"
 role        = "B.S. in Media Arts & Animation"
 year_range  = "Sep 2006 – Dec 2010"
 bullets = [
@@ -183,7 +183,7 @@ bullets = [
 
 [[params.experience]]
 type        = "education"
-header      = "SUNY Sullivan — New York"
+header      = "SUNY Sullivan, New York"
 role        = "A.S. in Graphic Design"
 year_range  = "Aug 2004 – Aug 2006"
 bullets = [
