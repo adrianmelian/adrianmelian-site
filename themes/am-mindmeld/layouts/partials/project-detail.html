@@ -1,0 +1,101 @@
+{{- /* themes/am-mindmeld/layouts/partials/project-detail.html */ -}}
+{{- /* Receives the current Page as context. */ -}}
+{{- $p := .Params -}}
+
+{{- /* Resolve fields with sensible fallbacks */ -}}
+{{- $role := $p.role -}}
+{{- $studio := $p.studio -}}
+{{- $year := $p.shipped_year | default (.Date.Format "2006") -}}
+{{- $status := $p.status -}}
+
+{{- /* Terminal-frame title: "role · studio · year" with present-only fallbacks */ -}}
+{{- $titleParts := slice -}}
+{{- with $role -}}{{ $titleParts = $titleParts | append . }}{{- end -}}
+{{- with $studio -}}{{ $titleParts = $titleParts | append . }}{{- end -}}
+{{- with $year -}}{{ $titleParts = $titleParts | append . }}{{- end -}}
+{{- $framTitle := delimit $titleParts " · " -}}
+{{- if not $framTitle -}}{{- $framTitle = .Title -}}{{- end -}}
+
+{{- /* Hero image — featured.{png,jpg,webp} from the page bundle */ -}}
+{{- $hero := .Resources.GetMatch "featured*" -}}
+
+<article class="project-detail">
+
+  {{- /* Hero terminal frame */ -}}
+  <header class="project-detail__hero">
+    <div class="term-frame term-frame--full project-detail__frame">
+      <div class="term-frame__bar">
+        <div class="term-frame__lights" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="term-frame__title">{{ $framTitle }}</span>
+        {{ with $status }}
+          {{ if eq . "shipped" }}
+            {{ partial "status-pill.html" (dict "variant" "shipped" "label" "Shipped") }}
+          {{ else if eq . "in_development" }}
+            {{ partial "status-pill.html" (dict "variant" "warn" "label" "In development") }}
+          {{ end }}
+        {{ end }}
+      </div>
+      <div class="term-frame__body project-detail__hero-body">
+        {{ if $hero }}
+          <img
+            src="{{ $hero.RelPermalink }}"
+            alt="{{ .Title }} — featured image"
+            class="project-detail__hero-img"
+            loading="eager"
+            decoding="async">
+        {{ end }}
+
+        {{- /* Inline metadata strip below the hero image */ -}}
+        {{- $hasMeta := or $role (or $studio $year) -}}
+        {{ if $hasMeta }}
+        <dl class="metadata-list project-detail__meta">
+          {{ with $role }}<dt>Role</dt><dd>{{ . }}</dd>{{ end }}
+          {{ with $studio }}<dt>Studio</dt><dd>{{ . }}</dd>{{ end }}
+          {{ with $year }}<dt>Shipped</dt><dd>{{ . }}</dd>{{ end }}
+        </dl>
+        {{ end }}
+      </div>
+    </div>
+  </header>
+
+  {{- /* Title (visually hidden — already shown in terminal title and metadata) */ -}}
+  <h1 class="visually-hidden">{{ .Title }}</h1>
+
+  {{- /* Body content — paragraph(s), shortcodes (youtubeLite, vimeo, lead), etc. */ -}}
+  <div class="project-detail__body">
+    {{ .Content }}
+  </div>
+
+  {{- /* Image grid — auto-discover from bundle, exclude featured */ -}}
+  {{ $images := slice }}
+  {{ range .Resources.Match "*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}" }}
+    {{ if not (hasPrefix .Name "featured") }}
+      {{ $images = $images | append . }}
+    {{ end }}
+  {{ end }}
+  {{ if $images }}
+  <section class="project-detail__images" aria-label="Additional images">
+    <div class="project-images">
+      {{ range $images }}
+      <a class="project-images__item" href="{{ .RelPermalink }}" target="_blank" rel="noopener">
+        <img
+          src="{{ .RelPermalink }}"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          class="project-images__img">
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{- /* Credits panel */ -}}
+  {{ partial "credits-panel.html" . }}
+
+  {{- /* Prev/next pager */ -}}
+  {{ partial "prev-next-pager.html" . }}
+
+</article>
