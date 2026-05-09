@@ -10,9 +10,9 @@ resume    = "/adrianmelian_resume.pdf"
 portrait  = "featured.png"
 
 bio = [
-  "I'm a Technical Artist who designs the systems other artists ship through. Across 14 years at studios like Sledgehammer Games, Meta, Double Fine, and Ubisoft, I've shipped characters, rigs, and pipelines on Call of Duty, Horizon Worlds, South Park, and Broken Age — and as the work has scaled, so has my focus: from building individual tools to designing the architectures that let teams build their own.",
-  "My current work runs in two parallel lanes. **KinematicSolutions** is a Maya rigging framework where components are declarative contracts — each module exposes plugs, validators, and option schemas, and new component types slot into the palette automatically. Templates live on disk as YAML blueprints; per-character instances persist in the scene; a reactive PySide6 UI keeps both in sync as you work, no save-reload cycles. **Archangel** is a from-scratch Unreal 5 melee combat game where hit detection runs through an `IHitDetectable` interface, abilities are composable plain components, and a three-layer tuning system (data assets + console variables + debug HUD) lets designers iterate without recompiles. Different domains, same architecture lesson: design systems that get out of the way of the people using them.",
-  "Underneath all of this is an ongoing exploration into machine learning for rigging — auto-skinning, rig-setup automation, ML-augmented artist workflows — aimed at cutting per-character cost while protecting deformation quality. My approach blends technical precision with artistic sensibility, and I thrive in cross-functional environments where engineering, design, and art share the same vocabulary."
+  "I'm a Technical Artist who designs the systems other artists ship through. Across 14 years at studios like Sledgehammer Games, Meta, Double Fine, and Ubisoft, I've shipped characters, rigs, and pipelines on Call of Duty, Horizon Worlds, South Park, and Broken Age — and as the work has scaled, so has my focus: from building individual tools to designing the architectures that let teams move fast without sacrificing quality.",
+  "My current focus has expanded from individual rigging tools into end-to-end pipeline architecture — watertight systems where every stage of the artist workflow talks cleanly to the next, prioritizing iteration speed and creative integrity over expensive manual handoffs. Rigging is part of that, but so are reactive authoring tools, validation layers, ML research into auto-skinning, and the connective tissue between disciplines that keeps a team in flow.",
+  "Alongside the pipeline work, I've been sharpening my gameplay-systems chops through hands-on C++ prototyping in Unreal — combat systems, ability components, and tuning workflows built from the ground up. My approach blends technical precision with artistic sensibility, and I thrive in cross-functional environments where engineering, design, and art share the same vocabulary."
 ]
 
 about_me = [
@@ -31,10 +31,10 @@ header      = "Independent / Personal Projects"
 role        = "Technical Artist & Systems Architect"
 location    = "Denver, CO"
 year_range  = "Mar 2026 – Present"
-titles      = "KinematicSolutions, Archangel, ML rigging research"
+titles      = "Pipeline architecture, gameplay prototyping, ML research"
 bullets = [
-  "Building KinematicSolutions — a blueprint-driven Maya rigging framework with contract-based components, two-tier storage authority (YAML templates on disk, per-character state in scene), and a reactive PySide6 authoring UI",
-  "Building Archangel — a from-scratch UE5 melee combat game with anim-driven hit detection (`IHitDetectable` interface), modular ability components, and a three-layer designer-tuning system (data assets, CVars, debug HUD)",
+  "Designing end-to-end pipeline architecture — declarative rigging frameworks, reactive PySide6 authoring tools, validation layers, and the connective tissue between disciplines, all aimed at artist iteration speed and creative integrity",
+  "Sharpening gameplay-systems chops through hands-on C++ prototyping in Unreal Engine — combat systems, ability components, and designer-friendly tuning workflows built from the ground up",
   "Continuing ML research into auto-skinning and rig-setup automation — exploring AI-augmented artist workflows aimed at cutting per-character cost while protecting deformation quality"
 ]
 
