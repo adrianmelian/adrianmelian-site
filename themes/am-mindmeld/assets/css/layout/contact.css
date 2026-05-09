@@ -1,0 +1,112 @@
+/* themes/am-mindmeld/assets/css/layout/contact.css */
+
+.contact {
+  padding: var(--sp-7) 0 var(--sp-8);
+}
+
+.contact__panel {
+  max-width: 720px;
+  border: 1px solid var(--iron-3);
+  background: var(--iron);
+  padding: var(--sp-7);
+}
+
+.contact__heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+.contact__num {
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  color: var(--ember);
+  line-height: 1;
+}
+.contact__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  color: var(--bone);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin: 0;
+}
+
+.contact__intro {
+  font-family: var(--font-body);
+  font-size: var(--fs-14);
+  color: var(--bone-dim);
+  line-height: var(--lh-body);
+  max-width: 60ch;
+  margin-bottom: var(--sp-6);
+}
+.contact__intro p { margin-bottom: 0; }
+
+.contact__email-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+.contact__email {
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  color: var(--plasma);
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}
+.contact__email:hover { color: var(--bone); text-decoration: underline; }
+
+.contact__copy {
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  background: transparent;
+  border: 1px solid var(--iron-3);
+  padding: var(--sp-2) var(--sp-3);
+  cursor: pointer;
+  transition: color var(--t-base) var(--ease-out), border-color var(--t-base) var(--ease-out);
+}
+.contact__copy:hover { color: var(--bone); border-color: var(--bone-dim); }
+.contact__copy--copied { color: var(--plasma); border-color: var(--plasma); }
+
+.contact__status {
+  margin-bottom: var(--sp-6);
+}
+
+.contact__socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+.contact__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--iron-3);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  letter-spacing: 0.08em;
+  color: var(--bone-dim);
+  transition: color var(--t-base) var(--ease-out), border-color var(--t-base) var(--ease-out);
+}
+.contact__social-link:hover {
+  color: var(--plasma);
+  border-color: var(--plasma);
+  text-decoration: none;
+}
+.contact__social-link svg { width: 16px; height: 16px; }
+
+@media (max-width: 720px) {
+  .contact__panel { padding: var(--sp-5); }
+  .contact__email { font-size: var(--fs-24); }
+  .contact__num, .contact__title { font-size: var(--fs-24); }
+}

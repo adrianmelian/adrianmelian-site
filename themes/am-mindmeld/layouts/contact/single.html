@@ -1,0 +1,79 @@
+{{- /* themes/am-mindmeld/layouts/contact/single.html */ -}}
+{{ define "main" }}
+{{- $p := .Params -}}
+<article class="contact container">
+  <h1 class="visually-hidden">{{ .Title }}</h1>
+
+  <section class="contact__panel">
+    <header class="contact__heading">
+      <span class="contact__num">contact //</span>
+      <h2 class="contact__title">Get in touch</h2>
+    </header>
+
+    {{ with .Content }}
+    <div class="contact__intro">{{ . }}</div>
+    {{ end }}
+
+    {{ with $p.email }}
+    <div class="contact__email-row">
+      <a class="contact__email" href="mailto:{{ . }}">{{ . }}</a>
+      <button class="contact__copy"
+              type="button"
+              data-copy-target="{{ . }}"
+              aria-label="Copy email address to clipboard">
+        <span class="contact__copy-label">Copy</span>
+      </button>
+    </div>
+    {{ end }}
+
+    <dl class="metadata-list contact__status">
+      {{ with $p.location }}<dt>Location</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with $p.availability }}<dt>Status</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with $p.preferred_contact }}<dt>Contact</dt><dd>{{ . }}</dd>{{ end }}
+    </dl>
+
+    <ul class="contact__socials" aria-label="Social links">
+      {{ range .Site.Menus.social }}
+      <li>
+        <a class="contact__social-link" href="{{ .URL }}" rel="me noopener" target="_blank">
+          {{- partial (printf "icons/%s.html" .Identifier) . -}}
+          <span class="contact__social-name">{{ .Name }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+</article>
+
+<script>
+(function () {
+  var btn = document.querySelector('.contact__copy');
+  if (!btn) return;
+  var label = btn.querySelector('.contact__copy-label');
+  var original = label.textContent;
+  btn.addEventListener('click', function () {
+    var target = btn.getAttribute('data-copy-target');
+    if (!navigator.clipboard) {
+      var range = document.createRange();
+      var sel = window.getSelection();
+      var emailEl = document.querySelector('.contact__email');
+      if (emailEl) {
+        range.selectNodeContents(emailEl);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        try { document.execCommand('copy'); } catch (e) {}
+        sel.removeAllRanges();
+      }
+    } else {
+      navigator.clipboard.writeText(target).catch(function () {});
+    }
+    label.textContent = 'Copied';
+    btn.classList.add('contact__copy--copied');
+    setTimeout(function () {
+      label.textContent = original;
+      btn.classList.remove('contact__copy--copied');
+    }, 1500);
+  });
+})();
+</script>
+{{ end }}
