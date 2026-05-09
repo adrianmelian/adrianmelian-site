@@ -10,9 +10,9 @@ resume    = "/adrianmelian_resume.pdf"
 portrait  = "featured.png"
 
 bio = [
-  "I'm a Technical Artist with a passion for building robust pipelines, intuitive tools, and high-quality animation rigs for characters, creatures, and props. With experience across industry-leading studios like Sledgehammer Games, Double Fine, Meta, and Ubisoft, I've contributed to AAA productions across a range of genres and platforms.",
-  "Recently, I've been exploring the intersection of machine learning and rigging. Developing AI-driven solutions to accelerate skin weighting and automate rig setup. This research is aimed at cutting costs, improving consistency, and unlocking new creative possibilities in artist pipelines.",
-  "My approach blends technical precision with artistic sensibility, and I thrive in cross-functional environments where collaboration, iteration, and R&D drive innovation."
+  "I'm a Technical Artist who designs the systems other artists ship through. Across 14 years at studios like Sledgehammer Games, Meta, Double Fine, and Ubisoft, I've shipped characters, rigs, and pipelines on Call of Duty, Horizon Worlds, South Park, and Broken Age — and as the work has scaled, so has my focus: from building individual tools to designing the architectures that let teams build their own.",
+  "My current work runs in two parallel lanes. **KinematicSolutions** is a Maya rigging framework where components are declarative contracts — each module exposes plugs, validators, and option schemas, and new component types slot into the palette automatically. Templates live on disk as YAML blueprints; per-character instances persist in the scene; a reactive PySide6 UI keeps both in sync as you work, no save-reload cycles. **Archangel** is a from-scratch Unreal 5 melee combat game where hit detection runs through an `IHitDetectable` interface, abilities are composable plain components, and a three-layer tuning system (data assets + console variables + debug HUD) lets designers iterate without recompiles. Different domains, same architecture lesson: design systems that get out of the way of the people using them.",
+  "Underneath all of this is an ongoing exploration into machine learning for rigging — auto-skinning, rig-setup automation, ML-augmented artist workflows — aimed at cutting per-character cost while protecting deformation quality. My approach blends technical precision with artistic sensibility, and I thrive in cross-functional environments where engineering, design, and art share the same vocabulary."
 ]
 
 about_me = [
@@ -24,6 +24,19 @@ about_me = [
 disciplines = ["Rigging", "Animation", "Modeling", "Tools", "Scripting", "Game design", "Gameplay programming", "Graphic design"]
 software    = ["Maya", "Unreal", "Unity", "ZBrush", "Painter", "Git", "Perforce"]
 languages   = ["Python", "PyQt", "PyTorch", "C++", "C#", "Lua", "Hugo"]
+
+[[params.experience]]
+type        = "work"
+header      = "Independent / Personal Projects"
+role        = "Technical Artist & Systems Architect"
+location    = "Denver, CO"
+year_range  = "Mar 2026 – Present"
+titles      = "KinematicSolutions, Archangel, ML rigging research"
+bullets = [
+  "Building KinematicSolutions — a blueprint-driven Maya rigging framework with contract-based components, two-tier storage authority (YAML templates on disk, per-character state in scene), and a reactive PySide6 authoring UI",
+  "Building Archangel — a from-scratch UE5 melee combat game with anim-driven hit detection (`IHitDetectable` interface), modular ability components, and a three-layer designer-tuning system (data assets, CVars, debug HUD)",
+  "Continuing ML research into auto-skinning and rig-setup automation — exploring AI-augmented artist workflows aimed at cutting per-character cost while protecting deformation quality"
+]
 
 [[params.experience]]
 type        = "work"

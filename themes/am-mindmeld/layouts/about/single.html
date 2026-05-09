@@ -30,7 +30,7 @@
     <div class="about__bio">
       <h2 id="bio-heading" class="visually-hidden">About Adrian</h2>
       {{ range $p.bio }}
-      <p>{{ . }}</p>
+      {{ . | markdownify }}
       {{ end }}
     </div>
   </section>
