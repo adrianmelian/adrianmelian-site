@@ -92,6 +92,62 @@
   margin: 0;
 }
 
+/* ===== section index (peer navigation) ===== */
+.section-index {
+  margin: var(--sp-7) 0;
+  padding-top: var(--sp-5);
+  border-top: 1px dashed var(--iron-3);
+}
+.section-index__heading {
+  font-family: var(--font-display);
+  font-size: var(--fs-18);
+  color: var(--ember);
+  letter-spacing: 0.08em;
+  margin-bottom: var(--sp-3);
+}
+.section-index__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.section-index__item {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--iron-3);
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  color: var(--bone-dim);
+  letter-spacing: 0.04em;
+  transition: border-color var(--t-base) var(--ease-out), color var(--t-base) var(--ease-out), background var(--t-base) var(--ease-out);
+}
+a.section-index__item:hover {
+  border-color: var(--plasma);
+  color: var(--bone);
+  text-decoration: none;
+}
+a.section-index__item:active {
+  transform: scale(0.98);
+  transition-duration: var(--t-active);
+}
+.section-index__item--current {
+  color: var(--plasma);
+  border-color: var(--plasma);
+  background: var(--plasma-glow);
+  cursor: default;
+}
+
+/* prev/next pager border-top would double up after the section-index dashed
+   line, so suppress it when both are rendered (section-index is always above) */
+.section-index + .prev-next-pager {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
 /* ===== prev/next pager ===== */
 .prev-next-pager {
   border-top: 1px dashed var(--iron-3);

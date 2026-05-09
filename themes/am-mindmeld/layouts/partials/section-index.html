@@ -1,0 +1,24 @@
+{{- /* themes/am-mindmeld/layouts/partials/section-index.html */ -}}
+{{- /* Receives the current detail Page as context. Renders a compact strip
+       of all peer pages in the same section, sorted by date (newest first).
+       The current page is highlighted in plasma and not clickable. */ -}}
+{{- $section := .Section -}}
+{{- $current := . -}}
+{{- $peers := where .Site.RegularPages "Section" $section -}}
+{{- if gt (len $peers) 1 -}}
+{{- $label := upper (printf "All %s" $section) -}}
+<nav class="section-index" aria-label="All items in this section">
+  <div class="section-index__heading">{{ $label }}</div>
+  <ul class="section-index__list">
+    {{ range $peers.ByDate.Reverse }}
+    <li>
+      {{- if eq .RelPermalink $current.RelPermalink -}}
+        <span class="section-index__item section-index__item--current" aria-current="page">{{ .Title }}</span>
+      {{- else -}}
+        <a class="section-index__item" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- end -}}
+    </li>
+    {{ end }}
+  </ul>
+</nav>
+{{- end -}}
