@@ -1,0 +1,33 @@
+{{- /* themes/am-mindmeld/layouts/partials/section-list-zigzag.html */ -}}
+{{- /* Receives the list page (.) as context. Renders:
+       - terminal-frame titlebar hero ("section.list" title)
+       - optional .Content intro
+       - year groups: ember "YYYY //" heading, then zig-zag cards
+*/ -}}
+{{- $section := .Section -}}
+{{- $titleBar := printf "%s.list" $section -}}
+
+<div class="project-list container">
+
+  {{- /* Page hero: titlebar-only terminal frame */ -}}
+  {{ partial "terminal-frame.html" (dict "title" $titleBar "variant" "titlebar") }}
+
+  {{- /* Optional intro from .Content */ -}}
+  {{ with .Content }}
+  <div class="project-list__intro">{{ . }}</div>
+  {{ end }}
+
+  {{- /* Year-grouped zig-zag */ -}}
+  {{ $sectionPages := where .Site.RegularPages "Section" $section }}
+  {{ range $sectionPages.GroupByDate "2006" }}
+  <section class="project-list__year" aria-labelledby="year-{{ .Key }}">
+    <header class="project-list__year-heading" id="year-{{ .Key }}">
+      <span class="project-list__year-num">{{ .Key }} //</span>
+      <span class="project-list__year-rule" aria-hidden="true"></span>
+    </header>
+    {{ range $i, $page := .Pages }}
+      {{ partial "project-card-zig.html" (dict "page" $page "index" $i) }}
+    {{ end }}
+  </section>
+  {{ end }}
+</div>
