@@ -15,7 +15,14 @@
 
 <section class="hero container">
   <div class="hero__left fade-up">
-    <div class="hero__logo">{{ partial "pixel-mark.html" (dict "size" 120 "title" "Adrian Melian") }}</div>
+    <div class="hero__logo">
+      <img src="{{ "iwahashi_mindmeld_v1.png" | relURL }}"
+           alt="Iwahashi family crest"
+           width="120"
+           height="120"
+           loading="eager"
+           decoding="async">
+    </div>
     <h1 class="hero__name">
       ADRIAN <span class="hero__name-accent">MELIAN</span>
     </h1>

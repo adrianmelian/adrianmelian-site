@@ -10,7 +10,9 @@
 }
 
 .hero__logo { color: var(--plasma); margin-bottom: var(--sp-5); }
-.hero__logo svg { display: block; }
+.hero__logo svg,
+.hero__logo img { display: block; }
+.hero__logo img { image-rendering: pixelated; }
 
 .hero__name {
   font-family: var(--font-display);
