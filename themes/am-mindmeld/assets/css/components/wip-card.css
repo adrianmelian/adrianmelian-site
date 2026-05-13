@@ -1,0 +1,70 @@
+/* themes/am-mindmeld/assets/css/components/wip-card.css */
+.wip-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--sp-5);
+  align-items: start;
+  padding: var(--sp-5);
+  border: 1px solid var(--iron-3);
+  background: var(--iron);
+  color: var(--bone);
+  text-decoration: none;
+  transition: border-color var(--t-base) var(--ease-out),
+              background var(--t-base) var(--ease-out);
+}
+
+.wip-card--link:hover,
+.wip-card--link:focus-visible {
+  border-color: var(--ember-dim);
+  background: var(--iron-2);
+}
+
+.wip-card__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--carbon);
+  border: 1px solid var(--iron-3);
+  overflow: hidden;
+}
+
+.wip-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wip-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.wip-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.wip-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-24);
+  line-height: var(--lh-snug);
+  margin: 0;
+  color: var(--bone);
+}
+
+.wip-card__description {
+  font-family: var(--font-body);
+  font-size: var(--fs-15);
+  line-height: var(--lh-body);
+  color: var(--bone-dim);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .wip-card {
+    grid-template-columns: 1fr;
+  }
+}
