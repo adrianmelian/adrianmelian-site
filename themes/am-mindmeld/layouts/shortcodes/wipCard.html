@@ -1,0 +1,27 @@
+{{- /* themes/am-mindmeld/layouts/shortcodes/wipCard.html */ -}}
+{{- /* Reusable "work in progress" card for a deferred project/section linkout.
+       Renders a card with an image, title, description, and an "In construction"
+       status pill (reuses the warn variant). If `href` is provided, the card is
+       wrapped in an anchor; otherwise it renders as static content. */ -}}
+{{- $image := .Get "image" -}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+{{- $href := .Get "href" -}}
+
+{{- $cardTag := "div" -}}
+{{- if $href -}}{{- $cardTag = "a" -}}{{- end -}}
+
+<{{ $cardTag }} class="wip-card{{ if $href }} wip-card--link{{ end }}"{{ with $href }} href="{{ . }}"{{ end }}>
+  {{ with $image }}
+  <div class="wip-card__media">
+    <img src="{{ . | relURL }}" alt="{{ $title }}" loading="lazy" decoding="async" class="wip-card__img">
+  </div>
+  {{ end }}
+  <div class="wip-card__body">
+    <div class="wip-card__header">
+      {{ with $title }}<h3 class="wip-card__title">{{ . }}</h3>{{ end }}
+      {{ partial "status-pill.html" (dict "variant" "warn" "label" "In construction") }}
+    </div>
+    {{ with $description }}<p class="wip-card__description">{{ . }}</p>{{ end }}
+  </div>
+</{{ $cardTag }}>
