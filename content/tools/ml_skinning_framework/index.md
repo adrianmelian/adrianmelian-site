@@ -1,6 +1,6 @@
 +++
 title = "ML Skinning Framework"
-description = "A Modular Non-linear Auto Rigging and Animation System"
+description = "ML research into auto-skinning. PyTorch MLPs trained on existing skinned assets predict skin weights for new meshes."
 date = "2025-07-01"
 
 [params]
