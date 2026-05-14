@@ -85,3 +85,24 @@
   .lightbox__btn--prev { left: var(--sp-2); }
   .lightbox__btn--next { right: var(--sp-2); }
 }
+
+/* Click-to-enlarge trigger inside the figure shortcode (lightbox=true).
+   Renders the image inline as usual but signals interactivity on hover. */
+.figure-shim__lightbox-trigger {
+  display: block;
+  cursor: zoom-in;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.figure-shim__lightbox-trigger img {
+  transition: filter var(--t-base) var(--ease-out);
+}
+.figure-shim__lightbox-trigger:hover img,
+.figure-shim__lightbox-trigger:focus-visible img {
+  filter: brightness(1.05);
+}
+.figure-shim__lightbox-trigger:focus-visible {
+  outline: 2px solid var(--plasma);
+  outline-offset: 4px;
+}

@@ -1,13 +1,17 @@
 {{- /* themes/am-mindmeld/layouts/shortcodes/figure.html */ -}}
 {{- /* args:
-         src     — asset path ("gallery/01.jpg") OR raw URL ("/gallery/01.jpg") — required
-         caption — optional
-         alt     — optional, defaults to caption
-         class   — optional class on the wrapping figure (Phase 5 may use)
+         src      — asset path ("gallery/01.jpg") OR raw URL ("/gallery/01.jpg") — required
+         caption  — optional
+         alt      — optional, defaults to caption
+         class    — optional class on the wrapping figure (Phase 5 may use)
+         lightbox — optional, truthy ("true"/"1") wraps the image in a click-to-enlarge anchor
+                    that opens the shared lightbox. Requires the projects/single (or other)
+                    layout to render the `lightbox` partial once on the page.
 */ -}}
 {{- $src := .Get "src" -}}
 {{- $caption := .Get "caption" -}}
 {{- $alt := (.Get "alt") | default $caption | default "" -}}
+{{- $lightbox := .Get "lightbox" -}}
 
 {{- /* Detect raw URL (starts with "/" or "http") vs. asset path */ -}}
 {{- $isRawURL := or (hasPrefix $src "/") (hasPrefix $src "http") -}}
@@ -22,11 +26,31 @@
   {{- end -}}
 {{- end -}}
 
-<figure class="figure-shim">
+{{- /* Resolve the full-size URL used as the lightbox source (largest variant
+       when the image is an asset; raw src otherwise). */ -}}
+{{- $lightboxSrc := $src -}}
+{{- if and $lightbox (not $isRawURL) -}}
+  {{- $img := resources.Get $assetPath -}}
+  {{- if $img -}}
+    {{- $maxW := math.Min $img.Width 1600 | int -}}
+    {{- $largest := $img.Resize (printf "%dx q82" $maxW) -}}
+    {{- $lightboxSrc = $largest.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $lbCaption := $caption | default $alt -}}
+
+<figure class="figure-shim{{ if $lightbox }} figure-shim--lightbox{{ end }}"{{ if $lightbox }} data-lightbox-group="figure-{{ .Ordinal }}"{{ end }}>
+  {{- if $lightbox -}}
+    <a href="#" class="figure-shim__lightbox-trigger" data-src="{{ $lightboxSrc }}" data-caption="{{ $lbCaption }}" aria-label="{{ printf "View enlarged: %s" $alt }}">
+  {{- end -}}
   {{- if $isRawURL -}}
     <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
   {{- else -}}
     {{ partial "responsive-image.html" (dict "path" $assetPath "alt" $alt) }}
+  {{- end -}}
+  {{- if $lightbox -}}
+    </a>
   {{- end -}}
   {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
 </figure>
