@@ -1,6 +1,6 @@
 +++
 title = "Adrian Melian"
-description = "Adrian Melian — Senior Technical Artist. Rigging, pipeline, and ML for AAA games."
+description = "Adrian Melian. Senior Technical Artist. Rigging, pipeline, and ML for AAA games."
 
 [params]
 tagline = "Senior Technical Artist · Rigging & Pipeline · 14 years shipping AAA"
