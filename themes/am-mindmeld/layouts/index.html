@@ -58,7 +58,7 @@
       {{ end }}
       {{ $inner := "" }}
       {{ if $image }}
-        {{ $inner = printf `<a href="%s" class="hero__featured-link"><img src="%s" alt="%s — featured project" class="hero__featured-img" /><div class="hero__featured-meta"><div class="hero__featured-title">%s</div><p class="hero__featured-blurb">%s</p></div></a>` $featured.RelPermalink $image $featured.Title $featured.Title $featured.Description }}
+        {{ $inner = printf `<a href="%s" class="hero__featured-link"><img src="%s" alt="%s featured project" class="hero__featured-img" /><div class="hero__featured-meta"><div class="hero__featured-title">%s</div><p class="hero__featured-blurb">%s</p></div></a>` $featured.RelPermalink $image $featured.Title $featured.Title $featured.Description }}
       {{ else }}
         {{ $inner = printf `<a href="%s" class="hero__featured-link"><div class="hero__featured-meta"><div class="hero__featured-title">%s</div><p class="hero__featured-blurb">%s</p></div></a>` $featured.RelPermalink $featured.Title $featured.Description }}
       {{ end }}

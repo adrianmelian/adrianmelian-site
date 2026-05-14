@@ -1,0 +1,16 @@
+/* themes/am-mindmeld/assets/css/components/loop-video.css */
+.loop-video {
+  width: 100%;
+  background: var(--carbon);
+  border: 1px solid var(--iron-3);
+  overflow: hidden;
+}
+
+.loop-video__player {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  background: var(--carbon);
+}

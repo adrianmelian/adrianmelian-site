@@ -1,0 +1,21 @@
+{{- /* themes/am-mindmeld/layouts/shortcodes/loopVideo.html */ -}}
+{{- /* Autoplay-loop-muted inline video. Used for short looping clips (rig demos,
+       UI captures, etc.) where the audio is irrelevant.
+       args:
+         src     — required, raw URL or asset path to the video file
+         alt     — optional, fallback descriptive text */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+<div class="loop-video">
+  <video
+    src="{{ $src | relURL }}"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="metadata"
+    aria-label="{{ $alt }}"
+    class="loop-video__player">
+    Your browser does not support the video tag.
+  </video>
+</div>

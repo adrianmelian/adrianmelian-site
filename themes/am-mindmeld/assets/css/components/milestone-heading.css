@@ -1,0 +1,20 @@
+/* themes/am-mindmeld/assets/css/components/milestone-heading.css */
+/* Extends the .project-list__year-heading layout so milestones inside a project
+   page read in the same visual language as the section list year headings. */
+.milestone-heading {
+  margin-top: var(--sp-7);
+}
+
+.milestone-heading__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-24);
+  line-height: var(--lh-snug);
+  color: var(--bone);
+  margin: 0;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .milestone-heading__title { font-size: var(--fs-18); }
+}

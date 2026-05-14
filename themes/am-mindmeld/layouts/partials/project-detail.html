@@ -14,6 +14,7 @@
 {{- with $studio -}}{{ $titleParts = $titleParts | append . }}{{- end -}}
 {{- with $year -}}{{ $titleParts = $titleParts | append . }}{{- end -}}
 {{- $framTitle := delimit $titleParts " · " -}}
+{{- with $p.term_title -}}{{- $framTitle = . -}}{{- end -}}
 {{- if not $framTitle -}}{{- $framTitle = .Title -}}{{- end -}}
 
 {{- /* Hero image — featured.{png,jpg,webp} from the page bundle */ -}}
@@ -41,7 +42,7 @@
         {{ if $hero }}
           <img
             src="{{ $hero.RelPermalink }}"
-            alt="{{ .Title }} — featured image"
+            alt="{{ .Title }} featured image"
             class="project-detail__hero-img"
             loading="eager"
             decoding="async">

@@ -8,10 +8,11 @@
 {{- $description := .Get "description" -}}
 {{- $href := .Get "href" -}}
 
-{{- $cardTag := "div" -}}
-{{- if $href -}}{{- $cardTag = "a" -}}{{- end -}}
-
-<{{ $cardTag }} class="wip-card{{ if $href }} wip-card--link{{ end }}"{{ with $href }} href="{{ . }}"{{ end }}>
+{{- if $href -}}
+<a class="wip-card wip-card--link" href="{{ $href }}">
+{{- else -}}
+<div class="wip-card">
+{{- end }}
   {{ with $image }}
   <div class="wip-card__media">
     <img src="{{ . | relURL }}" alt="{{ $title }}" loading="lazy" decoding="async" class="wip-card__img">
@@ -24,4 +25,8 @@
     </div>
     {{ with $description }}<p class="wip-card__description">{{ . }}</p>{{ end }}
   </div>
-</{{ $cardTag }}>
+{{- if $href -}}
+</a>
+{{- else -}}
+</div>
+{{- end -}}

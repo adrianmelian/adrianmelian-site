@@ -1,0 +1,14 @@
+{{- /* themes/am-mindmeld/layouts/shortcodes/milestoneHeading.html */ -}}
+{{- /* Date-stamped milestone heading. Reuses the .project-list__year-heading
+       styling so a milestone-list inside a project page reads in the same
+       visual language as the Projects/Tools section headings.
+       args:
+         date  — required, full date string (e.g. "2026-05-06")
+         title — required, milestone title (e.g. "Combat foundation") */ -}}
+{{- $date := .Get "date" -}}
+{{- $title := .Get "title" -}}
+<header class="project-list__year-heading milestone-heading">
+  <span class="project-list__year-num">{{ $date }} //</span>
+  <h2 class="milestone-heading__title">{{ $title }}</h2>
+  <span class="project-list__year-rule" aria-hidden="true"></span>
+</header>
