@@ -1,11 +1,12 @@
 {{- /* themes/am-mindmeld/layouts/shortcodes/timelineItem.html */ -}}
-{{- /* args: header (required), badge (optional), subheader (optional), icon (optional, ignored) */ -}}
+{{- /* args: header (required), badge (optional), subheader (optional), icon (optional, ignored), anchor (optional) */ -}}
 {{- $header := .Get "header" -}}
 {{- $badge := .Get "badge" -}}
 {{- $subheader := .Get "subheader" -}}
-<section class="timeline-item-shim" style="border-left: 2px solid var(--iron-3); padding: 12px 0 12px 16px; margin-bottom: 16px;">
-  <div style="font-family: var(--font-display); font-size: var(--fs-18); color: var(--bone); text-transform: uppercase; letter-spacing: 0.04em;">{{ $header }}</div>
-  {{ with $subheader }}<div style="font-family: var(--font-body); font-size: var(--fs-12); color: var(--plasma); letter-spacing: 0.06em; margin-top: 2px;">{{ . }}</div>{{ end }}
-  {{ with $badge }}<div style="font-family: var(--font-body); font-size: var(--fs-11); color: var(--ember); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px;">{{ . }}</div>{{ end }}
-  <div style="margin-top: 8px;">{{ .Inner }}</div>
+{{- $anchor := .Get "anchor" | default (anchorize $header) -}}
+<section{{ with $anchor }} id="{{ . }}"{{ end }} class="timeline-item-shim">
+  <div class="timeline-item-shim__header">{{ $header }}</div>
+  {{ with $subheader }}<div class="timeline-item-shim__subheader">{{ . }}</div>{{ end }}
+  {{ with $badge }}<div class="timeline-item-shim__badge">{{ . }}</div>{{ end }}
+  <div class="timeline-item-shim__body">{{ .Inner }}</div>
 </section>

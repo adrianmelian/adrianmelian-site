@@ -7,7 +7,7 @@ tagline = "Senior Technical Artist · Rigging & Pipeline · 14 years shipping AA
 location = "Denver, CO"
 availability = "Open to relocation · contract or full-time"
 studios = ["Sledgehammer Games", "Double Fine", "Meta", "Nomadic VR"]
-featured_project = "krazy_kaiju"
+featured_project = "kinematic_solutions"
 
 [[params.quick_links]]
 label = "Resume"

@@ -32,7 +32,344 @@
 /* ===== body ===== */
 .project-detail__body {
   margin-bottom: var(--sp-8);
-  max-width: 70ch;
+}
+.project-detail__body p {
+  max-width: none;
+}
+.project-detail__body iframe {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  margin: var(--sp-5) auto;
+}
+
+/* ===== KS intro card (logo + tagline) ===== */
+.ks-intro-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--sp-5);
+  align-items: center;
+  padding: var(--sp-5);
+  border: 2px solid var(--plasma);
+  background: var(--iron);
+  margin: var(--sp-5) 0 var(--sp-6);
+}
+
+/* ===== KS video card (iframe + philosophy paragraph) ===== */
+.ks-video-card {
+  padding: var(--sp-5);
+  border: 2px solid var(--ember);
+  background: var(--iron);
+  margin: var(--sp-5) 0 var(--sp-6);
+}
+.project-detail--wide .ks-video-card iframe {
+  margin: 0 auto var(--sp-5);
+}
+.ks-video-card p {
+  font-family: var(--font-body);
+  font-size: var(--fs-24);
+  line-height: 1.4;
+  color: var(--bone);
+  margin-bottom: 0;
+}
+
+/* ===== KS toolkit card (full-bleed roster image) ===== */
+.ks-toolkit-card {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--sp-5) 0 var(--sp-6);
+}
+
+/* ===== Timeline shortcode (base — preserves original inline-style look) ===== */
+.timeline-item-shim {
+  border-left: 2px solid var(--iron-3);
+  padding: 12px 0 12px 16px;
+  margin-bottom: 16px;
+}
+.timeline-item-shim__header {
+  font-family: var(--font-display);
+  font-size: var(--fs-18);
+  color: var(--bone);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.timeline-item-shim__subheader {
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  color: var(--plasma);
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+.timeline-item-shim__badge {
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  color: var(--ember);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.timeline-item-shim__body {
+  margin-top: 8px;
+}
+
+/* KS wide-body framed timeline items */
+.project-detail--wide .timeline-item-shim {
+  border: 1px solid var(--iron-3);
+  border-left: 4px solid var(--plasma);
+  padding: var(--sp-5);
+  margin-bottom: var(--sp-5);
+  background: var(--iron);
+  scroll-margin-top: var(--sp-6);
+}
+.project-detail--wide .timeline-item-shim__header {
+  font-size: var(--fs-32);
+}
+.project-detail--wide .timeline-item-shim__subheader {
+  font-size: var(--fs-15);
+  margin-top: 4px;
+}
+.project-detail--wide .timeline-item-shim__body {
+  margin-top: var(--sp-4);
+}
+.project-detail--wide .timeline-item-shim__body > p {
+  font-size: var(--fs-18);
+  line-height: 1.5;
+  color: var(--bone);
+}
+
+/* ===== KS side-by-side image pair (used inside tool sections) ===== */
+.ks-side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
+}
+.ks-side-by-side img,
+.ks-side-by-side video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--iron-3);
+}
+
+/* ===== KS demo video (autoplay-loop MP4 used in place of demo gifs) ===== */
+.ks-demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--sp-4) 0;
+}
+
+/* ===== KS feature card (universal-feature sections sitting outside the timeline) ===== */
+.ks-feature-card {
+  border: 1px solid var(--iron-3);
+  border-left: 4px solid var(--plasma);
+  padding: var(--sp-5);
+  margin: var(--sp-6) 0 var(--sp-5);
+  background: var(--iron);
+  scroll-margin-top: var(--sp-6);
+}
+.ks-feature-card__header {
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  color: var(--bone);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ks-feature-card__subheader {
+  font-family: var(--font-body);
+  font-size: var(--fs-15);
+  color: var(--plasma);
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+.ks-feature-card__body {
+  margin-top: var(--sp-4);
+}
+.ks-feature-card__body p {
+  font-size: var(--fs-18);
+  line-height: 1.5;
+  color: var(--bone);
+  margin-bottom: var(--sp-4);
+}
+.ks-feature-card__body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--iron-3);
+}
+
+@media (max-width: 720px) {
+  .ks-feature-card__header {
+    font-size: var(--fs-24);
+  }
+  .ks-feature-card__body p {
+    font-size: var(--fs-15);
+  }
+}
+
+@media (max-width: 720px) {
+  .project-detail--wide .timeline-item-shim__header {
+    font-size: var(--fs-24);
+  }
+  .project-detail--wide .timeline-item-shim__body > p {
+    font-size: var(--fs-15);
+  }
+  .ks-side-by-side {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== KS table of contents ===== */
+.ks-toc {
+  margin: var(--sp-5) 0 var(--sp-6);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--iron-3);
+  background: var(--iron);
+}
+.ks-toc__label {
+  font-family: var(--font-body);
+  font-size: var(--fs-12);
+  color: var(--ember);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-3);
+}
+.ks-toc__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ks-toc__list li {
+  margin: 0;
+}
+.ks-toc__list a {
+  display: inline-block;
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--iron-3);
+  background: var(--carbon);
+  font-family: var(--font-body);
+  font-size: var(--fs-14);
+  color: var(--bone);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: border-color var(--t-base) var(--ease-out), color var(--t-base) var(--ease-out), background var(--t-base) var(--ease-out);
+}
+.ks-toc__list a:hover {
+  border-color: var(--plasma);
+  color: var(--plasma);
+  background: var(--iron-2);
+  text-decoration: none;
+}
+
+/* ===== KS bullet sub-frames (icon + text rows inside a tool section) ===== */
+.ks-bullet-frame {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--sp-4);
+  align-items: center;
+  padding: var(--sp-4);
+  border: 1px solid var(--iron-3);
+  background: var(--carbon);
+  margin-bottom: var(--sp-3);
+}
+.ks-bullet-frame:last-of-type {
+  margin-bottom: 0;
+}
+.ks-bullet-frame__icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ks-bullet-frame__icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ks-bullet-frame__icon-placeholder {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--iron-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  color: var(--bone-dim);
+  letter-spacing: 0.08em;
+}
+.ks-bullet-frame__text {
+  font-family: var(--font-body);
+  font-size: var(--fs-18);
+  line-height: 1.5;
+  color: var(--bone);
+}
+
+@media (max-width: 720px) {
+  .ks-bullet-frame {
+    grid-template-columns: 60px 1fr;
+    gap: var(--sp-3);
+    padding: var(--sp-3);
+  }
+  .ks-bullet-frame__icon {
+    width: 60px;
+    height: 60px;
+  }
+  .ks-bullet-frame__text {
+    font-size: var(--fs-15);
+  }
+}
+.ks-intro-card__logo {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ks-intro-card__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ks-intro-card__logo-placeholder {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--iron-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--fs-11);
+  color: var(--bone-dim);
+  letter-spacing: 0.08em;
+}
+.ks-intro-card__copy {
+  font-family: var(--font-body);
+  font-size: var(--fs-24);
+  line-height: 1.4;
+  color: var(--bone);
+}
+
+@media (max-width: 720px) {
+  .ks-intro-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ks-intro-card__logo {
+    margin: 0 auto;
+  }
+  .ks-intro-card__copy,
+  .ks-video-card p {
+    font-size: var(--fs-18);
+  }
 }
 .project-detail__body p,
 .project-detail__body ul,

@@ -6,6 +6,9 @@
 {{- $featured := "" -}}
 {{- with $featuredSlug -}}
   {{- $featured = $.Site.GetPage (printf "/projects/%s" .) -}}
+  {{- if not $featured -}}
+    {{- $featured = $.Site.GetPage (printf "/tools/%s" .) -}}
+  {{- end -}}
 {{- end -}}
 {{- if not $featured -}}
   {{- range first 1 (where $.Site.RegularPages "Section" "projects").ByDate.Reverse -}}

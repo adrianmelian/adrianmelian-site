@@ -5,7 +5,7 @@
 {{- /* Resolve fields with sensible fallbacks */ -}}
 {{- $role := $p.role -}}
 {{- $studio := $p.studio -}}
-{{- $year := $p.shipped_year | default (.Date.Format "2006") -}}
+{{- $year := $p.shipped_year -}}
 {{- $status := $p.status -}}
 
 {{- /* Terminal-frame title: "role · studio · year" with present-only fallbacks */ -}}
@@ -20,7 +20,7 @@
 {{- /* Hero image — featured.{png,jpg,webp} from the page bundle */ -}}
 {{- $hero := .Resources.GetMatch "featured*" -}}
 
-<article class="project-detail">
+<article class="project-detail{{ if $p.wide_body }} project-detail--wide{{ end }}">
 
   {{- /* Hero terminal frame */ -}}
   <header class="project-detail__hero">
@@ -76,7 +76,7 @@
       {{ $images = $images | append . }}
     {{ end }}
   {{ end }}
-  {{ if $images }}
+  {{ if and $images (not $p.hide_image_grid) }}
   <section class="project-detail__images" aria-label="Additional images">
     <div class="project-images">
       {{ range $images }}
