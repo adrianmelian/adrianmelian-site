@@ -268,6 +268,22 @@
   text-decoration: none;
 }
 
+/* ===== Inline prose links ===== */
+/* Markdown links inside body copy read unmistakably as links: mindmeld green +
+   underline. Scoped to paragraph text so card / nav / TOC chrome (which carries
+   its own color and decoration) is untouched. */
+.project-detail__body p a {
+  color: var(--plasma);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.project-detail__body p a:hover {
+  color: var(--bone);
+}
+.project-detail__body p a strong {
+  color: inherit; /* bold links keep the link green, not <strong>'s bone color */
+}
+
 /* ===== KS bullet sub-frames (icon + text rows inside a tool section) ===== */
 .ks-bullet-frame {
   display: grid;
