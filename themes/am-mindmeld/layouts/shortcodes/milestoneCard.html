@@ -1,0 +1,20 @@
+{{- /* themes/am-mindmeld/layouts/shortcodes/milestoneCard.html */ -}}
+{{- /* Wraps one project milestone "post" (date-stamped heading + body + nested media
+       shortcodes) in a bordered card so consecutive milestones read as distinct
+       entries. Reuses the milestone-heading visual language for the header.
+       args:
+         date  — required, full date string (e.g. "2026-05-06")
+         title — required, milestone title
+       inner: the post body + media shortcodes (youtubeLite, figure, loopVideo, ...) */ -}}
+{{- $date := .Get "date" -}}
+{{- $title := .Get "title" -}}
+<article class="milestone-card">
+  <header class="project-list__year-heading milestone-heading milestone-card__head">
+    <span class="project-list__year-num">{{ $date }} //</span>
+    <h2 class="milestone-heading__title">{{ $title }}</h2>
+    <span class="project-list__year-rule" aria-hidden="true"></span>
+  </header>
+  <div class="milestone-card__body">
+    {{ .Inner | markdownify }}
+  </div>
+</article>

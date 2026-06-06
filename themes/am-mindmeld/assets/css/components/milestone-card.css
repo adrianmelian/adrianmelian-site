@@ -1,0 +1,26 @@
+/* themes/am-mindmeld/assets/css/components/milestone-card.css */
+/* Wraps each project milestone "post" (date-stamped heading + body + media) in a
+   bordered card so consecutive entries read as distinct, reusing the same surface
+   as the tool-card / wip-card (iron fill, iron-3 hairline border). */
+.milestone-card {
+  border: 1px solid var(--iron-3);
+  border-left: 4px solid var(--plasma); /* green accent rail, matching .ks-feature-card */
+  background: var(--iron);
+  padding: var(--sp-5);
+  margin-top: var(--sp-7);
+}
+.milestone-card:first-child {
+  margin-top: 0;
+}
+
+/* The date-stamped header sits flush at the top of the card (drop the section-level
+   top margin the bare milestone heading carries). */
+.milestone-card__head.milestone-heading {
+  margin-top: 0;
+  margin-bottom: var(--sp-4);
+}
+
+/* Vertical rhythm between the post's paragraphs and media blocks. */
+.milestone-card__body > * + * {
+  margin-top: var(--sp-4);
+}
