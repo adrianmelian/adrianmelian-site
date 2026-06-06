@@ -1,4 +1,4 @@
 +++
 title = "Projects"
 +++
-A selection of my creative and technical projects.
+A selection of my personal and professional projects.

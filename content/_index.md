@@ -3,10 +3,7 @@ title = "Adrian Melian"
 description = "Adrian Melian. Technical Artist. Rigging, pipeline, and ML for AAA games."
 
 [params]
-tagline = "Technical Artist · Rigging & Pipeline · 14 years shipping AAA"
-location = "Denver, CO"
-availability = "Open to relocation · contract or full-time"
-studios = ["Sledgehammer Games", "Double Fine", "Meta", "Nomadic VR"]
+tagline = "Technical Artist · Animator"
 featured_project = "kinematic_solutions"
 
 [[params.quick_links]]

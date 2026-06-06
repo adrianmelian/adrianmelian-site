@@ -13,6 +13,14 @@ engine = "Unreal Engine 5.4"
 platform = "PC (Steam)"
 +++
 
+{{< milestoneCard date="2026-06-05" title="Combat & Locomotion Update" >}}
+
+Here's where the build is at right now. Michael's locomotion and combat are running off the new hand-authored anim set, no more capsule placeholders. Early enemy AI is in, driving combat behavior against him. Engine side: a Lyra-style thread-safe AnimBP and an anim-driven combat pipeline, all the moment-to-moment feel I've been dialing in over the last few weeks. Animation authored in Maya, rigs built with [Kinematic Solutions](/tools/kinematic_solutions/).
+
+{{< youtubeLite id="uTYBit029t4" label="Archangel, combat & locomotion update" >}}
+
+{{< /milestoneCard >}}
+
 {{< milestoneCard date="2026-06-05" title="Character animation: Michael & Dybbuk" >}}
 
 Here's a little showcase of the animations I made for the game. Heavily inspired by UPA and Hanna-Barbera animation styles. Walk cycles, run cycles, attacks, combos, hit reacts, and death animations have been my concentration these past few weeks as I dial in the moment-to-moment gameplay feel. Lots of back-and-forth between gameplay engineering in Unreal and animation tuning and polish in Maya. I hope you enjoy!
