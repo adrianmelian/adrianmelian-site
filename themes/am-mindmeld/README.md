@@ -8,7 +8,12 @@ design system from AM_MayaTools. Not intended for redistribution.
 - Hugo Extended ≥ 0.120
 - Plain CSS via Hugo's resources pipeline (Concat + Minify + Fingerprint)
 - Self-hosted webfonts: VT323 (display), JetBrains Mono (body)
-- Vanilla JS (only the small inline mobile-nav toggle in the header partial)
+- Vanilla JS (small inline mobile-nav toggle in the header partial)
+- Homepage only: vendored GSAP 3.13 (ScrollTrigger, SplitText, ScrambleText)
+  + Three.js 0.182, bundled via js.Build. The hero is a real FABRIK/CCD IK
+  solver (`assets/js/solver.js` + `rig-hero.js`); choreography lives in
+  `assets/js/home-motion.js`. Spec:
+  `docs/superpowers/specs/2026-06-12-landing-rig-playground-design.md`.
 
 ## Structure
 

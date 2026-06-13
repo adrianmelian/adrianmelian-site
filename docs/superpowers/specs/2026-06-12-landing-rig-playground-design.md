@@ -86,6 +86,17 @@ themes/am-mindmeld/
 - GSAP files load as deferred classic scripts (fingerprinted Hugo resources). rig-hero.js bundles three via js.Build, loaded as deferred module. Homepage only.
 - Renderer caps: DPR clamp 2 desktop / 1.5 mobile, ~20 draw calls, pause on document.hidden and when hero leaves viewport (IntersectionObserver).
 
+## Shipped deltas (2026-06-12)
+
+Implemented as specced, plus review-driven additions: a FREEZE/PLAY HUD pill
+(WCAG 2.2.2 pause control), keyboard path for the effector puck (arrow keys),
+a play/pause button + Home/End keys on the time slider, a channel-box style
+meta readout in the close section, contrast promotions (bone-faint reserved
+for decoration), webp posters/thumbnails via the image pipeline, and font
+preloads. The hero height is `100svh - header` so the HUD bottom row sits
+on-fold. On narrow screens the chain is shorter and the scrim covers the
+full text block, since an anchored chain's slack always folds upward.
+
 ## Ship gates
 
 - Zero console errors. Zero horizontal overflow at 390px.

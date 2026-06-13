@@ -5,6 +5,10 @@
 <meta name="theme-color" content="#0B0E10">
 
 <title>{{ if .IsHome }}{{ .Site.Title | default "Adrian Melian" }}{{ else }}{{ .Title }} · {{ .Site.Title | default "Adrian Melian" }}{{ end }}</title>
+
+{{- /* Above-the-fold faces: preload so the giant display type doesn't swap late */ -}}
+<link rel="preload" href="{{ "fonts/VT323-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/JetBrainsMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 {{ with .Description | default .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 
 {{- /* CSS bundle: concat all theme CSS files, minify, fingerprint */ -}}

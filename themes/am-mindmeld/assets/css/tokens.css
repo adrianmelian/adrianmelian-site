@@ -27,7 +27,9 @@
   --fs-24: 1.5rem;     /* 24px */
   --fs-32: 2rem;       /* 32px */
   --fs-48: 3rem;       /* 48px */
-  --fs-72: 4.5rem;     /* 72px — hero name */
+  --fs-72: 4.5rem;     /* 72px — display (404, legacy) */
+  --fs-display-xl: clamp(3.6rem, 9.5vw, 8.5rem);  /* hero name + close */
+  --lh-display: 0.85;
 
   --lh-tight:  0.95;
   --lh-snug:   1.2;
