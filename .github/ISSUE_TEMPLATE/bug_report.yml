@@ -1,0 +1,68 @@
+name: Bug report
+description: Report a bug. One bug per report, please.
+labels: ["bug", "needs-triage"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong, in a sentence or two.
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Area
+      description: The part of the site affected (for example content, theme).
+    validations:
+      required: false
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps. Start from a fresh scene, level, or page when you can.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include the exact error text if there is any.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or build
+      description: Tool version, commit, branch, or build number. Include your OS and host app version (for example Maya 2025.3) when relevant.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How bad is it?
+      options:
+        - Blocks me completely
+        - Major problem, I can work around it
+        - Minor annoyance
+        - Cosmetic or polish
+        - Not sure
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Screenshots, logs, scene files, links.
+    validations:
+      required: false
