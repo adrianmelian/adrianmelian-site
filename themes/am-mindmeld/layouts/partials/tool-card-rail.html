@@ -8,8 +8,8 @@
 <article class="card-rail">
   <a href="{{ $p.RelPermalink }}" class="card-rail__link">
     {{ if $image }}
-    <div class="card-rail__media">
-      <img src="{{ $image }}" alt="{{ $p.Title }}" loading="lazy" class="card-rail__img">
+    <div class="card-rail__media" data-parallax-window>
+      <img src="{{ $image }}" alt="{{ $p.Title }}" loading="lazy" class="card-rail__img" data-parallax>
     </div>
     {{ else }}
     <div class="card-rail__media card-rail__media--empty"></div>

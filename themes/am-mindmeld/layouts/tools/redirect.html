@@ -1,0 +1,18 @@
+{{- /* themes/am-mindmeld/layouts/tools/redirect.html — external redirect page.
+     Kinematic Solutions grew into FabricatorStudio; this preserves every old
+     inbound link to /tools/kinematic_solutions/ by forwarding to the product
+     site. Standalone template (no define blocks) so Hugo renders it whole. */ -}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+  <link rel="canonical" href="{{ .Params.redirect_to }}">
+  <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
+  <meta name="robots" content="noindex">
+  <script>window.location.replace({{ .Params.redirect_to }});</script>
+</head>
+<body>
+  <p>Kinematic Solutions is now <a href="{{ .Params.redirect_to }}">FabricatorStudio</a>. Taking you there.</p>
+</body>
+</html>

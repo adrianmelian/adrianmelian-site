@@ -10,3 +10,34 @@
     <span class="statusbar__seg statusbar__seg--muted">© {{ now.Format "2006" }} ADRIAN MELIAN</span>
   </div>
 </footer>
+
+{{- /* Parallax JS fallback (ported from fabricator.studio): only runs where
+     CSS scroll-driven animations are unsupported; reduce-motion aware. */ -}}
+<script>
+  (function () {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.CSS && CSS.supports && CSS.supports('animation-timeline: view()')) return;
+    var pairs = [].slice.call(document.querySelectorAll('[data-parallax]'))
+      .map(function (img) { return { img: img, win: img.closest('[data-parallax-window]') }; })
+      .filter(function (pr) { return pr.win; });
+    if (!pairs.length) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      for (var i = 0; i < pairs.length; i++) {
+        var img = pairs[i].img, win = pairs[i].win;
+        var overflow = img.offsetHeight - win.offsetHeight;
+        if (overflow <= 0) { img.style.transform = ''; continue; }
+        var rect = win.getBoundingClientRect();
+        var p = (vh - rect.top) / (vh + rect.height);
+        p = p < 0 ? 0 : p > 1 ? 1 : p;
+        img.style.transform = 'translateY(' + (-overflow * (1 - p)).toFixed(1) + 'px)';
+      }
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  })();
+</script>

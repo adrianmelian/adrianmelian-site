@@ -32,9 +32,39 @@
 }
 .card-rail__link:active { transform: scale(0.98); transition-duration: var(--t-active); }
 
-.card-rail__media { aspect-ratio: 16 / 9; overflow: hidden; }
+.card-rail__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  /* parallax travel: how much taller the art is than its window */
+  --parallax-travel: clamp(28px, 6vw, 64px);
+}
 .card-rail__media--empty { background: var(--carbon); }
-.card-rail__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-rail__img {
+  width: 100%;
+  height: calc(100% + var(--parallax-travel));
+  object-fit: cover;
+  display: block;
+  transform: translateY(calc(var(--parallax-travel) / -2));
+  will-change: transform;
+}
+
+/* Scroll-driven parallax, ported from fabricator.studio (base.css): runs on
+   the compositor via a view() timeline; the JS in footer.html is only a
+   fallback for browsers without scroll-driven-animation support. Honors
+   reduce-motion. */
+@keyframes am-parallax-drift {
+  from { transform: translateY(calc(-1 * var(--parallax-travel, 0px))); }
+  to { transform: translateY(0); }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    [data-parallax] {
+      animation: am-parallax-drift linear both;
+      animation-timeline: view();
+    }
+  }
+}
 
 .card-rail__body { padding: var(--sp-3) var(--sp-4); }
 .card-rail__title {

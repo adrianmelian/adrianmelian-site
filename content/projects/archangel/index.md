@@ -15,7 +15,7 @@ platform = "PC (Steam)"
 
 {{< milestoneCard date="2026-06-05" title="Combat & Locomotion Update" >}}
 
-Here's where the build is at right now. Michael's locomotion and combat are running off the new hand-authored anim set, no more capsule placeholders. Early enemy AI is in, driving combat behavior against him. Engine side: a Lyra-style thread-safe AnimBP and an anim-driven combat pipeline, all the moment-to-moment feel I've been dialing in over the last few weeks. Animation authored in Maya, rigs built with [Kinematic Solutions](/tools/kinematic_solutions/).
+Here's where the build is at right now. Michael's locomotion and combat are running off the new hand-authored anim set, no more capsule placeholders. Early enemy AI is in, driving combat behavior against him. Engine side: a Lyra-style thread-safe AnimBP and an anim-driven combat pipeline, all the moment-to-moment feel I've been dialing in over the last few weeks. Animation authored in Maya, rigs built with [FabricatorStudio](https://fabricator.studio).
 
 {{< youtubeLite id="uTYBit029t4" label="Archangel, combat & locomotion update" >}}
 
@@ -35,7 +35,7 @@ Here's a little showcase of the animations I made for the game. Heavily inspired
 
 {{< milestoneCard date="2026-05-12" title="Final Michael model & rig" >}}
 
-Model, rig, and texture pass. Concept, modeling, texturing, and rigging all by me. Modeled the base shape in **Maya**, sculpted in **Blender**, textured in **Substance Painter**, and rigged with [**Kinematic Solutions' Fabricator**](/tools/kinematic_solutions/#fabricator). Next up: Unreal integration, using motion matching plus hand-authored animation sets for Michael (and the enemy character), then swapping out the capsule placeholders.
+Model, rig, and texture pass. Concept, modeling, texturing, and rigging all by me. Modeled the base shape in **Maya**, sculpted in **Blender**, textured in **Substance Painter**, and rigged with [**FabricatorStudio's Fabricator**](https://fabricator.studio). Next up: Unreal integration, using motion matching plus hand-authored animation sets for Michael (and the enemy character), then swapping out the capsule placeholders.
 
 {{< loopVideo src="/MichaelRig.mp4" alt="Michael rig demonstration loop" >}}
 
