@@ -86,18 +86,13 @@
 <section class="hp-section container">
   {{ partial "section-heading.html" (dict "number" "01" "title" "Featured / FabricatorStudio" "id" "featured") }}
 
-  {{- $fabV := "" }}{{ $skinV := "" }}{{ $orientV := "" -}}
-  {{- $fabP := "" }}{{ $skinP := "" }}{{ $orientP := "" }}{{ $animP := "" -}}
+  {{- /* The toolkit montage: the same card art as fabricator.studio's download banner. */ -}}
+  {{- $card := "" -}}
   {{- with $ks -}}
-    {{- with .Resources.GetMatch "fab_animation.mp4" }}{{ $fabV = .RelPermalink }}{{ end -}}
-    {{- with .Resources.GetMatch "autoskin.mp4" }}{{ $skinV = .RelPermalink }}{{ end -}}
-    {{- with .Resources.GetMatch "aimers.mp4" }}{{ $orientV = .RelPermalink }}{{ end -}}
-    {{- with .Resources.GetMatch "fabricator.png" }}{{ $fabP = (.Resize "960x webp q80").RelPermalink }}{{ end -}}
-    {{- with .Resources.GetMatch "autoskin.png" }}{{ $skinP = (.Resize "960x webp q80").RelPermalink }}{{ end -}}
-    {{- with .Resources.GetMatch "aimer.png" }}{{ $orientP = (.Resize "960x webp q80").RelPermalink }}{{ end -}}
+    {{- with .Resources.GetMatch "featured.png" -}}
+      {{- with .Resize "1600x webp q82" }}{{ $card = .RelPermalink }}{{ end -}}
+    {{- end -}}
   {{- end -}}
-  {{- /* pre-resized once from static/MichaelPainter.png (4.8 MB original) */ -}}
-  {{- $animP = "posters/michael_painter_960.webp" | relURL -}}
 
   <div class="term-frame pipe" data-reveal>
     <div class="term-frame__bar">
@@ -106,36 +101,14 @@
       <span class="term-frame__meta">MAYA 2025 → UE5</span>
     </div>
 
-    <div class="pipe__chips" role="group" aria-label="Pipeline stage demos">
-      <button class="pipe__chip is-active" type="button" aria-pressed="true"
-              data-video="{{ $fabV }}" data-poster="{{ $fabP }}"
-              data-label="FABRICATOR · MODULAR RIG BUILD">Build Rig</button>
-      <button class="pipe__chip" type="button" aria-pressed="false"
-              data-video="{{ $skinV }}" data-poster="{{ $skinP }}"
-              data-label="AUTOSKIN · BBW WEIGHTS">Skin</button>
-      <button class="pipe__chip" type="button" aria-pressed="false"
-              data-video="{{ $orientV }}" data-poster="{{ $orientP }}"
-              data-label="KSJOINTAIMER · ORIENT">Orient</button>
-      <button class="pipe__chip" type="button" aria-pressed="false"
-              data-video="{{ "MichaelRig.mp4" | relURL }}" data-poster="{{ $animP }}"
-              data-label="ANIMATOR-FRIENDLY RIG">Animate</button>
-    </div>
+    {{ with $card }}
+    <a class="pipe__shot" href="https://fabricator.studio" rel="noopener" aria-label="Visit fabricator.studio">
+      <img src="{{ . }}" width="1600" height="781" loading="lazy" decoding="async"
+           alt="The FabricatorStudio toolkit in Maya: modular rig builder, Pose and Anim Studio, Skin IO, Skeleton IO, FBX exporter, and Reggie the AI technical artist.">
+    </a>
+    {{ end }}
 
     <div class="pipe__body">
-      <div class="pipe__viewport">
-        <span class="pipe__stage-title">FABRICATOR · MODULAR RIG BUILD</span>
-        <span class="pipe__frames">
-          <button class="pipe__playpause" type="button" aria-label="Pause demo video">❚❚</button>
-          <span><span class="pipe__frame-cur">0</span> / <span class="pipe__frame-end">0</span> F</span>
-        </span>
-        <video class="pipe__video" muted loop playsinline preload="none"
-               aria-label="FabricatorStudio tool demo loop"></video>
-        <div class="pipe__slider" role="slider" tabindex="0" aria-label="Scrub the demo video timeline"
-             aria-valuemin="0" aria-valuenow="0" aria-valuemax="0">
-          <div class="pipe__playhead"></div>
-        </div>
-      </div>
-
       <div class="pipe__rail">
         <h3 class="pipe__title">FabricatorStudio</h3>
         <p class="pipe__blurb">The artist-friendly Maya to Unreal pipeline. A fast, modular workflow with animator-friendly rigs that work out of the box. In production on Archangel (UE5).</p>

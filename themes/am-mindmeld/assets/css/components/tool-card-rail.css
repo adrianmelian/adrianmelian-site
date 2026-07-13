@@ -38,6 +38,11 @@
   position: relative;
   /* parallax travel: how much taller the art is than its window */
   --parallax-travel: clamp(28px, 6vw, 64px);
+  /* NAMED timeline, deliberately: overflow:hidden makes this a scroll container, so a
+     plain view() on the image resolves against THIS clipped box (never scrolls -> no
+     animation). Naming it here anchors the timeline to this window's pass through the
+     page scroller. */
+  view-timeline-name: --card-rail-shot;
 }
 .card-rail__media--empty { background: var(--carbon); }
 .card-rail__img {
@@ -61,7 +66,7 @@
   @media (prefers-reduced-motion: no-preference) {
     [data-parallax] {
       animation: am-parallax-drift linear both;
-      animation-timeline: view();
+      animation-timeline: --card-rail-shot;
     }
   }
 }

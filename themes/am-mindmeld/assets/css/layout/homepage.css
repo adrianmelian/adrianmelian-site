@@ -333,9 +333,52 @@
 .pipe__chip.is-active { color: var(--plasma); border-color: var(--plasma-dim); }
 .pipe__chip.is-active::after { transform: scaleX(1); }
 
+/* Featured card leads with the full-width toolkit montage; copy sits beneath it.
+   The window shows 600 of the art's 1000px of height (2048:600); the spare 400px is
+   parallax travel. The image keeps its natural aspect at full width (no object-fit:
+   cover) so the outer tool windows never get cropped off the sides. Travel therefore
+   equals 40% of the image's own height, which is what the keyframe translates by.
+   Driven by a view() timeline so it runs on the compositor and stays smooth on mobile;
+   without support it simply rests centered. Honors reduce-motion. */
+.pipe__shot {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2048 / 600;
+  border-top: 1px solid var(--iron-3);
+  border-bottom: 1px solid var(--iron-3);
+  /* NAMED timeline, deliberately. overflow:hidden makes this element a scroll
+     container, so a plain view() on the image inside would resolve against THIS
+     clipped box (never scrolls -> no animation). Naming the timeline here anchors
+     it to the window's own pass through the page scroller, which is what we want. */
+  view-timeline-name: --pipe-shot;
+}
+.pipe__shot img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-20%); /* rest = centered on the art */
+  will-change: transform;
+}
+@keyframes pipe-shot-drift {
+  from { transform: translateY(-40%); } /* entering: bottom of the art */
+  to   { transform: translateY(0); }    /* leaving: top of the art */
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .pipe__shot img {
+      animation: pipe-shot-drift linear both;
+      animation-timeline: --pipe-shot;
+    }
+  }
+}
+
 .pipe__body {
   display: grid;
-  grid-template-columns: 62fr 38fr;
+  grid-template-columns: 1fr;
   gap: var(--sp-6);
   padding: var(--sp-4) var(--sp-5) var(--sp-6);
 }
@@ -436,8 +479,9 @@
   color: var(--bone-dim);
   line-height: 1.6;
   margin: 0;
+  max-width: 68ch; /* the rail is full-width now; keep the measure readable */
 }
-.pipe__bullets { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
+.pipe__bullets { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--sp-2); max-width: 68ch; }
 .pipe__bullets li {
   font-family: var(--font-body);
   font-size: var(--fs-12);
