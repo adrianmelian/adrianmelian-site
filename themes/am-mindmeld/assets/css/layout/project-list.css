@@ -46,3 +46,16 @@
 @media (max-width: 720px) {
   .project-list__year-num { font-size: var(--fs-24); }
 }
+
+/* Mindmeld 2.0: the list pages lead with a real heading now, not a fake terminal titlebar
+   carrying a filename ("projects.list"). */
+.project-list__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-48);
+  line-height: var(--lh-tight);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--bone);
+  margin-bottom: var(--sp-6);
+}

@@ -1,19 +1,18 @@
 {{- /* themes/am-mindmeld/layouts/partials/section-list-zigzag.html */ -}}
 {{- /* Receives the list page (.) as context. Renders:
-       - terminal-frame titlebar hero ("section.list" title)
+       - the page title
        - optional .Content intro
-       - year groups: ember "YYYY //" heading, then zig-zag cards
-*/ -}}
+       - year groups: ember year heading, then zig-zag cards
+
+   Mindmeld 2.0: the page used to lead with a fake terminal titlebar carrying a filename
+   ("projects.list", "tools.list") while the real h1 sat visually-hidden behind it. Terminal
+   frames and that whole console affectation are RETIRED (brand DNA principle 8), so the
+   real heading is simply visible now. */ -}}
 {{- $section := .Section -}}
-{{- $titleBar := printf "%s.list" $section -}}
 
 <div class="project-list container">
 
-  {{- /* Visually-hidden h1 for screen readers — the terminal-frame titlebar is decorative */ -}}
-  <h1 class="visually-hidden">{{ .Title }}</h1>
-
-  {{- /* Page hero: titlebar-only terminal frame */ -}}
-  {{ partial "terminal-frame.html" (dict "title" $titleBar "variant" "titlebar") }}
+  <h1 class="project-list__title">{{ .Title }}</h1>
 
   {{- /* Optional intro from .Content */ -}}
   {{ with .Content }}
