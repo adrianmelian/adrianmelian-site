@@ -7,6 +7,9 @@
   {{- /* Mindmeld 2.0: the `//` console prefix is RETIRED (brand DNA principle 8). The
          number stands on its own as the section index. */ -}}
   {{ with $number }}<span class="section-heading__num">{{ . }}</span>{{ end }}
-  <h2 class="section-heading__title">{{ $title | upper }}</h2>
+  {{- /* No Hugo `upper` here: .section-heading__title already uppercases in CSS, and doing it
+         in the template too would bake a literal run-on into the markup that .brand-name
+         could no longer rescue. Let CSS case it, and let the wrapper exempt the company. */ -}}
+  <h2 class="section-heading__title">{{ partial "brand-name.html" $title }}</h2>
   <span class="section-heading__rule" aria-hidden="true"></span>
 </header>

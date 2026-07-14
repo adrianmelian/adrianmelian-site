@@ -111,6 +111,13 @@ hr { border: none; border-top: 1px dashed var(--iron-3); margin: var(--sp-6) 0; 
 .fallback-page__list { margin-top: var(--sp-5); }
 .fallback-page__list li { margin-bottom: var(--sp-2); }
 
+/* The company name keeps its native casing everywhere, including inside the uppercased
+   headings. "FabricatorStudio" is a compound whose only word-break signal IS the capital F
+   and S; uppercase it and you get the run-on "FABRICATORSTUDIO", which reads as one long
+   word. Restraint: it stays the heading's font, weight, colour and spacing, and opts out of
+   the casing alone. */
+.brand-name { text-transform: none; }
+
 /* a11y: visually hide while staying available to screen readers */
 .visually-hidden {
   position: absolute;

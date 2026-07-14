@@ -78,17 +78,32 @@ for (const f of htmlFiles) {
   if (m) failures.push(`G12 hype word "${m[0]}" in ${f}`);
 }
 
-// ---- principle 9: the company name ----------------------------------------
-// The dot form is always wrong: "Fabricator.Studio" is the DOMAIN, never the company.
+// ---- principle 9: the company renders as FabricatorStudio ------------------
+// Compound, capital F and capital S, no dot, NO SPACE (DNA section 7). The gate used to
+// test only the mid-word dot, so "Fabricator Studio" (spaced) sailed through it; that is
+// just as much a naming break, and it turned up in real copy.
 //
-// The space is Adrian's call (2026-07-14): this site renders the spaced "Fabricator Studio".
-// The spaced check that used to live here is therefore OFF, and deliberately so, not by
-// oversight. It is still ON in fabricator.studio's copy of this gate, where DNA section 7
-// locks the compound. Until that section is amended the two sites disagree on purpose;
-// if the DNA moves to the spaced form, delete this note and the check stays gone.
+// G9b: the compound is ONLY legible because the capital F and S separate the two words, so
+// uppercasing it destroys the name and yields the unreadable run-on "FABRICATORSTUDIO".
+// Headings on this site are uppercased (CSS text-transform, and Hugo `upper`), so the name
+// must be wrapped in .brand-name to keep its native casing. Catch the run-on in the output.
 for (const f of htmlFiles) {
   const html = readFileSync(f, 'utf8');
   if (html.includes('Fabricator.Studio')) failures.push(`G9 "Fabricator.Studio" rendering in ${f}`);
+  const spaced = visibleText(f).match(/Fabricator\s+Studio/);
+  if (spaced) failures.push(`G9 spaced "${spaced[0]}" in ${f} (the company name is the compound FabricatorStudio)`);
+  // Hugo-side `upper` bakes the run-on straight into the markup, so a text scan sees it.
+  if (/FABRICATORSTUDIO/.test(visibleText(f))) {
+    failures.push(`G9b uppercased "FABRICATORSTUDIO" in ${f} (wrap the name in .brand-name so casing survives)`);
+  }
+  // CSS text-transform does NOT: the markup still reads "FabricatorStudio" and only the
+  // rendered pixels are wrong, so no text scan can catch it. Headings are uppercased by
+  // rule here, so require the wrapper on any heading carrying the name.
+  for (const [, inner] of html.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/gi)) {
+    if (inner.includes('FabricatorStudio') && !inner.includes('brand-name')) {
+      failures.push(`G9b bare "FabricatorStudio" in a heading in ${f} (uppercased by CSS; wrap it in .brand-name)`);
+    }
+  }
 }
 
 // ---- principles 3 + 4: ONE family, JetBrains Mono. VT323 and Geist retired --

@@ -15,7 +15,7 @@
     </div>
     {{ end }}
     <div class="card-zig__body">
-      <h3 class="card-zig__title">{{ $p.Title }}</h3>
+      <h3 class="card-zig__title">{{ partial "brand-name.html" $p.Title }}</h3>
       {{ with $p.Params.role | default $p.Params.studio }}
         <dl class="metadata-list card-zig__meta">
           {{ with $p.Params.role }}<dt>Role</dt><dd>{{ . }}</dd>{{ end }}

@@ -1,0 +1,11 @@
+{{- /* themes/am-mindmeld/layouts/partials/brand-name.html
+     Takes a title string, returns it with the company name wrapped in .brand-name.
+
+     The compound "FabricatorStudio" is legible ONLY because the capital F and S separate the
+     two words. Headings on this site are uppercased, which erases exactly that signal and
+     leaves the unreadable run-on "FABRICATORSTUDIO". The wrapper opts the name out of the
+     casing so it keeps its native F/S, which is what makes the compound work at all.
+
+     Fix the cause, not the copy: the name itself is correct (brand DNA section 7 locks the
+     compound, no space). It was the uppercasing that broke it. */ -}}
+{{- . | replaceRE "FabricatorStudio" `<span class="brand-name">FabricatorStudio</span>` | safeHTML -}}
