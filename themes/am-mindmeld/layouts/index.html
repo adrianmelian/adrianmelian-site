@@ -38,7 +38,7 @@
 
 {{- /* ============================================== 01 / FEATURED PIPELINE */ -}}
 <section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "01" "title" "Featured / FabricatorStudio" "id" "featured") }}
+  {{ partial "section-heading.html" (dict "number" "01" "title" "FabricatorStudio" "id" "featured") }}
 
   {{- /* The toolkit montage: the same card art as fabricator.studio's download banner. */ -}}
   {{- $card := "" -}}
@@ -81,7 +81,7 @@
 
 {{- /* ===================================================== 02 / SHIPPED */ -}}
 <section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "02" "title" "Shipped / Build Log" "id" "shipped") }}
+  {{ partial "section-heading.html" (dict "number" "02" "title" "Projects" "id" "shipped") }}
   <div class="ledger">
     {{ range $i, $page := (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
     {{- $img := "" }}{{ $thumb := "" -}}
@@ -108,7 +108,7 @@
 
 {{- /* ===================================================== 03 / TOOLBOX */ -}}
 <section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "03" "title" "Toolbox / Plugin Manager" "id" "tools") }}
+  {{ partial "section-heading.html" (dict "number" "03" "title" "Toolbox" "id" "tools") }}
   <div class="plugmgr">
     {{ range $i, $page := (where .Site.RegularPages "Section" "tools").ByDate.Reverse }}
     <a class="plugmgr__row" href="{{ $page.RelPermalink }}" data-reveal>
@@ -129,7 +129,7 @@
 
 {{- /* ============================================ 04 / RENDER TARGETS */ -}}
 <section class="hp-section container hp-selected">
-  {{ partial "section-heading.html" (dict "number" "04" "title" "Render Targets / Selected Work" "id" "selected") }}
+  {{ partial "section-heading.html" (dict "number" "04" "title" "Traditional Art" "id" "selected") }}
   <div class="bento" data-reveal>
     {{ partial "bento-cell.html" (dict "path" "gallery/ufo.jpg" "caption" "Krazy Kaiju! · acrylic on canvas" "span" 3 "aspect" "16/10") }}
     {{ partial "bento-cell.html" (dict "path" "gallery/07.jpg" "caption" "Chicken Run & Coop · 3D to real world" "span" 2 "aspect" "1") }}
@@ -142,7 +142,6 @@
 <section class="hp-section container hp-close">
   <div class="hp-close__grid">
     <div>
-      <p class="hp-close__sub" data-reveal>Rigging, pipeline, and ML for AAA games. 14 years, 13 shipped titles. Currently building Archangel in UE5.</p>
       <div class="hp-close__ctas" data-reveal>
         <a class="btn-term btn-term--primary magnetic" href="{{ "/contact/" | relURL }}">Contact →</a>
         <a class="btn-term" href="{{ "adrianmelian_resume.pdf" | relURL }}" rel="noopener" target="_blank">Resume</a>
