@@ -78,15 +78,17 @@ for (const f of htmlFiles) {
   if (m) failures.push(`G12 hype word "${m[0]}" in ${f}`);
 }
 
-// ---- principle 9: the company renders as FabricatorStudio ------------------
-// Compound, capital F and capital S, no dot, NO SPACE (DNA section 7). The gate used to
-// test only the mid-word dot, so "Fabricator Studio" (spaced) sailed through it; that is
-// just as much a naming break, and it turned up in real copy.
+// ---- principle 9: the company name ----------------------------------------
+// The dot form is always wrong: "Fabricator.Studio" is the DOMAIN, never the company.
+//
+// The space is Adrian's call (2026-07-14): this site renders the spaced "Fabricator Studio".
+// The spaced check that used to live here is therefore OFF, and deliberately so, not by
+// oversight. It is still ON in fabricator.studio's copy of this gate, where DNA section 7
+// locks the compound. Until that section is amended the two sites disagree on purpose;
+// if the DNA moves to the spaced form, delete this note and the check stays gone.
 for (const f of htmlFiles) {
   const html = readFileSync(f, 'utf8');
   if (html.includes('Fabricator.Studio')) failures.push(`G9 "Fabricator.Studio" rendering in ${f}`);
-  const spaced = visibleText(f).match(/Fabricator\s+Studio/);
-  if (spaced) failures.push(`G9 spaced "${spaced[0]}" in ${f} (the company name is the compound FabricatorStudio)`);
 }
 
 // ---- principles 3 + 4: ONE family, JetBrains Mono. VT323 and Geist retired --
