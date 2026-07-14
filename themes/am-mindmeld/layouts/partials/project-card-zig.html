@@ -15,7 +15,20 @@
     </div>
     {{ end }}
     <div class="card-zig__body">
-      <h3 class="card-zig__title">{{ partial "brand-name.html" $p.Title }}</h3>
+      {{- /* Optional mark, locked up with the title on one row. Cards without a `mark` param
+             render the head as a plain heading, exactly as before. */ -}}
+      <div class="card-zig__head">
+        {{- with $p.Params.mark -}}
+          {{- with resources.Get . -}}
+            {{- with .Resize "72x72 webp q90" }}
+        <img class="card-zig__mark" src="{{ .RelPermalink }}" width="36" height="36"
+             alt="" aria-hidden="true" loading="lazy" decoding="async">
+            {{ end -}}
+          {{- end -}}
+        {{- end }}
+        <h3 class="card-zig__title">{{ partial "brand-name.html" $p.Title }}</h3>
+      </div>
+      {{ with $p.Params.tagline }}<p class="card-zig__tagline">{{ . }}</p>{{ end }}
       {{ with $p.Params.role | default $p.Params.studio }}
         <dl class="metadata-list card-zig__meta">
           {{ with $p.Params.role }}<dt>Role</dt><dd>{{ . }}</dd>{{ end }}

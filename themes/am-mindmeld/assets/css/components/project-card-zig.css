@@ -37,6 +37,16 @@
 
 .card-zig__body { padding: 0 var(--sp-3); }
 
+/* Mark and title read as one lockup. The head carries the spacing the title used to, so
+   cards with no mark are laid out exactly as before. */
+.card-zig__head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+.card-zig__mark { width: 36px; height: 36px; flex-shrink: 0; }
+
 .card-zig__title {
   font-family: var(--font-display);
   font-weight: 700;
@@ -45,9 +55,20 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   line-height: 1;
-  margin-bottom: var(--sp-3);
+  margin-bottom: 0;
 }
 .card-zig__link:hover .card-zig__title { color: var(--plasma); }
+
+/* Optional plasma tagline, matching the homepage card. It pulls back up against the head so
+   name and tagline read as one unit; the pull-up lives here rather than shrinking the head's
+   margin, so cards WITHOUT a tagline keep their original spacing untouched. */
+.card-zig__tagline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-14);
+  color: var(--plasma);
+  margin: calc(var(--sp-3) * -1 + var(--sp-2)) 0 var(--sp-3);
+}
 
 .card-zig__meta { margin-bottom: var(--sp-3); }
 .card-zig__blurb {
