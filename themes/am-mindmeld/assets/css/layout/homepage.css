@@ -380,26 +380,34 @@
 .ledger-preview.is-visible { opacity: 1; clip-path: inset(0); }
 
 @media (max-width: 760px) {
+  /* The cover art takes the year's slot (Adrian 2026-07-14). The old row squeezed the title
+     from BOTH sides: a 6ch year column on the left and a 56px thumb on the right. Promoting
+     the thumb into the left column drops the right one entirely, so the title gets that
+     width back and stops wrapping to shreds. The art also identifies a game faster than its
+     year does, which is the point.
+
+     Every project ships a featured image (checked), so the left column is never a 56px hole.
+     The year is desktop-only now; it is not lost, just not on a 360px screen. */
   .ledger__row {
-    grid-template-columns: 6ch minmax(0, 1fr) 56px;
+    grid-template-columns: 56px minmax(0, 1fr);
     grid-template-areas:
-      "year  title title"
-      "year  meta  meta";
+      "thumb title"
+      "thumb meta";
     row-gap: 6px;
     align-items: center;
   }
-  .ledger__idx, .ledger__arrow { display: none; }
-  .ledger__year { grid-area: year; }
+  .ledger__idx, .ledger__arrow, .ledger__year { display: none; }
   .ledger__title { grid-area: title; white-space: normal; }
   .ledger__studio { grid-area: meta; }
   .ledger__role { display: none; }
   .ledger__thumb {
     display: block;
-    grid-area: 1 / 3 / 3 / 4;
+    grid-area: thumb;
     width: 56px;
     height: 56px;
     object-fit: cover;
     border: 1px solid var(--iron-3);
+    border-radius: var(--radius-sm);
   }
 }
 
