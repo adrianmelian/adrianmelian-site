@@ -1,8 +1,13 @@
 {{- /* themes/am-mindmeld/layouts/partials/header.html */ -}}
 <header class="site-header">
   <div class="site-header__inner container">
+    {{- /* The mark is Adrian's crest (Adrian, 2026-07-14), replacing the pixel-art "AM"
+           SVG. That mark was a 1.0 motif: 2.0 is sleek vector, not pixel. */ -}}
+    {{- $mark := "" -}}
+    {{- with resources.Get "iwahashi_mindmeld_v1.png" }}{{ $mark = (.Resize "48x48").RelPermalink }}{{ else }}{{ $mark = "favicon-32.png" | relURL }}{{ end -}}
     <a class="site-header__logo" href="{{ "/" | relURL }}" aria-label="Adrian Melian, home">
-      {{ partial "pixel-mark.html" (dict "size" 24 "title" "Adrian Melian") }}
+      <img class="site-header__mark" src="{{ $mark }}" alt="" width="24" height="24"
+           loading="eager" decoding="async" aria-hidden="true">
       <span class="site-header__wordmark">ADRIAN MELIAN</span>
     </a>
 

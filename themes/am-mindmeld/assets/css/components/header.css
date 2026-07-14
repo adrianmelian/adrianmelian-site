@@ -24,6 +24,17 @@
 }
 .site-header__logo:hover { color: var(--bone); }
 
+/* The crest mark. The old pixel-art "AM" SVG inherited `currentColor` from the link; the
+   crest is a real image, so it lifts on hover instead of recoloring. */
+.site-header__mark {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform var(--t-base) var(--ease-spring);
+}
+.site-header__logo:hover .site-header__mark { transform: scale(1.08); }
+
 .site-header__wordmark {
   font-family: var(--font-display);
   font-weight: 700;

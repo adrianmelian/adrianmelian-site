@@ -45,4 +45,9 @@
   | resources.Fingerprint "sha512" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 
-<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+{{- /* The tab mark is Adrian's crest (Adrian, 2026-07-14). It replaces the old pixel-art
+       "AM" favicon, which was a 1.0 motif: 2.0 is sleek vector, not pixel. */ -}}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+<link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png" sizes="32x32">
+<link rel="icon" href="{{ "favicon-16.png" | relURL }}" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
