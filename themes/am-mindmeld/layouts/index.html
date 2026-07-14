@@ -32,8 +32,28 @@
     </div>
     {{ end }}
   </div>
+</section>
 
-  <div class="hero__cue" aria-hidden="true">scroll</div>
+{{- /* ===================================================== 00b / ABOUT */ -}}
+{{- /* The about block, mirrored from fabricator.studio (Adrian, 2026-07-14). It sits
+       between the hero and the FabricatorStudio card on purpose: the second paragraph
+       hands off straight into the card below it. */ -}}
+<section class="hp-section container">
+  {{ partial "section-heading.html" (dict "title" "About" "id" "about") }}
+  {{- $portrait := "" -}}
+  {{- with resources.Get "adrian.png" -}}
+    {{- with .Resize "480x webp q82" }}{{ $portrait = .RelPermalink }}{{ end -}}
+  {{- end -}}
+  <div class="about__grid{{ if $portrait }} about__grid--photo{{ end }}" data-reveal>
+    {{ with $portrait }}
+    <img class="about__photo" src="{{ . }}" alt="Adrian Melian"
+         width="480" height="458" loading="lazy" decoding="async">
+    {{ end }}
+    <div class="about__body">
+      <p>Hi, I'm Adrian Melian. I've spent 14 years as a Technical Artist in AAA games, most recently leading the Tech Art team at Sledgehammer Games. Along the way I've worked with Double Fine, Ubisoft, Camouflaj, and Meta, on games like Broken Age, Modern Warfare III, and South Park: The Fractured But Whole.</p>
+      <p>Game dev is changing fast, and a new era of generative AI is here. Avoiding generic slop still takes good tools, ones that put the layers of polish where you want them. So I'm sharing my toolbox. FabricatorStudio is the rigging, skinning, animation, and export kit I built for indie teams and small studios, to the standard I held on AAA productions. The tools are free and open source.</p>
+    </div>
+  </div>
 </section>
 
 {{- /* ============================================== 01 / FEATURED PIPELINE */ -}}

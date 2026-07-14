@@ -43,7 +43,7 @@
       { y: 14, autoAlpha: 0 },
       { y: 0, autoAlpha: 1, duration: 0.5, ease: 'expo.out', stagger: 0.06, delay: 0.55 });
 
-    gsap.fromTo('.hero__cue', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, delay: 1.6 });
+    
 
     // ---- scroll reveals ---------------------------------------------
     if (window.ScrollTrigger) {
@@ -85,7 +85,7 @@
   // Reduced-motion path: content visible, no tweens.
   // ------------------------------------------------------------------
   mm.add('(prefers-reduced-motion: reduce)', function () {
-    gsap.set('[data-reveal], .hero__cue, .hero__links .quick-link, .hero__tagline', {
+    gsap.set('[data-reveal], .hero__links .quick-link, .hero__tagline', {
       clearProps: 'all',
     });
     return function () {};

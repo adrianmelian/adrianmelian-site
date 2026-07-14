@@ -93,22 +93,6 @@
   max-width: 420px;
 }
 
-.hero__cue {
-  position: absolute;
-  z-index: 2;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-body);
-  font-size: var(--fs-11);
-  letter-spacing: 0.18em;
-  color: var(--bone-dim);
-  text-transform: uppercase;
-}
-.hero__cue::before {
-  content: "BC ";
-  color: var(--plasma-dim);
-}
 
 @media (max-width: 760px) {
   .hero { min-height: 520px; }
@@ -119,7 +103,39 @@
       rgba(11, 14, 16, 0.88) 0%, rgba(11, 14, 16, 0.78) 55%,
       rgba(11, 14, 16, 0.55) 100%);
   }
-  .hero__cue { display: none; }
+  }
+
+/* ============================================================ about */
+/* Mirrored from fabricator.studio; Mindmeld 2.0 forms (rounded, layered). */
+.about__grid {
+  margin-top: var(--sp-5);
+  max-width: 56rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-5);
+  align-items: start;
+}
+.about__grid--photo { grid-template-columns: 240px 1fr; }
+
+.about__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--iron-3);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.about__body { display: flex; flex-direction: column; gap: var(--sp-4); }
+.about__body p {
+  color: var(--bone-dim);
+  line-height: var(--lh-body);
+  max-width: 68ch;
+}
+
+@media (max-width: 720px) {
+  .about__grid--photo { grid-template-columns: 1fr; }
+  .about__photo { max-width: 240px; }
 }
 
 /* ============================================================ sections */
