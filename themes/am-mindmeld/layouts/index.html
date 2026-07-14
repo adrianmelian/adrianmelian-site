@@ -4,81 +4,36 @@
 {{- $ks := .Site.GetPage "/tools/kinematic_solutions" -}}
 
 {{- /* ============================================================ 00 / HERO */ -}}
-<section class="rig-hero" id="rig-hero">
-  <canvas class="rig-hero__canvas" id="rig-canvas" aria-hidden="true"></canvas>
+{{- /* Showreel hero. The interactive WebGL IK rig that used to live here (canvas, HUD,
+       channelbox, drag effector) was retired 2026-07-14 (Adrian): the personal site should
+       be simpler and let the work speak. Same shape as the fabricator.studio hero. */ -}}
+<section class="hero" id="hero">
+  {{- /* muted + playsinline so it autoplays on mobile. Reduced-motion visitors never see
+         the video at all: the poster below stands in for it. */ -}}
+  <video class="hero__media" autoplay muted loop playsinline
+         poster="{{ "posters/adrianmelian_hero.jpg" | relURL }}"
+         src="{{ "adrianmelian_hero.mp4" | relURL }}"
+         aria-hidden="true"></video>
+  <img class="hero__media hero__poster" src="{{ "posters/adrianmelian_hero.jpg" | relURL }}"
+       alt="" aria-hidden="true" width="1920" height="810">
+  <div class="hero__scrim" aria-hidden="true"></div>
 
-  {{- /* Static fallback: visible until WebGL boots; stays if it can't. */ -}}
-  <div class="rig-hero__fallback" aria-hidden="true">
-    <svg viewBox="0 0 480 420" fill="none" stroke-linecap="round">
-      <g stroke="#262C33" stroke-width="1">
-        <line x1="0" y1="380" x2="480" y2="380"/>
-        <line x1="40" y1="420" x2="120" y2="340"/><line x1="140" y1="420" x2="200" y2="340"/>
-        <line x1="240" y1="420" x2="280" y2="340"/><line x1="340" y1="420" x2="360" y2="340"/>
-        <line x1="440" y1="420" x2="440" y2="340"/>
-        <line x1="60" y1="380" x2="430" y2="345"/>
-      </g>
-      <g stroke="#7CFFB2" stroke-width="1.5" opacity="0.9">
-        <path d="M240 380 L228 332 240 320 252 332 Z"/><path d="M240 320 L230 276 244 264 254 278 Z"/>
-        <path d="M244 264 L250 222 264 216 266 232 Z"/><path d="M264 216 L282 184 296 184 292 200 Z"/>
-        <path d="M296 184 L322 164 334 170 326 182 Z"/><path d="M334 170 L362 162 372 170 362 178 Z"/>
-        <circle cx="240" cy="380" r="9"/><circle cx="240" cy="320" r="8"/><circle cx="244" cy="264" r="8"/>
-        <circle cx="264" cy="216" r="7"/><circle cx="296" cy="184" r="7"/><circle cx="334" cy="170" r="6"/>
-        <circle cx="372" cy="166" r="6"/>
-      </g>
-      <g stroke="#FF7A3D" stroke-width="1.5">
-        <circle cx="372" cy="166" r="16"/><circle cx="372" cy="166" r="22"/>
-      </g>
-      <g stroke="#B5532A" stroke-width="1" stroke-dasharray="5 4" opacity="0.7">
-        <line x1="264" y1="216" x2="320" y2="290"/>
-      </g>
-      <g stroke="#B5532A" stroke-width="1.5">
-        <line x1="312" y1="290" x2="328" y2="290"/><line x1="320" y1="282" x2="320" y2="298"/>
-      </g>
-    </svg>
-  </div>
-
-  <div class="rig-hero__scrim" aria-hidden="true"></div>
-
-  {{- /* HUD */ -}}
-  <div class="rig-hero__hud-tr">
-    <button class="hud-pill" id="hud-solver" type="button"><span>SOLVER: FABRIK</span></button>
-    <button class="hud-pill" id="hud-mirror" type="button" aria-label="Mirror the rig pose">MIRROR</button>
-    <button class="hud-pill" id="hud-reset" type="button" aria-label="Reset the rig to bind pose">RESET</button>
-    <button class="hud-pill" id="hud-freeze" type="button" aria-pressed="false">FREEZE</button>
-  </div>
-  <div class="rig-hero__hud-bl" aria-hidden="true">
-    <span>REAL-TIME IK. NOTHING FAKED.</span>
-    <span class="hud-status" id="hud-status">ONLINE</span>
-  </div>
-  <table class="rig-hero__hud-br hud-channelbox" aria-hidden="true">
-    <tr><td>effector.tx</td><td id="ch-tx">0.000</td></tr>
-    <tr><td>effector.ty</td><td id="ch-ty">0.000</td></tr>
-    <tr><td>effector.tz</td><td id="ch-tz">0.000</td></tr>
-    <tr><td>iterations</td><td id="ch-iter">0</td></tr>
-    <tr><td>residual</td><td id="ch-err">0.0000</td></tr>
-    <tr><td>frame.ms</td><td id="ch-ms">0.0</td></tr>
-    <tr><td>frame</td><td id="ch-frame">00000</td></tr>
-  </table>
-  <div class="rig-hero__grab" id="rig-grab" role="button" tabindex="0"
-       aria-label="IK effector. Drag, or use arrow keys to move the target."></div>
-
-  {{- /* content */ -}}
-  <div class="container rig-hero__content">
+  <div class="container hero__content">
     {{- $crest := "" -}}
     {{- with resources.Get "iwahashi_mindmeld_v1.png" }}{{ $crest = (.Resize "144x144").RelPermalink }}{{ else }}{{ $crest = "iwahashi_mindmeld_v1.png" | relURL }}{{ end -}}
-    <img class="rig-hero__crest" src="{{ $crest }}"
+    <img class="hero__crest" src="{{ $crest }}"
          alt="" width="72" height="72" loading="eager" decoding="async" aria-hidden="true">
-    <h1 class="rig-hero__name"><span class="ln">Adrian</span> <span class="ln accent">Melian</span></h1>
-    <p class="rig-hero__tagline">{{ $p.tagline | default "Technical Artist · Animator" }}
-      <span class="tag-accent">/ rigging · pipeline · ML</span></p>
+    <h1 class="hero__name"><span class="ln">Adrian</span> <span class="ln accent">Melian</span></h1>
+    <p class="hero__tagline">{{ $p.tagline | default "Technical Artist · Animator" }}
+      <span class="tag-accent">rigging · pipeline · ML</span></p>
     {{ with $p.quick_links }}
-    <div class="rig-hero__links">
+    <div class="hero__links">
       {{ range . }}{{ partial "quick-link.html" . }}{{ end }}
     </div>
     {{ end }}
   </div>
 
-  <div class="rig-hero__cue" aria-hidden="true">scroll to inspect</div>
+  <div class="hero__cue" aria-hidden="true">scroll</div>
 </section>
 
 {{- /* ============================================== 01 / FEATURED PIPELINE */ -}}
@@ -216,6 +171,4 @@
 <script src="{{ $split.RelPermalink }}" integrity="{{ $split.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- $motion := resources.Get "js/home-motion.js" | js.Build (dict "minify" true "format" "iife" "target" "es2019") | resources.Fingerprint "sha512" -}}
 <script src="{{ $motion.RelPermalink }}" integrity="{{ $motion.Data.Integrity }}" crossorigin="anonymous" defer></script>
-{{- $rig := resources.Get "js/rig-hero.js" | js.Build (dict "minify" true "format" "iife" "target" "es2019") | resources.Fingerprint "sha512" -}}
-<script src="{{ $rig.RelPermalink }}" integrity="{{ $rig.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{ end }}

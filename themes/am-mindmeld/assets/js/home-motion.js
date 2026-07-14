@@ -25,9 +25,9 @@
     // ---- hero load: the name prints ---------------------------------
     // Split each .ln block separately — splitting across a nested span
     // makes SplitText emit an empty duplicate span that costs a line box.
-    var nameLines = document.querySelectorAll('.rig-hero__name .ln');
+    var nameLines = document.querySelectorAll('.hero__name .ln');
     if (nameLines.length && window.SplitText) {
-      var name = document.querySelector('.rig-hero__name');
+      var name = document.querySelector('.hero__name');
       var split = new window.SplitText(nameLines, { type: 'chars' });
       gsap.set(split.chars, { autoAlpha: 0 });
       gsap.to(split.chars, {
@@ -39,11 +39,11 @@
       });
     }
 
-    gsap.fromTo('.rig-hero__links .quick-link, .rig-hero__tagline',
+    gsap.fromTo('.hero__links .quick-link, .hero__tagline',
       { y: 14, autoAlpha: 0 },
       { y: 0, autoAlpha: 1, duration: 0.5, ease: 'expo.out', stagger: 0.06, delay: 0.55 });
 
-    gsap.fromTo('.rig-hero__cue', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, delay: 1.6 });
+    gsap.fromTo('.hero__cue', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, delay: 1.6 });
 
     // ---- scroll reveals ---------------------------------------------
     if (window.ScrollTrigger) {
@@ -85,7 +85,7 @@
   // Reduced-motion path: content visible, no tweens.
   // ------------------------------------------------------------------
   mm.add('(prefers-reduced-motion: reduce)', function () {
-    gsap.set('[data-reveal], .rig-hero__cue, .rig-hero__links .quick-link, .rig-hero__tagline', {
+    gsap.set('[data-reveal], .hero__cue, .hero__links .quick-link, .hero__tagline', {
       clearProps: 'all',
     });
     return function () {};

@@ -1,162 +1,56 @@
 /* themes/am-mindmeld/layout/homepage.css — SOLVER ONLINE landing page */
 
 /* ============================================================ hero */
-.rig-hero {
+/* Showreel hero. Replaces the interactive WebGL IK rig (canvas, HUD, channelbox, drag
+   effector), retired 2026-07-14: the personal site should be simpler and let the work
+   speak. Same shape as the fabricator.studio hero: full-bleed video, carbon scrim, copy
+   over the top. Mindmeld 2.0 throughout. */
+.hero {
   position: relative;
-  /* the header sits above; subtract it so the HUD bottom row is on-fold */
   height: calc(100svh - var(--header-h));
-  min-height: 580px;
-  max-height: 1200px;
+  min-height: 560px;
+  max-height: 1100px;
   overflow: hidden;
   background: var(--carbon);
+  display: flex;
+  align-items: center;
 }
 
-.rig-hero__canvas {
+.hero__media {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  display: block;
+  object-fit: cover;
+  z-index: 0;
+}
+/* The video plays by default; reduced-motion visitors get the still instead, and never
+   download-and-play a moving background they asked not to see. */
+.hero video.hero__media { display: block; }
+.hero img.hero__poster { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .hero video.hero__media { display: none; }
+  .hero img.hero__poster { display: block; }
 }
 
-/* SVG fallback is visible by default; hidden once WebGL boots. */
-.rig-hero__fallback {
+/* Carbon scrim: the copy has to stay legible over whatever frame is on screen. Carbon
+   stops only, so it never introduces a hue (DNA principle 6). */
+.hero__scrim {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 8%;
+  z-index: 1;
   pointer-events: none;
-}
-.rig-hero__fallback svg { width: min(42vw, 480px); height: auto; opacity: 0.9; }
-.rig-hero--webgl .rig-hero__fallback { display: none; }
-.rig-hero--fallback .rig-hero__canvas,
-.rig-hero--fallback .rig-hero__grab,
-.rig-hero--fallback .rig-hero__hud-tr,
-.rig-hero--fallback .rig-hero__hud-br { display: none; }
-
-.rig-hero__scrim {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse 760px 560px at 22% 46%,
-    rgba(11, 14, 16, 0.82) 0%, rgba(11, 14, 16, 0.45) 48%, transparent 72%);
+  background: linear-gradient(to right,
+    rgba(11, 14, 16, 0.92) 0%, rgba(11, 14, 16, 0.78) 38%,
+    rgba(11, 14, 16, 0.45) 65%, rgba(11, 14, 16, 0.30) 100%);
 }
 
-/* Mindmeld 2.0: the CRT SCANLINES are RETIRED (DNA principle 8, console-era motif). The
-   vignette survives on its own: it is depth, not a terminal affectation, and 2.0 sanctions
-   restrained depth (principle 6). */
-.rig-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse 140% 110% at 50% 45%, transparent 62%, rgba(0, 0, 0, 0.42) 100%);
-  opacity: 0.5;
-  z-index: 3;
-}
-
-/* ---- HUD corners ---- */
-.rig-hero__hud-tl,
-.rig-hero__hud-tr,
-.rig-hero__hud-bl,
-.rig-hero__hud-br {
-  position: absolute;
-  z-index: 4;
-  font-family: var(--font-body);
-  font-size: var(--fs-11);
-  letter-spacing: 0.08em;
-}
-.rig-hero__hud-tl { top: calc(var(--header-h) + 14px); left: var(--container-px); color: var(--bone-dim); text-transform: lowercase; }
-.rig-hero__hud-tr { top: calc(var(--header-h) + 10px); right: var(--container-px); display: flex; gap: var(--sp-2); z-index: 6; }
-.rig-hero__hud-bl { bottom: 16px; left: var(--container-px); color: var(--bone-dim); text-transform: uppercase; }
-.rig-hero__hud-br { bottom: 16px; right: var(--container-px); color: var(--bone-dim); }
-
-/* 2.0: the status reads as a soft pill. It used to be wrapped in literal `[ ]` brackets in
-   the markup (a console motif); the brackets are gone and the pill carries the shape. */
-.hud-status {
-  display: inline-block;
-  font-weight: 700;
-  color: var(--bone-dim);
-  border: 1px solid var(--iron-3);
-  border-radius: var(--radius-pill);
-  padding: 2px 10px;
-  margin-left: var(--sp-2);
-}
-.hud-status.is-online {
-  color: var(--plasma);
-  border-color: var(--plasma-dim);
-  background: var(--plasma-glow);
-}
-
-/* 2.0: soft pill, not a hard-cornered console chip (DNA principle 5). */
-.hud-pill {
-  appearance: none;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: var(--fs-11);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bone-dim);
-  background: rgba(11, 14, 16, 0.65);
-  border: 1px solid var(--iron-3);
-  border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-sm);
-  padding: 6px 12px;
-  cursor: pointer;
-  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out),
-              transform var(--t-fast) var(--ease-spring);
-}
-.hud-pill:hover { color: var(--plasma); border-color: var(--plasma-dim); }
-.hud-pill:active { transform: scale(0.97); }
-.hud-pill:focus-visible { outline: 1px solid var(--plasma); outline-offset: 2px; }
-.hud-pill.is-ccd,
-.hud-pill[aria-pressed="true"] { color: var(--ember); border-color: var(--ember-dim); }
-
-.hud-channelbox {
-  border-collapse: collapse;
-  text-align: right;
-  background: rgba(11, 14, 16, 0.55);
-  border: 1px solid var(--iron-2);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-  padding: 8px 12px;
-}
-.hud-channelbox td { padding: 1px 0 1px 14px; color: var(--bone); font-size: var(--fs-11); }
-.hud-channelbox td:first-child { color: var(--bone-dim); padding-left: 0; }
-
-/* effector grab puck */
-.rig-hero__grab {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 44px;
-  height: 44px;
-  z-index: 5;
-  touch-action: none;
-  cursor: grab;
-  border-radius: 50%;
-}
-.rig-hero__grab.is-grabbing { cursor: grabbing; }
-.rig-hero__grab:focus-visible {
-  outline: 1px solid var(--plasma);
-  outline-offset: 2px;
-}
-
-/* ---- hero content ---- */
-.rig-hero__content {
+.hero__content {
   position: relative;
-  z-index: 4;
-  padding-top: max(16vh, 120px);
-  /* full-width container must not eat clicks meant for the HUD or rig */
-  pointer-events: none;
+  z-index: 2;
 }
-.rig-hero__content a { pointer-events: auto; }
 
-/* 2.0 is sleek vector, not pixel: `image-rendering: pixelated` was a retro/CRT affectation
-   and is dropped. The crest renders smooth. */
-.rig-hero__crest {
+.hero__crest {
   display: block;
   width: 72px;
   height: 72px;
@@ -164,7 +58,7 @@
   margin-bottom: var(--sp-4);
 }
 
-.rig-hero__name {
+.hero__name {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: var(--fs-display-xl);
@@ -172,19 +66,16 @@
   letter-spacing: 0.02em;
   color: var(--bone);
   text-transform: uppercase;
+  text-shadow: 0 2px 18px rgba(11, 14, 16, 0.75);
 }
-.rig-hero__name .ln { display: block; }
-.rig-hero__name .accent { color: var(--plasma); }
-/* SplitText char divs are inline-block; baseline alignment would inflate
-   the line box past our 0.82 line-height. Top-align keeps lines tight. */
-.rig-hero__name div { vertical-align: top; }
-.rig-hero__name span:empty { display: none; }
-/* Mindmeld 2.0: the blinking terminal CURSOR after the name is RETIRED (console-era motif,
-   DNA principle 8). The name stands on its own. */
+.hero__name .ln { display: block; }
+.hero__name .accent { color: var(--plasma); }
+/* SplitText char divs are inline-block; baseline alignment would inflate the line box past
+   our display line-height. Top-align keeps lines tight. */
+.hero__name div { vertical-align: top; }
+.hero__name span:empty { display: none; }
 
-@keyframes cursor-blink { 0%, 60% { opacity: 1; } 61%, 100% { opacity: 0; } }
-
-.rig-hero__tagline {
+.hero__tagline {
   font-family: var(--font-body);
   font-size: var(--fs-12);
   letter-spacing: 0.14em;
@@ -192,9 +83,9 @@
   text-transform: uppercase;
   margin-top: var(--sp-4);
 }
-.rig-hero__tagline .tag-accent { color: var(--ember); display: block; margin-top: 2px; }
+.hero__tagline .tag-accent { color: var(--ember); display: block; margin-top: 2px; }
 
-.rig-hero__links {
+.hero__links {
   margin-top: var(--sp-5);
   display: flex;
   flex-wrap: wrap;
@@ -202,9 +93,9 @@
   max-width: 420px;
 }
 
-.rig-hero__cue {
+.hero__cue {
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
@@ -214,40 +105,21 @@
   color: var(--bone-dim);
   text-transform: uppercase;
 }
-.rig-hero__cue::before {
-  content: "▼ ";
+.hero__cue::before {
+  content: "BC ";
   color: var(--plasma-dim);
-  animation: cursor-blink 1.4s steps(1) infinite;
 }
 
-@media (max-width: 900px) {
-  .rig-hero__hud-tl { display: none; }
-  .rig-hero__content { padding-top: max(12vh, 96px); }
-}
 @media (max-width: 760px) {
-  .rig-hero { min-height: 560px; }
-  .rig-hero__hud-br { display: none; }
-  .rig-hero__crest { width: 56px; height: 56px; }
-  .rig-hero__scrim {
-    /* cover the full text block (incl. quick links) so wandering chain
-       slack reads as backdrop, never as clutter over type */
+  .hero { min-height: 520px; }
+  .hero__crest { width: 56px; height: 56px; }
+  /* Portrait: the copy sits over the middle of the frame, so the scrim runs vertical. */
+  .hero__scrim {
     background: linear-gradient(to bottom,
       rgba(11, 14, 16, 0.88) 0%, rgba(11, 14, 16, 0.78) 55%,
-      rgba(11, 14, 16, 0.45) 72%, transparent 86%);
+      rgba(11, 14, 16, 0.55) 100%);
   }
-  .rig-hero__cue { display: none; }
-  .rig-hero__hud-tr {
-    top: auto;
-    bottom: 10px;
-    right: var(--container-px);
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    max-width: 220px;
-  }
-  .rig-hero__hud-tr .hud-pill { padding: 5px 8px; }
-  .rig-hero__hud-bl { bottom: 14px; }
-  /* keep only the [ ONLINE ] status on small screens; pills need the room */
-  /* (the scramble label that used to live here is retired) */
+  .hero__cue { display: none; }
 }
 
 /* ============================================================ sections */
@@ -663,6 +535,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .rig-hero__cue::before,
   .hp-close__status::before { animation: none; }
 }
