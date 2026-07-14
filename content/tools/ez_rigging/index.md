@@ -8,7 +8,7 @@ studio = "Personal"
 shipped_year = "2017"
 status = "shipped"
 +++
-*Note: This page showcases an earlier version of the system. A newer iteration of this tool is also featured here: [Rig Authoring Framework]({{< ref "rig_authoring_framework/index.md" >}}).*
+*Note: This page showcases an early version of the system. It grew into [FabricatorStudio](https://fabricator.studio), which is where the current tools live.*
 
 **EZ Rigging: a modular, non-linear, non-destructive auto-rigging + animation system**
 
