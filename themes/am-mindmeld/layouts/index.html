@@ -40,7 +40,6 @@
   <div class="rig-hero__scrim" aria-hidden="true"></div>
 
   {{- /* HUD */ -}}
-  <div class="rig-hero__hud-tl" aria-hidden="true"><span data-scramble>persp / ks_rig_playground.ma</span></div>
   <div class="rig-hero__hud-tr">
     <button class="hud-pill" id="hud-solver" type="button"><span>SOLVER: FABRIK</span></button>
     <button class="hud-pill" id="hud-mirror" type="button" aria-label="Mirror the rig pose">MIRROR</button>
@@ -48,8 +47,8 @@
     <button class="hud-pill" id="hud-freeze" type="button" aria-pressed="false">FREEZE</button>
   </div>
   <div class="rig-hero__hud-bl" aria-hidden="true">
-    <span data-scramble>// REAL-TIME IK. NOTHING FAKED.</span>
-    [ <span class="hud-status" id="hud-status">ONLINE</span> ]
+    <span>REAL-TIME IK. NOTHING FAKED.</span>
+    <span class="hud-status" id="hud-status">ONLINE</span>
   </div>
   <table class="rig-hero__hud-br hud-channelbox" aria-hidden="true">
     <tr><td>effector.tx</td><td id="ch-tx">0.000</td></tr>
@@ -96,8 +95,7 @@
 
   <div class="term-frame pipe" data-reveal>
     <div class="term-frame__bar">
-      <span class="term-frame__lights" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="term-frame__title">featured.project / fabricator_studio.session</span>
+      <span class="term-frame__title">Featured Project</span>
       <span class="term-frame__meta">MAYA 2025 → UE5</span>
     </div>
 
@@ -119,7 +117,7 @@
         </ul>
         <div class="pipe__ctas">
           <a class="btn-term btn-term--primary magnetic" href="https://fabricator.studio" rel="noopener">Visit fabricator.studio →</a>
-          <a class="btn-term" href="https://fabricator.studio/docs" rel="noopener">[ &gt; ] Browse the Docs</a>
+          <a class="btn-term" href="https://fabricator.studio/docs" rel="noopener">Browse the Docs</a>
         </div>
       </div>
     </div>
@@ -161,9 +159,9 @@
     <a class="plugmgr__row" href="{{ $page.RelPermalink }}" data-reveal>
       <span class="plugmgr__idx">{{ printf "%02d" (add $i 1) }}</span>
       {{- if eq $page.Params.status "in_development" -}}
-      <span class="plugmgr__status plugmgr__status--beta">[ BETA ]</span>
+      <span class="plugmgr__status plugmgr__status--beta">BETA</span>
       {{- else -}}
-      <span class="plugmgr__status">[ LOADED ]</span>
+      <span class="plugmgr__status">LOADED</span>
       {{- end -}}
       <span class="plugmgr__name">{{ $page.Title }}</span>
       <span class="plugmgr__desc">{{ $page.Description }}</span>
@@ -199,11 +197,11 @@
       </div>
     </div>
     <div class="hp-close__meta" data-reveal aria-hidden="true">
-      <div class="hp-close__meta-row"><span class="k">// CHANNEL</span><span class="v v--plasma">OPEN</span></div>
-      <div class="hp-close__meta-row"><span class="k">// EXPERIENCE</span><span class="v">14 YRS</span></div>
-      <div class="hp-close__meta-row"><span class="k">// SHIPPED</span><span class="v">13 TITLES</span></div>
-      <div class="hp-close__meta-row"><span class="k">// CURRENT</span><span class="v">ARCHANGEL · UE5</span></div>
-      <div class="hp-close__meta-row"><span class="k">// STACK</span><span class="v">MAYA · PY · TORCH</span></div>
+      <div class="hp-close__meta-row"><span class="k">CHANNEL</span><span class="v v--plasma">OPEN</span></div>
+      <div class="hp-close__meta-row"><span class="k">EXPERIENCE</span><span class="v">14 YRS</span></div>
+      <div class="hp-close__meta-row"><span class="k">SHIPPED</span><span class="v">13 TITLES</span></div>
+      <div class="hp-close__meta-row"><span class="k">CURRENT</span><span class="v">ARCHANGEL · UE5</span></div>
+      <div class="hp-close__meta-row"><span class="k">STACK</span><span class="v">MAYA · PY · TORCH</span></div>
     </div>
   </div>
 </section>
@@ -213,11 +211,9 @@
 {{- $gsap := resources.Get "js/vendor/gsap.min.js" | resources.Fingerprint "sha512" -}}
 {{- $st := resources.Get "js/vendor/ScrollTrigger.min.js" | resources.Fingerprint "sha512" -}}
 {{- $split := resources.Get "js/vendor/SplitText.min.js" | resources.Fingerprint "sha512" -}}
-{{- $scramble := resources.Get "js/vendor/ScrambleTextPlugin.min.js" | resources.Fingerprint "sha512" -}}
 <script src="{{ $gsap.RelPermalink }}" integrity="{{ $gsap.Data.Integrity }}" crossorigin="anonymous" defer></script>
 <script src="{{ $st.RelPermalink }}" integrity="{{ $st.Data.Integrity }}" crossorigin="anonymous" defer></script>
 <script src="{{ $split.RelPermalink }}" integrity="{{ $split.Data.Integrity }}" crossorigin="anonymous" defer></script>
-<script src="{{ $scramble.RelPermalink }}" integrity="{{ $scramble.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- $motion := resources.Get "js/home-motion.js" | js.Build (dict "minify" true "format" "iife" "target" "es2019") | resources.Fingerprint "sha512" -}}
 <script src="{{ $motion.RelPermalink }}" integrity="{{ $motion.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{- $rig := resources.Get "js/rig-hero.js" | js.Build (dict "minify" true "format" "iife" "target" "es2019") | resources.Fingerprint "sha512" -}}

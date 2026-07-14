@@ -4,7 +4,9 @@
 {{- $title := .title | default "" -}}
 {{- $id := .id | default (urlize $title) -}}
 <header class="section-heading" id="{{ $id }}">
-  {{ with $number }}<span class="section-heading__num">{{ . }} //</span>{{ end }}
+  {{- /* Mindmeld 2.0: the `//` console prefix is RETIRED (brand DNA principle 8). The
+         number stands on its own as the section index. */ -}}
+  {{ with $number }}<span class="section-heading__num">{{ . }}</span>{{ end }}
   <h2 class="section-heading__title">{{ $title | upper }}</h2>
   <span class="section-heading__rule" aria-hidden="true"></span>
 </header>

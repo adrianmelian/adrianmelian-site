@@ -458,12 +458,10 @@ function init() {
   }
 
   // ------------------------------------------------------------ HUD wiring
+  // Mindmeld 2.0: scramble-text is a RETIRED console motif (brand DNA principle 8), so the
+  // label just sets cleanly now. Name kept so the call sites below are untouched.
   function scrambleLabel(el, text) {
-    if (gsap && window.ScrambleTextPlugin && !reducedMotion) {
-      gsap.to(el, { duration: 0.5, scrambleText: { text, chars: '█▓▒░<>/[]', speed: 1.2 } });
-    } else {
-      el.textContent = text;
-    }
+    el.textContent = text;
   }
 
   if (hud.solverBtn) {

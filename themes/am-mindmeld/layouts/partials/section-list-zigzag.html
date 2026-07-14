@@ -25,7 +25,7 @@
   {{ range $sectionPages.GroupByDate "2006" }}
   <section class="project-list__year" aria-labelledby="year-{{ .Key }}">
     <header class="project-list__year-heading" id="year-{{ .Key }}">
-      <span class="project-list__year-num">{{ .Key }} //</span>
+      <span class="project-list__year-num">{{ .Key }}</span>
       <span class="project-list__year-rule" aria-hidden="true"></span>
     </header>
     {{ range $i, $page := .Pages }}

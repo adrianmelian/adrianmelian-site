@@ -1,12 +1,7 @@
-/* themes/am-mindmeld/assets/css/fonts.css */
-@font-face {
-  font-family: 'VT323';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/VT323-Regular.woff2') format('woff2');
-}
-
+/* themes/am-mindmeld/assets/css/fonts.css
+   Mindmeld 2.0: ONE family, JetBrains Mono. VT323 (the pixel display face) is RETIRED from
+   the system entirely (brand DNA principles 3 + 4); its @font-face and preload are gone.
+   Display is JBM Bold. */
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;

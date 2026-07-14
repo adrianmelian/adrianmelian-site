@@ -25,17 +25,10 @@ body {
   position: relative;
 }
 
-/* ===== grain overlay ===== */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1000;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.025 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  background-size: 200px 200px;
-  mix-blend-mode: overlay;
-}
+/* ===== grain overlay: RETIRED =====
+   Mindmeld 2.0 explicitly retires "Scanline / grain" (brand DNA section 0). The full-screen
+   fractal-noise overlay was a CRT affectation and is gone. 2.0 gets its texture from real
+   depth (shadow, gentle gradient), not from film grain. */
 
 /* ===== skip link ===== */
 .skip-link {
@@ -59,9 +52,11 @@ body::before {
 /* ===== prose defaults (used by fallback templates) ===== */
 main { flex: 1; }
 
+/* Mindmeld 2.0: display is JetBrains Mono BOLD. The old 400 was VT323's only weight; JBM at
+   400 reads as body copy, not display, so headings must carry 700. */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 700;
   line-height: var(--lh-tight);
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -127,4 +122,66 @@ hr { border: none; border-top: 1px dashed var(--iron-3); margin: var(--sp-6) 0; 
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ===== MINDMELD 2.0 DEPTH + ROUNDING (brand DNA principles 5 + 6) =====
+   1.0 was flat and hard-cornered by rule (no radius, no shadows). 2.0 layers: panels round
+   off, lift off the carbon ground on a soft shadow, and rise slightly on hover with a
+   controlled settle ("alive", DNA section 4). Restraint governs: no neon, no bevel.
+
+   Applied centrally here rather than in fifteen component files so the whole surface moves
+   at once and stays consistent. */
+.bento-cell,
+.card-rail__link,
+.card-zig__link,
+.milestone-card,
+.wip-card,
+.quick-link,
+.ledger__row,
+.plugmgr__row,
+.ledger-preview {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t-base) var(--ease-spring),
+              box-shadow var(--t-base) var(--ease-out),
+              border-color var(--t-fast) var(--ease-out),
+              color var(--t-fast) var(--ease-out);
+}
+
+.bento-cell:hover,
+.card-rail__link:hover,
+.card-zig__link:hover,
+.milestone-card:hover,
+.wip-card:hover,
+.quick-link:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Rows sit in a list: they shift, they do not levitate. */
+.ledger__row:hover,
+.plugmgr__row:hover {
+  transform: translateX(3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Media inside a rounded card must be clipped to the card's corners.
+   CLIP, NOT HIDDEN, and this is load-bearing: `overflow: hidden` makes an element a SCROLL
+   CONTAINER, and .card-rail__link is the ancestor of .card-rail__media, which carries the
+   scroll-driven parallax timeline (view-timeline-name: --card-rail-shot). Hidden here would
+   make that timeline resolve against this never-scrolling box and silently kill the
+   parallax. `clip` clips the corners without creating a scroll container. */
+.bento-cell,
+.card-rail__link,
+.card-zig__media,
+.ledger-preview { overflow: clip; }
+
+/* Inputs and small chips take the tighter radius. */
+input, textarea, select { border-radius: var(--radius-sm); }
+
+@media (prefers-reduced-motion: reduce) {
+  .bento-cell, .card-rail__link, .card-zig__link, .milestone-card, .wip-card,
+  .quick-link, .ledger__row, .plugmgr__row { transition: none; }
+  .bento-cell:hover, .card-rail__link:hover, .card-zig__link:hover, .milestone-card:hover,
+  .wip-card:hover, .quick-link:hover, .ledger__row:hover, .plugmgr__row:hover { transform: none; }
 }

@@ -1,22 +1,29 @@
-{{- /* themes/am-mindmeld/layouts/partials/terminal-frame.html */ -}}
-{{- /* params:
-       title (string)         — left side of titlebar
-       meta (string)          — right side of titlebar (e.g., timestamp)
-       variant (full|titlebar) — full has body content; titlebar is bar only
-       inner (HTML)           — body content for full variant
+{{- /* themes/am-mindmeld/layouts/partials/terminal-frame.html
+
+       MINDMELD 2.0. This was a fake terminal window: a titlebar carrying three "traffic
+       light" squares. Terminal frames are RETIRED (brand DNA principle 8), so the lights
+       are gone and this is now a plain rounded PANEL with a clean header.
+
+       The partial name and the .term-frame class are 1.0 baggage, deliberately kept so
+       every existing call site (index, project-detail, 404) keeps working untouched.
+
+       params:
+         title (string)         — left side of the header
+         meta (string)          — right side of the header (e.g., timestamp)
+         variant (full|titlebar) — full has body content; titlebar is header only
+         inner (HTML)           — body content for the full variant
 */ -}}
 {{- $title := .title | default "" -}}
 {{- $meta := .meta | default "" -}}
 {{- $variant := .variant | default "full" -}}
 {{- $inner := .inner | default "" -}}
 <div class="term-frame term-frame--{{ $variant }}">
+  {{ if or $title $meta }}
   <div class="term-frame__bar">
-    <div class="term-frame__lights" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
     {{ with $title }}<span class="term-frame__title">{{ . }}</span>{{ end }}
     {{ with $meta }}<span class="term-frame__meta">{{ . }}</span>{{ end }}
   </div>
+  {{ end }}
   {{ if eq $variant "full" }}
   <div class="term-frame__body">{{ $inner | safeHTML }}</div>
   {{ end }}

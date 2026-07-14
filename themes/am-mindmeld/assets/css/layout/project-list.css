@@ -29,6 +29,7 @@
 }
 .project-list__year-num {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-32);
   color: var(--ember);
   line-height: 1;

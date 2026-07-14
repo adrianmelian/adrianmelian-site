@@ -25,6 +25,7 @@
 
 .error__title {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-72);
   color: var(--ember);
   letter-spacing: 0.04em;

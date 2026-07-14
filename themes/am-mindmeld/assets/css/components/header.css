@@ -26,6 +26,7 @@
 
 .site-header__wordmark {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-18);
   letter-spacing: 0.04em;
   color: var(--bone);

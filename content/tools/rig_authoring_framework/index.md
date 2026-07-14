@@ -21,7 +21,7 @@ Specialized in crafting Animator-Friendly Rigs that bring your animations to lif
 
 The Tech-Artist Friendly Modules are ready to streamline your workflow, ensuring you spend less time troubleshooting and more time creating.
 
-Plus, I’ve fostered a Rigger-Friendly environment that encourages creativity—because why not have a bit of fun while you work?
+Plus, I’ve fostered a Rigger-Friendly environment that encourages creativity, because why not have a bit of fun while you work?
 
 {{< timeline >}}
 

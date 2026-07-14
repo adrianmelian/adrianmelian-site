@@ -44,15 +44,15 @@
     rgba(11, 14, 16, 0.82) 0%, rgba(11, 14, 16, 0.45) 48%, transparent 72%);
 }
 
-/* CRT hint: faint scanlines + vignette. Decorative only. */
+/* Mindmeld 2.0: the CRT SCANLINES are RETIRED (DNA principle 8, console-era motif). The
+   vignette survives on its own: it is depth, not a terminal affectation, and 2.0 sanctions
+   restrained depth (principle 6). */
 .rig-hero::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0, 0, 0, 0.14) 2px 3px),
-    radial-gradient(ellipse 140% 110% at 50% 45%, transparent 62%, rgba(0, 0, 0, 0.42) 100%);
+  background: radial-gradient(ellipse 140% 110% at 50% 45%, transparent 62%, rgba(0, 0, 0, 0.42) 100%);
   opacity: 0.5;
   z-index: 3;
 }
@@ -73,21 +73,40 @@
 .rig-hero__hud-bl { bottom: 16px; left: var(--container-px); color: var(--bone-dim); text-transform: uppercase; }
 .rig-hero__hud-br { bottom: 16px; right: var(--container-px); color: var(--bone-dim); }
 
-.hud-status { color: var(--bone-dim); }
-.hud-status.is-online { color: var(--plasma); }
+/* 2.0: the status reads as a soft pill. It used to be wrapped in literal `[ ]` brackets in
+   the markup (a console motif); the brackets are gone and the pill carries the shape. */
+.hud-status {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--bone-dim);
+  border: 1px solid var(--iron-3);
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+  margin-left: var(--sp-2);
+}
+.hud-status.is-online {
+  color: var(--plasma);
+  border-color: var(--plasma-dim);
+  background: var(--plasma-glow);
+}
 
+/* 2.0: soft pill, not a hard-cornered console chip (DNA principle 5). */
 .hud-pill {
   appearance: none;
   font-family: var(--font-body);
+  font-weight: 700;
   font-size: var(--fs-11);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--bone-dim);
   background: rgba(11, 14, 16, 0.65);
   border: 1px solid var(--iron-3);
-  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  padding: 6px 12px;
   cursor: pointer;
-  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out);
+  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out),
+              transform var(--t-fast) var(--ease-spring);
 }
 .hud-pill:hover { color: var(--plasma); border-color: var(--plasma-dim); }
 .hud-pill:active { transform: scale(0.97); }
@@ -100,7 +119,9 @@
   text-align: right;
   background: rgba(11, 14, 16, 0.55);
   border: 1px solid var(--iron-2);
-  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 8px 12px;
 }
 .hud-channelbox td { padding: 1px 0 1px 14px; color: var(--bone); font-size: var(--fs-11); }
 .hud-channelbox td:first-child { color: var(--bone-dim); padding-left: 0; }
@@ -133,17 +154,19 @@
 }
 .rig-hero__content a { pointer-events: auto; }
 
+/* 2.0 is sleek vector, not pixel: `image-rendering: pixelated` was a retro/CRT affectation
+   and is dropped. The crest renders smooth. */
 .rig-hero__crest {
   display: block;
   width: 72px;
   height: 72px;
-  image-rendering: pixelated;
   opacity: 0.85;
   margin-bottom: var(--sp-4);
 }
 
 .rig-hero__name {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-display-xl);
   line-height: var(--lh-display);
   letter-spacing: 0.02em;
@@ -156,11 +179,8 @@
    the line box past our 0.82 line-height. Top-align keeps lines tight. */
 .rig-hero__name div { vertical-align: top; }
 .rig-hero__name span:empty { display: none; }
-.rig-hero__name .accent::after {
-  content: "_";
-  color: var(--plasma);
-  animation: cursor-blink 1.1s steps(1) infinite;
-}
+/* Mindmeld 2.0: the blinking terminal CURSOR after the name is RETIRED (console-era motif,
+   DNA principle 8). The name stands on its own. */
 
 @keyframes cursor-blink { 0%, 60% { opacity: 1; } 61%, 100% { opacity: 0; } }
 
@@ -227,7 +247,7 @@
   .rig-hero__hud-tr .hud-pill { padding: 5px 8px; }
   .rig-hero__hud-bl { bottom: 14px; }
   /* keep only the [ ONLINE ] status on small screens; pills need the room */
-  .rig-hero__hud-bl [data-scramble] { display: none; }
+  /* (the scramble label that used to live here is retired) */
 }
 
 /* ============================================================ sections */
@@ -244,94 +264,42 @@
 }
 .hp-more-link:hover { text-decoration: underline; }
 
-/* terminal-style CTA buttons */
+/* CTA buttons. Mindmeld 2.0: a soft PILL with restrained depth and a springy press, not a
+   hard-cornered "terminal" chip (DNA principles 5 + 6, and section 4's "alive"). The class
+   name is 1.0 baggage; it is kept so every call site keeps working. */
 .btn-term {
   display: inline-block;
   font-family: var(--font-body);
+  font-weight: 700;
   font-size: var(--fs-12);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border: 1px solid var(--iron-3);
-  color: var(--bone-dim);
-  background: transparent;
+  border-radius: var(--radius-pill);
+  color: var(--bone);
+  background: var(--iron);
+  box-shadow: var(--shadow-sm);
   transition: color var(--t-fast) var(--ease-out),
               border-color var(--t-fast) var(--ease-out),
-              background var(--t-fast) var(--ease-out);
+              background var(--t-fast) var(--ease-out),
+              transform var(--t-fast) var(--ease-spring),
+              box-shadow var(--t-fast) var(--ease-out);
 }
-.btn-term:hover { color: var(--bone); border-color: var(--bone-dim); text-decoration: none; }
-.btn-term--primary { border-color: var(--plasma-dim); color: var(--plasma); }
-.btn-term--primary:hover { background: var(--plasma); border-color: var(--plasma); color: var(--carbon); }
-.btn-term:active { transform: scale(0.98); }
+.btn-term:hover { color: var(--bone); border-color: var(--bone-faint); box-shadow: var(--shadow-md); text-decoration: none; }
+/* plasma = go / action (principle 2): the primary is filled. */
+.btn-term--primary {
+  border-color: var(--plasma);
+  background: var(--plasma);
+  color: var(--carbon);
+  box-shadow: var(--shadow-md);
+}
+.btn-term--primary:hover { background: var(--plasma-dim); border-color: var(--plasma-dim); color: var(--carbon); }
+.btn-term:active { transform: scale(0.97); }
 
 /* ============================================================ pipeline */
 .pipe { border: 1px solid var(--iron-3); background: var(--carbon); }
 
-.pipe__chips {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: var(--sp-5);
-  padding: var(--sp-5) var(--sp-5) var(--sp-4);
-}
-.pipe__chips::before {
-  content: "";
-  position: absolute;
-  left: var(--sp-5);
-  right: var(--sp-5);
-  top: 50%;
-  height: 1px;
-  background: var(--iron-3);
-}
-.pipe__chips::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 1px);
-  left: var(--sp-5);
-  width: 28px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--plasma));
-  animation: pipe-streak 4.5s linear infinite;
-  opacity: 0.8;
-  will-change: transform;
-}
-/* transform, not left: no layout work while the section is on screen */
-@keyframes pipe-streak {
-  from { transform: translateX(0); opacity: 0.9; }
-  to { transform: translateX(min(86vw, 1080px)); opacity: 0.4; }
-}
-
-.pipe__chip {
-  position: relative;
-  z-index: 1;
-  appearance: none;
-  font-family: var(--font-body);
-  font-size: var(--fs-12);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bone-dim); /* 5.16:1 on carbon */
-  background: var(--carbon);
-  border: 1px solid var(--iron-3);
-  padding: 9px 16px;
-  cursor: pointer;
-  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out);
-}
-.pipe__chip::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 2px;
-  background: var(--ember);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--t-fast) var(--ease-out);
-}
-.pipe__chip:hover { color: var(--bone); border-color: var(--bone-faint); }
-.pipe__chip:focus-visible { outline: 1px solid var(--plasma); outline-offset: 2px; }
-.pipe__chip.is-active { color: var(--plasma); border-color: var(--plasma-dim); }
-.pipe__chip.is-active::after { transform: scaleX(1); }
 
 /* Featured card leads with the full-width toolkit montage; copy sits beneath it.
    The window shows 600 of the art's 1000px of height (2048:600); the spare 400px is
@@ -383,91 +351,11 @@
   padding: var(--sp-4) var(--sp-5) var(--sp-6);
 }
 
-.pipe__viewport { position: relative; border: 1px solid var(--iron-3); background: var(--iron); }
-.pipe__video {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: var(--carbon);
-}
-.pipe__stage-title {
-  position: absolute;
-  top: 10px;
-  left: 12px;
-  z-index: 2;
-  font-family: var(--font-body);
-  font-size: var(--fs-11);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--plasma);
-  background: rgba(11, 14, 16, 0.7);
-  padding: 4px 8px;
-  border: 1px solid var(--iron-3);
-}
-.pipe__viewport::after {
-  /* scanline hint over the viewport */
-  content: "";
-  position: absolute;
-  inset: 0 0 31px 0;
-  pointer-events: none;
-  background: repeating-linear-gradient(to bottom, transparent 0 3px, rgba(0, 0, 0, 0.1) 3px 4px);
-}
-
-.pipe__slider {
-  position: relative;
-  height: 30px;
-  background: var(--iron);
-  border-top: 1px solid var(--iron-3);
-  cursor: ew-resize;
-  touch-action: none;
-  background-image: repeating-linear-gradient(to right,
-    var(--iron-3) 0 1px, transparent 1px calc(100% / 24));
-}
-.pipe__slider:focus-visible { outline: 1px solid var(--plasma); outline-offset: -1px; }
-.pipe__playhead {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -3px;
-  width: 7px;
-  background: rgba(255, 122, 61, 0.65);
-  border-left: 1px solid var(--ember);
-  border-right: 1px solid var(--ember);
-  pointer-events: none;
-  will-change: transform;
-}
-.pipe__frames {
-  position: absolute;
-  right: 8px;
-  bottom: 36px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-body);
-  font-size: var(--fs-11);
-  color: var(--bone-dim);
-  letter-spacing: 0.08em;
-  background: rgba(11, 14, 16, 0.7);
-  padding: 2px 6px;
-}
-.pipe__playpause {
-  appearance: none;
-  background: none;
-  border: none;
-  padding: 2px 4px;
-  font-family: var(--font-body);
-  font-size: var(--fs-11);
-  color: var(--bone-dim);
-  cursor: pointer;
-}
-.pipe__playpause:hover { color: var(--plasma); }
-.pipe__playpause:focus-visible { outline: 1px solid var(--plasma); outline-offset: 1px; }
 
 .pipe__rail { display: flex; flex-direction: column; gap: var(--sp-4); }
 .pipe__title {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-48);
   line-height: 0.9;
   color: var(--bone);
@@ -488,13 +376,12 @@
   color: var(--bone-dim);
   line-height: 1.5;
 }
-.pipe__bullets li::before { content: "// "; color: var(--plasma); }
+/* 2.0: a plasma bullet, not a `//` console prefix (DNA principle 8). */
+.pipe__bullets li::before { content: "\2022  "; color: var(--plasma); }
 .pipe__ctas { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: auto; padding-top: var(--sp-4); }
 
 @media (max-width: 900px) {
   .pipe__body { grid-template-columns: 1fr; }
-  .pipe__chips { flex-wrap: wrap; gap: var(--sp-2); }
-  .pipe__chips::before, .pipe__chips::after { display: none; }
   .pipe__rail { gap: var(--sp-3); }
   .pipe__title { font-size: var(--fs-32); }
 }
@@ -535,6 +422,7 @@
 .ledger__year { font-family: var(--font-body); font-size: var(--fs-12); color: var(--bone-dim); }
 .ledger__title {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-24);
   line-height: 1;
   color: var(--bone);
@@ -624,15 +512,27 @@
   transition: color var(--t-fast) var(--ease-out);
 }
 .plugmgr__row:hover .plugmgr__idx { color: var(--ember); }
+/* 2.0: a soft rounded pill, not `[ BRACKETED CAPS ]` (DNA principles 5 + 8). */
 .plugmgr__status {
   font-family: var(--font-body);
+  font-weight: 700;
   font-size: var(--fs-11);
   letter-spacing: 0.06em;
   color: var(--plasma);
+  border: 1px solid var(--plasma-dim);
+  background: var(--plasma-glow);
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+  white-space: nowrap;
 }
-.plugmgr__status--beta { color: var(--ember); }
+.plugmgr__status--beta {
+  color: var(--ember);
+  border-color: var(--ember-dim);
+  background: var(--ember-glow);
+}
 .plugmgr__name {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-24);
   line-height: 1;
   color: var(--bone);
@@ -728,6 +628,7 @@
 }
 .hp-close__big {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-display-xl);
   line-height: var(--lh-display);
   color: var(--bone);
@@ -762,8 +663,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pipe__chips::after,
-  .rig-hero__name .accent::after,
-  .rig-hero__cue::before,
+    .rig-hero__cue::before,
   .hp-close__status::before { animation: none; }
 }

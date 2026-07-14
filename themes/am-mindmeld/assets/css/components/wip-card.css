@@ -49,6 +49,7 @@
 
 .wip-card__title {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-24);
   line-height: var(--lh-snug);
   margin: 0;

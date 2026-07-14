@@ -74,6 +74,7 @@
 .card-rail__body { padding: var(--sp-3) var(--sp-4); }
 .card-rail__title {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-18);
   color: var(--bone);
   text-transform: uppercase;

@@ -7,6 +7,7 @@
 }
 .section-heading__num {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-32);
   color: var(--ember);
   line-height: 1;
@@ -14,6 +15,7 @@
 }
 .section-heading__title {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-32);
   color: var(--bone);
   text-transform: uppercase;

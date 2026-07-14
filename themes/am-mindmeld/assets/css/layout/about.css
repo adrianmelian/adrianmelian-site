@@ -55,6 +55,7 @@
 }
 .about__me-heading {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-18);
   color: var(--ember);
   letter-spacing: 0.08em;
@@ -117,6 +118,7 @@
 
 .about__exp-year {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-18);
   color: var(--ember);
   letter-spacing: 0.06em;
@@ -126,6 +128,7 @@
 .about__exp-body {}
 .about__exp-header {
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: var(--fs-24);
   color: var(--bone);
   text-transform: uppercase;
@@ -170,6 +173,7 @@
   left: 0;
   color: var(--ember);
   font-family: var(--font-display);
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {
