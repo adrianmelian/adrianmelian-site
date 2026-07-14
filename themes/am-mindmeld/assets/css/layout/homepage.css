@@ -241,6 +241,12 @@
 
 
 .pipe__rail { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+/* Mark and name read as one lockup, so they sit on a shared baseline row and the rail's
+   gap does not open up between them. */
+.pipe__lockup { display: flex; align-items: center; gap: var(--sp-3); }
+.pipe__mark { width: 48px; height: 48px; flex-shrink: 0; }
+
 .pipe__title {
   font-family: var(--font-display);
   font-weight: 700;
@@ -249,6 +255,17 @@
   color: var(--bone);
   text-transform: uppercase;
 }
+
+/* The tagline carries the plasma, matching fabricator.studio's hero. It rides tight under
+   the lockup rather than taking the rail's full gap, so the three lines read as one block. */
+.pipe__tagline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-18);
+  color: var(--plasma);
+  margin: calc(var(--sp-4) * -1 + var(--sp-2)) 0 0;
+}
+
 .pipe__blurb {
   font-family: var(--font-body);
   font-size: var(--fs-14);
@@ -272,6 +289,13 @@
   .pipe__body { grid-template-columns: 1fr; }
   .pipe__rail { gap: var(--sp-3); }
   .pipe__title { font-size: var(--fs-32); }
+  /* The mark tracks the smaller title, and the tagline's pull-up re-keys to the rail's
+     gap at this breakpoint (sp-3, not sp-4) or it would over-pull and collide. */
+  .pipe__mark { width: 34px; height: 34px; }
+  .pipe__tagline {
+    font-size: var(--fs-14);
+    margin-top: calc(var(--sp-3) * -1 + var(--sp-1));
+  }
 }
 @media (max-width: 760px) {
   .pipe .term-frame__meta { display: none; }

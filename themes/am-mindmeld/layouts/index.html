@@ -82,8 +82,19 @@
 
     <div class="pipe__body">
       <div class="pipe__rail">
-        <h3 class="pipe__title"><span class="brand-name">FabricatorStudio</span></h3>
-        <p class="pipe__blurb">The artist-friendly Maya to Unreal pipeline. A fast, modular workflow with animator-friendly rigs that work out of the box. In production on Archangel (UE5).</p>
+        {{- /* The bone mono mark, not the full-colour one: this card sits on carbon, and the
+               colour mark's letterforms ARE carbon, so they would vanish into it. */ -}}
+        <div class="pipe__lockup">
+          {{- with resources.Get "fs-mark.png" -}}
+            {{- with .Resize "96x96 webp q90" }}
+          <img class="pipe__mark" src="{{ .RelPermalink }}" width="48" height="48"
+               alt="" aria-hidden="true" loading="lazy" decoding="async">
+            {{ end -}}
+          {{- end }}
+          <h3 class="pipe__title"><span class="brand-name">FabricatorStudio</span></h3>
+        </div>
+        <p class="pipe__tagline">Human+AI Studio Toolset</p>
+        <p class="pipe__blurb">Built for solo developers and small teams. Free, open source, Maya-to-Unreal pipeline tools. Rigging, skinning, animation, export, and more. With an AI Technical Artist built in.</p>
         <ul class="pipe__bullets">
           <li>Drag-and-drop modular rigging. Build, unbuild, iterate.</li>
           <li>AutoSkin: production-ready weights in minutes, not days.</li>
