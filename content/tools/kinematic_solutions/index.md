@@ -1,6 +1,6 @@
 +++
 title = "FabricatorStudio"
-description = "Built for solo developers and small teams. Free, open source, Maya-to-Unreal pipeline tools. Rigging, skinning, animation, export, and more. With an AI Technical Artist built in."
+description = "Built for solo developers and small teams. Free Maya-to-Unreal pipeline tools. Rigging, skinning, animation, export, and more. With an AI Technical Artist built in."
 date = "2026-07-12"
 layout = "redirect"
 # Old tool pages that FabricatorStudio superseded. They were live and indexed, so they
