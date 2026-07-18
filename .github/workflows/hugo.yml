@@ -58,7 +58,16 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo --minify -d ./public --baseURL https://adrianmelian.com/
-    
+
+      # G13 (ported from fabricator-studio-site, SITE-LIC-R1 2026-07-18): the toolset is
+      # BSL 1.1, not open source, and the built site must never claim otherwise.
+      - name: License-claim gate (G13)
+        run: |
+          if grep -rniE "open[ -]source|apache" public --include="*.html" --include="*.css"; then
+            echo "G13: banned license claim in built output (see matches above)"; exit 1
+          fi
+          echo "G13 clean"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
