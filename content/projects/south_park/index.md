@@ -7,6 +7,7 @@ role = "Senior Technical Artist"
 studio = "Ubisoft"
 shipped_year = "2017"
 status = "shipped"
+claim = "Built the pipeline and 2D flipbook animation tools behind the game's distinctive look, rigging hybrid 2D and 3D characters."
 +++
 
 **South Park - Fractured But Whole | Ubisoft | Senior Technical Artist | 2017**

@@ -1,9 +1,10 @@
 +++
 title = "Adrian Melian"
-description = "Adrian Melian. Technical Artist. Rigging, pipeline, and ML for AAA games."
+description = "Adrian Melian. Technical Director and Technical Art Director. 14 years building the technical backbone of AAA game art teams."
 
 [params]
-tagline = "Technical Artist · Animator"
+tagline = "Technical Director · Technical Art Director"
+availability = "Open to director roles and technical art leadership"
 featured_project = "kinematic_solutions"
 
 [[params.quick_links]]

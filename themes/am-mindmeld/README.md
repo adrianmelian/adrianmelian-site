@@ -7,7 +7,7 @@ design system from AM_MayaTools. Not intended for redistribution.
 
 - Hugo Extended ≥ 0.120
 - Plain CSS via Hugo's resources pipeline (Concat + Minify + Fingerprint)
-- Self-hosted webfonts: VT323 (display), JetBrains Mono (body)
+- Self-hosted webfonts: JetBrains Mono only, display and body. VT323 retired with Mindmeld 1.0 and no longer ships (no font file, no @font-face).
 - Vanilla JS (small inline mobile-nav toggle in the header partial)
 - Homepage only: vendored GSAP 3.13 (ScrollTrigger, SplitText, ScrambleText)
   + Three.js 0.182, bundled via js.Build. The hero is a real FABRIK/CCD IK

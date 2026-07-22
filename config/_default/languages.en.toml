@@ -11,13 +11,16 @@ title = "Adrian Melian"
     dateFormat = "2 January 2006"
     logo = "adrianmelian_logo_72px.png"
     secondaryLogo = "adrianmelian_logo_512px.png"
-    description = "Adrian Melian - Technical Artst - Portfolio Site"
+    description = "Adrian Melian - Technical Director - Portfolio Site"
 
+# Corrected 2026-07-22 (website overhaul). Two problems here, both quiet and both real:
+# the headline still said Technical Artist after the director reframe, and the bio claimed
+# "over 15 years" where every other surface says 14. The larger number is the wrong one.
 [params.author]
     name = "Adrian Melian"
     email = "AdrianMelian123@gmail.com"
-    headline = "Technical Artist | Animator | Maker of Things"
-    bio = "Adrian Melian is a Technical Artist and Animator with over 15 years of experience in the video game industry. He has worked on various high-profile projects, including Call of Duty, South Park, and Broken Age. Adrian is passionate about creating engaging and visually stunning experiences for players."
+    headline = "Technical Director | Technical Art Director"
+    bio = "Adrian Melian is a Technical Director with 14 years building the technical backbone of AAA game art teams, at Sledgehammer Games, Camouflaj, Meta, Double Fine, Ubisoft, and NCSoft. He led Character and Weapons Tech Art across two shipped Call of Duty titles, and in 2026 founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product."
     image = "portrait_face.png"
     links = [
         { LinkedIn = "https://www.linkedin.com/in/adrian-melian-33066423" },

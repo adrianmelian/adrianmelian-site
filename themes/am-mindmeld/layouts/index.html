@@ -24,8 +24,24 @@
     <img class="hero__crest" src="{{ $crest }}"
          alt="" width="72" height="72" loading="eager" decoding="async" aria-hidden="true">
     <h1 class="hero__name"><span class="ln">Adrian</span> <span class="ln accent">Melian</span></h1>
-    <p class="hero__tagline">{{ $p.tagline | default "Technical Artist · Animator" }}
-      <span class="tag-accent">rigging · pipeline · ML</span></p>
+    {{- /* The masthead states role and availability in the first thing a visitor reads
+           (Adrian, 2026-07-22). It used to read "Technical Artist · Animator", which
+           understated a claim the goals file already marks as made: the reframe from expert
+           IC to director scope. Availability is furniture here, not a page you have to find. */ -}}
+    <p class="hero__tagline">{{ $p.tagline | default "Technical Director · Technical Art Director" }}
+      <span class="tag-accent">{{ $p.availability | default "Open to director roles and technical art leadership" }}</span></p>
+
+    {{- /* The record, moved up from the decorative readout that used to sit in the closing
+           block. Up here it does a job (it grounds the director claim the line above makes);
+           down there it was aria-hidden set dressing. Every number survives the
+           shipped-versus-worked-on test: two Call of Duty titles SHIPPED, a third worked on
+           and not shipped, so the third is not counted. */ -}}
+    <ul class="hero__stats">
+      <li><span class="hero__stat-n">14</span><span class="hero__stat-k">Years in AAA</span></li>
+      <li><span class="hero__stat-n">02</span><span class="hero__stat-k">Call of Duty titles shipped</span></li>
+      <li><span class="hero__stat-n">01</span><span class="hero__stat-k">Studio founded, pipeline shipped</span></li>
+    </ul>
+
     {{ with $p.quick_links }}
     <div class="hero__links">
       {{ range . }}{{ partial "quick-link.html" . }}{{ end }}
@@ -49,8 +65,15 @@
     <img class="about__photo" src="{{ . }}" alt="Adrian Melian"
          width="480" height="458" loading="lazy" decoding="async">
     {{ end }}
+    {{- /* CREDENTIAL CORRECTION 2026-07-22. The old copy said "most recently leading the
+           Tech Art team at Sledgehammer Games", which was wrong twice: the most recent role
+           was Camouflaj, and 14 years across ten studios was compressed into a Sledgehammer
+           lead line. Rewritten outcome-first for the director reframe, and the traditional
+           art now lives as one line here instead of costing a whole homepage section. */ -}}
     <div class="about__body">
-      <p>Hi, I'm Adrian Melian. I've spent 14 years as a Technical Artist in AAA games, most recently leading the Tech Art team at Sledgehammer Games. Along the way I've worked with Double Fine, Ubisoft, Camouflaj, and Meta, on games like Broken Age, Modern Warfare III, and South Park: The Fractured But Whole.</p>
+      <p>Hi, I'm Adrian Melian. I've spent 14 years building the technical backbone of AAA game art teams, and I now architect the pipelines, tools, and teams that ship them. I led the Character and Weapons Tech Art teams at Sledgehammer Games across two shipped Call of Duty titles, and before that built character and animation pipelines at Camouflaj, Meta, Double Fine, Ubisoft, and NCSoft.</p>
+      <p>In 2026 I founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product, documentation and issue tracker included. I lead by owning outcomes: the shipped result, the team that grows around it, and the technical bets that pay off.</p>
+      <p class="about__aside">Away from the screen I paint, draw from life, and build physical things. <a href="{{ "/gallery/" | relURL }}">See the gallery &rarr;</a></p>
     </div>
   </div>
 </section>
@@ -109,11 +132,45 @@
   </div>
 </section>
 
-{{- /* ===================================================== 02 / SHIPPED */ -}}
+{{- /* ================================================ 02 / SELECTED WORK */ -}}
+{{- /* NEW 2026-07-22 (website overhaul).
+
+       The homepage used to show every project at equal weight in one flat ledger, so
+       nothing on it argued for anything: thirteen rows, no status labels, no claim, and a
+       visitor could read the whole page without learning what Adrian did on any of them.
+
+       These five carry the argument; the ledger below is now the index for everything
+       else, with these five removed from it so the page never says the same thing twice.
+       Archangel is in the set on purpose and is labelled IN DEVELOPMENT: it is a personal
+       project, it is current work, and stating that plainly is what makes the shipped
+       entries beside it worth believing. */ -}}
+{{- $csPaths := slice "/projects/mw3" "/projects/vanguard" "/projects/archangel" "/projects/south_park" "/projects/broken_age" -}}
+{{- $cases := slice -}}
+{{- range $csPaths }}{{ with $.Site.GetPage . }}{{ $cases = $cases | append . }}{{ end }}{{ end -}}
+
+{{ with $cases }}
 <section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "02" "title" "Projects" "id" "shipped") }}
+  {{ partial "section-heading.html" (dict "number" "02" "title" "Selected Work" "id" "work") }}
+  <div class="cs-list">
+    {{ range $i, $page := . }}
+      {{ partial "case-study.html" (dict "page" $page "index" $i) }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{- /* ===================================================== 03 / FULL RECORD */ -}}
+<section class="hp-section container">
+  {{ partial "section-heading.html" (dict "number" "03" "title" "Full Record" "id" "shipped") }}
+  {{- /* The five case studies above are removed here, so the page never says the same thing
+         twice. Filtered BEFORE the range, not skipped inside it, or the row numbering would
+         come out with gaps in it. */ -}}
+  {{- $rest := slice -}}
+  {{- range (where .Site.RegularPages "Section" "projects").ByDate.Reverse -}}
+    {{- if not (in $csPaths (strings.TrimSuffix "/" .RelPermalink)) }}{{ $rest = $rest | append . }}{{ end -}}
+  {{- end -}}
   <div class="ledger">
-    {{ range $i, $page := (where .Site.RegularPages "Section" "projects").ByDate.Reverse }}
+    {{ range $i, $page := $rest }}
     {{- $img := "" }}{{ $thumb := "" -}}
     {{- with $page.Resources.GetMatch "featured*" -}}
       {{- if eq .MediaType.MainType "image" -}}
@@ -136,57 +193,38 @@
   <div class="ledger-preview" aria-hidden="true"><img alt="" decoding="async"></div>
 </section>
 
-{{- /* ===================================================== 03 / TOOLBOX */ -}}
-<section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "03" "title" "Toolbox" "id" "tools") }}
-  <div class="plugmgr">
-    {{ range $i, $page := (where .Site.RegularPages "Section" "tools").ByDate.Reverse }}
-    <a class="plugmgr__row" href="{{ $page.RelPermalink }}" data-reveal>
-      <span class="plugmgr__idx">{{ printf "%02d" (add $i 1) }}</span>
-      {{- if eq $page.Params.status "in_development" -}}
-      <span class="plugmgr__status plugmgr__status--beta">BETA</span>
-      {{- else -}}
-      <span class="plugmgr__status">LOADED</span>
-      {{- end -}}
-      <span class="plugmgr__name">{{ $page.Title }}</span>
-      <span class="plugmgr__desc">{{ $page.Description }}</span>
-      <span class="plugmgr__arrow" aria-hidden="true">→</span>
-    </a>
-    {{ end }}
-  </div>
-  <div class="hp-more"><a class="hp-more-link" href="{{ "/tools/" | relURL }}">All tools →</a></div>
-</section>
+{{- /* THE TOOLBOX SECTION WAS CUT 2026-07-22 (website overhaul).
 
-{{- /* ============================================ 04 / RENDER TARGETS */ -}}
-<section class="hp-section container hp-selected">
-  {{ partial "section-heading.html" (dict "number" "04" "title" "Traditional Art" "id" "selected") }}
-  <div class="bento" data-reveal>
-    {{ partial "bento-cell.html" (dict "path" "gallery/ufo.jpg" "caption" "Krazy Kaiju! · acrylic on canvas" "span" 3 "aspect" "16/10") }}
-    {{ partial "bento-cell.html" (dict "path" "gallery/07.jpg" "caption" "Chicken Run & Coop · 3D to real world" "span" 2 "aspect" "1") }}
-    {{ partial "bento-cell.html" (dict "path" "gallery/039.jpg" "caption" "Space Arcade · 3D to real world" "span" 1 "aspect" "1") }}
-  </div>
-  <div class="hp-more"><a class="hp-more-link" href="{{ "/gallery/" | relURL }}">View gallery →</a></div>
-</section>
+       It listed six rows, and it did a job two other things on this page already did
+       better: FabricatorStudio has the whole featured block above it, the demo reels are
+       one click away in the closing CTAs and in the header's YouTube icon, and "Tools" is
+       a nav item leading to the same list in full. A block that duplicates a nav item
+       becomes a link. Nothing was deleted: /tools/ and every tool page are untouched.
 
-{{- /* ================================================== 05 / TRANSMISSION */ -}}
+       THE TRADITIONAL ART BENTO WAS CUT in the same pass. The work is genuinely good and
+       it is not evidence for a director hire, so on a page competing for that job it was
+       spending a whole section saying something off-message. It is now one line inside
+       About with a link to the gallery, which keeps the character without the real estate,
+       and /gallery/ is untouched. */ -}}
+
+{{- /* =============================================== 04 / OPEN TO WORK */ -}}
+{{- /* The closing ask, aimed the OPPOSITE direction from fabricator.studio: that site sells
+       engagements, this one is for hiring the person. Same furniture as the old closing
+       block, different job. The decorative readout that used to sit on the right was
+       aria-hidden set dressing carrying a wrong number ("13 TITLES SHIPPED", when two of
+       the thirteen entries are in development and not shipped at all). Its real content
+       moved into the hero, where it grounds the director claim. */ -}}
 <section class="hp-section container hp-close">
-  <div class="hp-close__grid">
-    <div>
-      <div class="hp-close__ctas" data-reveal>
-        <a class="btn-term btn-term--primary magnetic" href="{{ "/contact/" | relURL }}">Contact →</a>
-        <a class="btn-term" href="{{ "adrianmelian_resume.pdf" | relURL }}" rel="noopener" target="_blank">Resume</a>
-        <a class="btn-term" href="https://www.youtube.com/@age914" rel="noopener" target="_blank">Reel ↗</a>
-        <a class="btn-term" href="https://www.linkedin.com/in/adrian-melian-33066423" rel="noopener" target="_blank">LinkedIn ↗</a>
-        <a class="btn-term" href="https://github.com/adrianmelian" rel="noopener" target="_blank">GitHub ↗</a>
-      </div>
-    </div>
-    <div class="hp-close__meta" data-reveal aria-hidden="true">
-      <div class="hp-close__meta-row"><span class="k">CHANNEL</span><span class="v v--plasma">OPEN</span></div>
-      <div class="hp-close__meta-row"><span class="k">EXPERIENCE</span><span class="v">14 YRS</span></div>
-      <div class="hp-close__meta-row"><span class="k">SHIPPED</span><span class="v">13 TITLES</span></div>
-      <div class="hp-close__meta-row"><span class="k">CURRENT</span><span class="v">ARCHANGEL · UE5</span></div>
-      <div class="hp-close__meta-row"><span class="k">STACK</span><span class="v">MAYA · PY · TORCH</span></div>
-    </div>
+  <div class="hp-close__ask" data-reveal>
+    <h2 class="hp-close__head">Open to director roles.</h2>
+    <p class="hp-close__line">Technical Director and Technical Art Director positions, and studio engagements through <span class="brand-name">FabricatorStudio</span>. Based in Denver, Colorado.</p>
+  </div>
+  <div class="hp-close__ctas" data-reveal>
+    <a class="btn-term btn-term--primary magnetic" href="{{ "/contact/" | relURL }}">Contact →</a>
+    <a class="btn-term" href="{{ "adrianmelian_resume.pdf" | relURL }}" rel="noopener" target="_blank">Resume</a>
+    <a class="btn-term" href="https://www.youtube.com/@age914" rel="noopener" target="_blank">Reel ↗</a>
+    <a class="btn-term" href="https://www.linkedin.com/in/adrian-melian-33066423" rel="noopener" target="_blank">LinkedIn ↗</a>
+    <a class="btn-term" href="https://github.com/adrianmelian" rel="noopener" target="_blank">GitHub ↗</a>
   </div>
 </section>
 {{ end }}

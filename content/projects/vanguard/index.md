@@ -8,6 +8,7 @@ role = "Technical Artist"
 studio = "Sledgehammer Games"
 shipped_year = "2021"
 status = "shipped"
+claim = "The first of two Call of Duty titles shipped at Sledgehammer, and the one where a modular weapons rigging solution went from architecture to team-wide adoption."
 +++
 **Call of Duty - Vanguard | Sledgehammer Games | Technical Artist | 2021**
 

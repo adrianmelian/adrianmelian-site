@@ -1,0 +1,53 @@
+{{- /* themes/am-mindmeld/layouts/partials/case-study.html
+
+       A single Selected Work entry: image, status, title, credit line, one declarative
+       claim, and a link into the full page.
+
+       Added 2026-07-22 (website overhaul). The homepage used to present every project at
+       equal weight in one flat ledger, so nothing on the page argued for anything: a
+       visitor could see thirteen titles and still not know what Adrian actually did on any
+       of them. This partial is the argument; the ledger below it stays as the index.
+
+       The claim comes from the project's own `claim` front-matter field, written
+       outcome-first (led / owned / drove / defined / scaled) rather than
+       thing-first, which is the whole point of the director reframe.
+
+       params: page (Page), index (int, 0-based)
+*/ -}}
+{{- $page := .page -}}
+{{- $i := .index | default 0 -}}
+{{- $status := $page.Params.status | default "shipped" -}}
+{{- $year := $page.Params.shipped_year | default (string $page.Date.Year) -}}
+
+{{- $shot := "" -}}
+{{- with $page.Resources.GetMatch "featured*" -}}
+  {{- if eq .MediaType.MainType "image" -}}
+    {{- with .Resize "900x webp q82" }}{{ $shot = .RelPermalink }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+
+<article class="cs{{ if eq (mod $i 2) 1 }} cs--flip{{ end }}" data-reveal>
+  {{ with $shot }}
+  <a class="cs__shot" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ . }}" alt="" loading="lazy" decoding="async">
+  </a>
+  {{ end }}
+  <div class="cs__body">
+    <div class="cs__top">
+      <span class="cs__idx">{{ printf "%02d" (add $i 1) }}</span>
+      {{- if eq $status "in_development" -}}
+        {{ partial "status-pill.html" (dict "variant" "warn" "label" "In development") }}
+      {{- else -}}
+        {{ partial "status-pill.html" (dict "variant" "shipped" "label" "Shipped") }}
+      {{- end -}}
+    </div>
+    <h3 class="cs__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+    <p class="cs__meta">
+      {{- with $page.Params.studio }}<span>{{ . }}</span>{{ end -}}
+      {{- with $page.Params.role }}<span>{{ . }}</span>{{ end -}}
+      {{- if ne $year "In progress" }}<span>{{ $year }}</span>{{ end -}}
+    </p>
+    {{ with $page.Params.claim }}<p class="cs__claim">{{ . }}</p>{{ end }}
+    <a class="cs__more" href="{{ $page.RelPermalink }}">Read the full breakdown &rarr;</a>
+  </div>
+</article>

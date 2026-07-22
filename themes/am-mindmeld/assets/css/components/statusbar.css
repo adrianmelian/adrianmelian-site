@@ -34,6 +34,9 @@
   height: 6px;
   background: var(--plasma);
   box-shadow: 0 0 6px var(--plasma);
-  border-radius: 0;
+  /* Was `border-radius: 0`, a Mindmeld 1.0 hard-corner leftover the 2.0 sweep missed
+     because the mechanical gate only ever looked for a literal 2px. Forms are rounded
+     (principle 5), and a status dot is the most obviously round thing on the page. */
+  border-radius: 50%;
   flex-shrink: 0;
 }

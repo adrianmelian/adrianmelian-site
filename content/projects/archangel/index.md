@@ -9,6 +9,7 @@ role = "Solo developer"
 studio = "Personal Project"
 shipped_year = "In progress"
 status = "in_development"
+claim = "A solo Unreal project in development. Every character runs the same rig-binding and export contract the FabricatorStudio toolset ships."
 engine = "Unreal Engine 5.4"
 platform = "PC (Steam)"
 +++

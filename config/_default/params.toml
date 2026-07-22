@@ -1,5 +1,7 @@
 # am-mindmeld theme params
-description = "Adrian Melian — Senior Technical Artist. Rigging, pipeline, and ML for AAA games."
+# Director reframe 2026-07-22. The em-dash also went: outbound copy in Adrian's voice
+# does not carry them.
+description = "Adrian Melian. Technical Director and Technical Art Director. Rigging, pipeline, and ML for AAA games."
 
 # Defaults consumed by the homepage hero (overridable in content/_index.md):
 # tagline, location, availability, currently, recent_studios,

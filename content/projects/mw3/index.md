@@ -8,6 +8,7 @@ role = "Lead Technical Artist"
 studio = "Sledgehammer Games"
 shipped_year = "2023"
 status = "shipped"
+claim = "Led the Character and Weapons Tech Art teams through a full Call of Duty cycle, scaling the discipline through internal hiring and offshore management."
 +++
 
 **Call of Duty - MW3 | Sledgehammer Games | Lead Technical Artist | 2023**

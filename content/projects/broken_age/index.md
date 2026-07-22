@@ -7,6 +7,7 @@ role = "Technical Artist"
 studio = "Double Fine Productions"
 shipped_year = "2016"
 status = "shipped"
+claim = "Authored the flipbook animation system behind every character in the game, a 2D-on-3D hybrid built to carry a flagship title on a small team."
 +++
 
 **Broken Age | Double Fine Productions | Technical Artist | 2016**

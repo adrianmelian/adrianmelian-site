@@ -12,7 +12,11 @@
 {{- $title := .Get "title" -}}
 <article class="milestone-card">
   <h2 class="milestone-card__title">{{ $title }}</h2>
-  <div class="milestone-card__date">{{ $date }} //</div>
+  {{- /* The trailing `//` was a Mindmeld 1.0 console motif and is RETIRED (brand DNA
+         principle 8). It survived the 2.0 sweep because that pass went through the partials
+         and this is a shortcode, so every Archangel devlog entry kept rendering
+         "2026-06-05 //" on the live site. Removed 2026-07-22. */ -}}
+  <div class="milestone-card__date">{{ $date }}</div>
   <div class="milestone-card__body">
     {{ .Inner | markdownify }}
   </div>
