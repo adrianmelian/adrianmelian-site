@@ -9,11 +9,12 @@ design system from AM_MayaTools. Not intended for redistribution.
 - Plain CSS via Hugo's resources pipeline (Concat + Minify + Fingerprint)
 - Self-hosted webfonts: JetBrains Mono only, display and body. VT323 retired with Mindmeld 1.0 and no longer ships (no font file, no @font-face).
 - Vanilla JS (small inline mobile-nav toggle in the header partial)
-- Homepage only: vendored GSAP 3.13 (ScrollTrigger, SplitText, ScrambleText)
-  + Three.js 0.182, bundled via js.Build. The hero is a real FABRIK/CCD IK
-  solver (`assets/js/solver.js` + `rig-hero.js`); choreography lives in
-  `assets/js/home-motion.js`. Spec:
-  `docs/superpowers/specs/2026-06-12-landing-rig-playground-design.md`.
+- Homepage only: vendored GSAP 3.13 (ScrollTrigger, SplitText), bundled via
+  js.Build. Choreography lives in `assets/js/home-motion.js`.
+  ScrambleText was removed 2026-07-22 with the KS launch-console page, the
+  only thing still loading it; scramble-text itself retired with Mindmeld 1.0.
+  The interactive WebGL IK hero was retired 2026-07-14, so `solver.js`,
+  `rig-hero.js`, and Three.js are vendored but no longer on any page.
 
 ## Structure
 
