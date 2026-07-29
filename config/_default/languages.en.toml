@@ -11,16 +11,17 @@ title = "Adrian Melian"
     dateFormat = "2 January 2006"
     logo = "adrianmelian_logo_72px.png"
     secondaryLogo = "adrianmelian_logo_512px.png"
-    description = "Adrian Melian - Technical Director - Portfolio Site"
+    description = "Adrian Melian - Lead Technical Artist - Portfolio Site"
 
-# Corrected 2026-07-22 (website overhaul). Two problems here, both quiet and both real:
-# the headline still said Technical Artist after the director reframe, and the bio claimed
-# "over 15 years" where every other surface says 14. The larger number is the wrong one.
+# Reframed 2026-07-28: back to Lead Technical Artist, reversing the 2026-07-22 director pass
+# and matching the resume. The 14-years figure is the one correction from that pass that
+# still holds: the bio used to claim "over 15 years" where every other surface says 14, and
+# the larger number is the wrong one. Do not let it drift back up.
 [params.author]
     name = "Adrian Melian"
     email = "AdrianMelian123@gmail.com"
-    headline = "Technical Director | Technical Art Director"
-    bio = "Adrian Melian is a Technical Director with 14 years building the technical backbone of AAA game art teams, at Sledgehammer Games, Camouflaj, Meta, Double Fine, Ubisoft, and NCSoft. He joined Sledgehammer as a Senior Technical Artist on Call of Duty: Vanguard and led the Character and Weapons Tech Art teams through Modern Warfare III, and in 2026 founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product."
+    headline = "Lead Technical Artist | Character Pipelines"
+    bio = "Adrian Melian is a Lead Technical Artist with 14 years building the technical backbone of AAA game art teams, at Sledgehammer Games, Camouflaj, Meta, Double Fine, Ubisoft, and NCSoft. He joined Sledgehammer as a Senior Technical Artist on Call of Duty: Vanguard and led the Character and Weapons Tech Art teams through Modern Warfare III, and in 2026 founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product."
     image = "portrait_face.png"
     links = [
         { LinkedIn = "https://www.linkedin.com/in/adrian-melian-33066423" },

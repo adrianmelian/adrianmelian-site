@@ -1,7 +1,9 @@
 # am-mindmeld theme params
-# Director reframe 2026-07-22. The em-dash also went: outbound copy in Adrian's voice
-# does not carry them.
-description = "Adrian Melian. Technical Director and Technical Art Director. Rigging, pipeline, and ML for AAA games."
+# Technical Artist reframe 2026-07-28. This REVERSES the director reframe of 2026-07-22:
+# Adrian's public title is Lead Technical Artist and founder again, matching the resume.
+# The em-dash rule from that pass still stands: outbound copy in Adrian's voice does not
+# carry them.
+description = "Adrian Melian. Lead Technical Artist and founder. Rigging, pipeline, and ML for AAA games."
 
 # Defaults consumed by the homepage hero (overridable in content/_index.md):
 # tagline, location, availability, currently, recent_studios,

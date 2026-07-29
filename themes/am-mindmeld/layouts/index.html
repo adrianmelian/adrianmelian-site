@@ -25,14 +25,14 @@
          alt="" width="72" height="72" loading="eager" decoding="async" aria-hidden="true">
     <h1 class="hero__name"><span class="ln">Adrian</span> <span class="ln accent">Melian</span></h1>
     {{- /* The masthead states role and availability in the first thing a visitor reads
-           (Adrian, 2026-07-22). It used to read "Technical Artist · Animator", which
-           understated a claim the goals file already marks as made: the reframe from expert
-           IC to director scope. Availability is furniture here, not a page you have to find. */ -}}
-    <p class="hero__tagline">{{ $p.tagline | default "Technical Director · Technical Art Director" }}
-      <span class="tag-accent">{{ $p.availability | default "Open to director roles and technical art leadership" }}</span></p>
+           (Adrian, 2026-07-22). REFRAMED 2026-07-28: the director titles are reversed out
+           and the line is Lead Technical Artist again, worded to match the resume exactly.
+           Availability is furniture here, not a page you have to find. */ -}}
+    <p class="hero__tagline">{{ $p.tagline | default "Lead Technical Artist · Founder · Character Pipelines" }}
+      <span class="tag-accent">{{ $p.availability | default "Open to lead technical art roles and studio engagements" }}</span></p>
 
     {{- /* The record, moved up from the decorative readout that used to sit in the closing
-           block. Up here it does a job (it grounds the director claim the line above makes);
+           block. Up here it does a job (it grounds the claim the line above makes);
            down there it was aria-hidden set dressing. Every number survives the
            shipped-versus-worked-on test: two Call of Duty titles SHIPPED, a third worked on
            and not shipped, so the third is not counted. */ -}}
@@ -68,8 +68,11 @@
     {{- /* CREDENTIAL CORRECTION 2026-07-22. The old copy said "most recently leading the
            Tech Art team at Sledgehammer Games", which was wrong twice: the most recent role
            was Camouflaj, and 14 years across ten studios was compressed into a Sledgehammer
-           lead line. Rewritten outcome-first for the director reframe, and the traditional
-           art now lives as one line here instead of costing a whole homepage section. */ -}}
+           lead line. Both fixes stand. The outcome-first phrasing survives the 2026-07-28
+           Technical Artist reframe untouched: these two paragraphs are almost verbatim the
+           resume summary, which kept them. Only titles changed, not the way work is
+           described. The traditional art lives as one line here instead of costing a whole
+           homepage section. */ -}}
     <div class="about__body">
       <p>Hi, I'm Adrian Melian. I've spent 14 years building the technical backbone of AAA game art teams, and I now architect the pipelines, tools, and teams that ship them. I joined Sledgehammer Games as a Senior Technical Artist on Vanguard and led the Character and Weapons Tech Art teams through Modern Warfare III, and before that I built character and animation pipelines at Camouflaj, Meta, Double Fine, Ubisoft, and NCSoft.</p>
       <p>In 2026 I founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product, documentation and issue tracker included. I lead by owning outcomes: the shipped result, the team that grows around it, and the technical bets that pay off.</p>
@@ -202,10 +205,11 @@
        becomes a link. Nothing was deleted: /tools/ and every tool page are untouched.
 
        THE TRADITIONAL ART BENTO WAS CUT in the same pass. The work is genuinely good and
-       it is not evidence for a director hire, so on a page competing for that job it was
-       spending a whole section saying something off-message. It is now one line inside
-       About with a link to the gallery, which keeps the character without the real estate,
-       and /gallery/ is untouched. */ -}}
+       it is not evidence for the roles this page competes for, so a whole section spent on
+       it was off-message. It is now one line inside About with a link to the gallery, which
+       keeps the character without the real estate, and /gallery/ is untouched. (The cut was
+       argued at the time as director-specific; it holds for a lead technical art hire too,
+       so the 2026-07-28 reframe left it cut.) */ -}}
 
 {{- /* =============================================== 04 / OPEN TO WORK */ -}}
 {{- /* The closing ask, aimed the OPPOSITE direction from fabricator.studio: that site sells
@@ -213,11 +217,12 @@
        block, different job. The decorative readout that used to sit on the right was
        aria-hidden set dressing carrying a wrong number ("13 TITLES SHIPPED", when two of
        the thirteen entries are in development and not shipped at all). Its real content
-       moved into the hero, where it grounds the director claim. */ -}}
+       moved into the hero, where it grounds the claim. The ask itself was reframed
+       2026-07-28 from director roles to lead technical art roles. */ -}}
 <section class="hp-section container hp-close">
   <div class="hp-close__ask" data-reveal>
-    <h2 class="hp-close__head">Open to director roles.</h2>
-    <p class="hp-close__line">Technical Director and Technical Art Director positions, and studio engagements through <span class="brand-name">FabricatorStudio</span>. Based in Denver, Colorado.</p>
+    <h2 class="hp-close__head">Open to lead technical art roles.</h2>
+    <p class="hp-close__line">Lead and senior technical art positions, and studio engagements through <span class="brand-name">FabricatorStudio</span>. Based in Denver, Colorado.</p>
   </div>
   <div class="hp-close__ctas" data-reveal>
     <a class="btn-term btn-term--primary magnetic" href="{{ "/contact/" | relURL }}">Contact →</a>
