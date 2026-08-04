@@ -135,7 +135,58 @@
   </div>
 </section>
 
-{{- /* ================================================ 02 / SELECTED WORK */ -}}
+{{- /* ================================================== 02 / ARMATURE */ -}}
+{{- /* NEW 2026-08-03 (Adrian). Armature shipped as a public product on 2026-08-01 and the
+       homepage said nothing about it. It reuses the .pipe card wholesale rather than inventing
+       a second featured shape: same frame, same rail, same CTA pair, so the two products read
+       as a set instead of competing.
+
+       The one departure is the media slot. FabricatorStudio's card carries a still montage;
+       this one carries the fabricator.studio hero cut, downscaled to 1280x720 for a slot that
+       never renders wider than the container. Rigging is motion, and a still of a rig is the
+       one thing that cannot show it. Reduced-motion visitors get the poster instead, the same
+       contract the page hero already honours. */ -}}
+<section class="hp-section container">
+  {{ partial "section-heading.html" (dict "number" "02" "title" "Armature" "id" "armature") }}
+
+  <div class="term-frame pipe" data-reveal>
+    <div class="term-frame__bar">
+      <span class="term-frame__title">Featured Product</span>
+      <span class="term-frame__meta">STANDALONE → UE5 / MAYA</span>
+    </div>
+
+    <a class="pipe__shot pipe__shot--video" href="https://fabricator.studio/armature/" rel="noopener" aria-label="See Armature on fabricator.studio">
+      <video class="pipe__video" autoplay muted loop playsinline
+             poster="{{ "posters/armature_card.jpg" | relURL }}"
+             src="{{ "armature_card.mp4" | relURL }}"
+             aria-hidden="true"></video>
+      <img class="pipe__video-poster" src="{{ "posters/armature_card.jpg" | relURL }}"
+           alt="Characters rigged and skinned in Armature, shown across the app's stations."
+           width="1280" height="720" loading="lazy" decoding="async">
+    </a>
+
+    <div class="pipe__body">
+      <div class="pipe__rail">
+        <div class="pipe__lockup">
+          <h3 class="pipe__title"><span class="brand-name">Armature</span></h3>
+        </div>
+        <p class="pipe__tagline">Artist+AI Rigging. You drive.</p>
+        <p class="pipe__blurb">A standalone rigging and skinning app, no Maya licence needed. A developer takes a mesh to a working rig in minutes; a character artist pushes that same rig to production level. Free for personal work and small studios.</p>
+        <ul class="pipe__bullets">
+          <li>Drop a mesh, place a skeleton from templates or modules, and skin it locally.</li>
+          <li>Two skinning engines: one solves in seconds on any machine, the AI one runs on your GPU.</li>
+          <li>Exports one USD carrying mesh, skeleton, weights and control rig build data.</li>
+        </ul>
+        <div class="pipe__ctas">
+          <a class="btn-term btn-term--primary magnetic" href="https://fabricator.studio/armature/" rel="noopener">See Armature →</a>
+          <a class="btn-term" href="https://fabricator.studio/docs/armature/" rel="noopener">Browse the Docs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{- /* ================================================ 03 / SELECTED WORK */ -}}
 {{- /* NEW 2026-07-22 (website overhaul).
 
        The homepage used to show every project at equal weight in one flat ledger, so
@@ -153,7 +204,7 @@
 
 {{ with $cases }}
 <section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "02" "title" "Selected Work" "id" "work") }}
+  {{ partial "section-heading.html" (dict "number" "03" "title" "Selected Work" "id" "work") }}
   <div class="cs-list">
     {{ range $i, $page := . }}
       {{ partial "case-study.html" (dict "page" $page "index" $i) }}
@@ -162,9 +213,9 @@
 </section>
 {{ end }}
 
-{{- /* ===================================================== 03 / FULL RECORD */ -}}
+{{- /* ===================================================== 04 / FULL RECORD */ -}}
 <section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "03" "title" "Full Record" "id" "shipped") }}
+  {{ partial "section-heading.html" (dict "number" "04" "title" "Full Record" "id" "shipped") }}
   {{- /* The five case studies above are removed here, so the page never says the same thing
          twice. Filtered BEFORE the range, not skipped inside it, or the row numbering would
          come out with gaps in it. */ -}}

@@ -232,6 +232,35 @@
   }
 }
 
+/* The Armature card's media slot (2026-08-03). It departs from .pipe__shot above in two ways,
+   both because this media moves. The slot takes the footage's own 16/9 rather than the
+   montage's 2048/600 letterbox, which would crop a full-frame capture to a band. And it opts
+   out of the parallax drift: the art above drifts because it is still, and drifting a moving
+   picture is motion on top of motion.
+
+   Reduced-motion visitors get the poster and never download the video, which is the same
+   contract the page hero already honours. */
+.pipe__shot--video {
+  aspect-ratio: 16 / 9;
+  view-timeline-name: none;
+}
+.pipe__shot--video .pipe__video,
+.pipe__shot--video .pipe__video-poster {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  animation: none;
+}
+.pipe__shot--video .pipe__video-poster { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .pipe__shot--video .pipe__video { display: none; }
+  .pipe__shot--video .pipe__video-poster { display: block; }
+}
+
 .pipe__body {
   display: grid;
   grid-template-columns: 1fr;
