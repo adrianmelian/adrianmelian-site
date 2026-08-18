@@ -27,13 +27,8 @@
     <div class="term-frame term-frame--full project-detail__frame">
       <div class="term-frame__bar">
         <span class="term-frame__title">{{ $framTitle }}</span>
-        {{ with $status }}
-          {{ if eq . "shipped" }}
-            {{ partial "status-pill.html" (dict "variant" "shipped" "label" "Shipped") }}
-          {{ else if eq . "in_development" }}
-            {{ partial "status-pill.html" (dict "variant" "warn" "label" "In development") }}
-          {{ end }}
-        {{ end }}
+        {{- /* SHIPPED / IN DEVELOPMENT pills removed 2026-08-18 (Adrian). The `status` front
+               matter stays: it is still true metadata, it is simply no longer rendered. */ -}}
       </div>
       <div class="term-frame__body project-detail__hero-body">
         {{ if $hero }}

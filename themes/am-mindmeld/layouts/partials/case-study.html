@@ -37,11 +37,7 @@
   <div class="cs__body">
     <div class="cs__top">
       <span class="cs__idx">{{ printf "%02d" (add $i 1) }}</span>
-      {{- if eq $status "in_development" -}}
-        {{ partial "status-pill.html" (dict "variant" "warn" "label" "In development") }}
-      {{- else -}}
-        {{ partial "status-pill.html" (dict "variant" "shipped" "label" "Shipped") }}
-      {{- end -}}
+      {{- /* Status pills removed 2026-08-18 (Adrian), same as the project detail hero. */ -}}
     </div>
     <h3 class="cs__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
     <p class="cs__meta">

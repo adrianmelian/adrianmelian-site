@@ -28,18 +28,21 @@
            (Adrian, 2026-07-22). REFRAMED 2026-07-28: the director titles are reversed out
            and the line is Lead Technical Artist again, worded to match the resume exactly.
            Availability is furniture here, not a page you have to find. */ -}}
-    <p class="hero__tagline">{{ $p.tagline | default "Lead Technical Artist · Founder · Character Pipelines" }}
-      <span class="tag-accent">{{ $p.availability | default "Open to lead technical art roles and studio engagements" }}</span></p>
+    <p class="hero__tagline">{{ $p.tagline | default "Lead/Principal Technical Artist · Founder · Character Pipelines" }}
+      <span class="tag-accent">{{ $p.availability | default "Open to technical art roles and studio engagements" }}</span></p>
 
     {{- /* The record, moved up from the decorative readout that used to sit in the closing
            block. Up here it does a job (it grounds the claim the line above makes);
-           down there it was aria-hidden set dressing. Every number survives the
-           shipped-versus-worked-on test: two Call of Duty titles SHIPPED, a third worked on
-           and not shipped, so the third is not counted. */ -}}
+           down there it was aria-hidden set dressing.
+
+           Revised 2026-08-18 (Adrian): the Call of Duty count and the studio-founded line are
+           gone, replaced by a single titles-shipped figure. Both surviving numbers still pass
+           the shipped-versus-worked-on test. NOTE for whoever changes 10: the Projects section
+           currently carries ELEVEN entries with status = "shipped", so 10 deliberately
+           understates by one rather than overstating. Do not raise it without recounting. */ -}}
     <ul class="hero__stats">
       <li><span class="hero__stat-n">14</span><span class="hero__stat-k">Years in AAA</span></li>
-      <li><span class="hero__stat-n">02</span><span class="hero__stat-k">Call of Duty titles shipped</span></li>
-      <li><span class="hero__stat-n">01</span><span class="hero__stat-k">Studio founded, pipeline shipped</span></li>
+      <li><span class="hero__stat-n">10</span><span class="hero__stat-k">Titles Shipped</span></li>
     </ul>
 
     {{ with $p.quick_links }}
@@ -65,18 +68,20 @@
     <img class="about__photo" src="{{ . }}" alt="Adrian Melian"
          width="480" height="458" loading="lazy" decoding="async">
     {{ end }}
-    {{- /* CREDENTIAL CORRECTION 2026-07-22. The old copy said "most recently leading the
-           Tech Art team at Sledgehammer Games", which was wrong twice: the most recent role
-           was Camouflaj, and 14 years across ten studios was compressed into a Sledgehammer
-           lead line. Both fixes stand. The outcome-first phrasing survives the 2026-07-28
-           Technical Artist reframe untouched: these two paragraphs are almost verbatim the
-           resume summary, which kept them. Only titles changed, not the way work is
-           described. The traditional art lives as one line here instead of costing a whole
-           homepage section. */ -}}
+    {{- /* CREDENTIAL CORRECTION 2026-07-22, still binding: the most recent studio role was
+           Camouflaj, NOT Sledgehammer, and the 14 years are across ten studios rather than
+           compressed into the Sledgehammer stint. State the Sledgehammer PROGRESSION (joined
+           Senior on Vanguard, promoted to Lead for MW3); flattening it loses the stronger
+           claim.
+
+           CUT 2026-08-18 (Adrian) to roughly two thirds of its old length, 137 words to 91.
+           What went: the "architect the pipelines, tools, and teams" positioning line, the
+           documentation-and-issue-tracker detail, and the "I lead by owning outcomes" close.
+           Every verifiable claim survived the cut. */ -}}
     <div class="about__body">
-      <p>Hi, I'm Adrian Melian. I've spent 14 years building the technical backbone of AAA game art teams, and I now architect the pipelines, tools, and teams that ship them. I joined Sledgehammer Games as a Senior Technical Artist on Vanguard and led the Character and Weapons Tech Art teams through Modern Warfare III, then moved to Camouflaj as an Expert Technical Artist. Before Sledgehammer I built character and animation pipelines at Meta, Double Fine, Ubisoft, and NCSoft.</p>
-      <p>In 2026 I founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product, documentation and issue tracker included. I lead by owning outcomes: the shipped result, the team that grows around it, and the technical bets that pay off.</p>
-      <p class="about__aside">Away from the screen I paint, draw from life, and build physical things. <a href="{{ "/gallery/" | relURL }}">See the gallery &rarr;</a></p>
+      <p>Hi, I'm Adrian Melian. Fourteen years building the technical backbone of AAA game art teams. I joined Sledgehammer Games as a Senior Technical Artist on Vanguard and was promoted to Lead for Modern Warfare III, running Character and Weapons Tech Art, then moved to Camouflaj as an Expert Technical Artist. Before Sledgehammer: Meta, Double Fine, Ubisoft, and NCSoft.</p>
+      <p>In 2026 I founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product.</p>
+      <p class="about__aside">Away from the screen I paint, draw from life, and build things. <a href="{{ "/gallery/" | relURL }}">See the gallery &rarr;</a></p>
     </div>
   </div>
 </section>
@@ -213,9 +218,11 @@
 </section>
 {{ end }}
 
-{{- /* ===================================================== 04 / FULL RECORD */ -}}
+{{- /* ======================================================= 04 / PROJECTS */ -}}
 <section class="hp-section container">
-  {{ partial "section-heading.html" (dict "number" "04" "title" "Full Record" "id" "shipped") }}
+  {{- /* Renamed from "Full Record" 2026-08-18 (Adrian). The anchor stays #shipped: nothing
+         links to it today, but changing an id costs more than it gains. */ -}}
+  {{ partial "section-heading.html" (dict "title" "Projects" "id" "shipped") }}
   {{- /* The five case studies above are removed here, so the page never says the same thing
          twice. Filtered BEFORE the range, not skipped inside it, or the row numbering would
          come out with gaps in it. */ -}}
@@ -269,11 +276,13 @@
        aria-hidden set dressing carrying a wrong number ("13 TITLES SHIPPED", when two of
        the thirteen entries are in development and not shipped at all). Its real content
        moved into the hero, where it grounds the claim. The ask itself was reframed
-       2026-07-28 from director roles to lead technical art roles. */ -}}
+       2026-07-28 from director roles to lead technical art roles, then opened further
+       2026-08-18 (Adrian): "I'll take principal, lead, even senior, so just leave it open."
+       Do not narrow this back to a single seniority. */ -}}
 <section class="hp-section container hp-close">
   <div class="hp-close__ask" data-reveal>
-    <h2 class="hp-close__head">Open to lead technical art roles.</h2>
-    <p class="hp-close__line">Lead and senior technical art positions, and studio engagements through <span class="brand-name">FabricatorStudio</span>. Based in Denver, Colorado.</p>
+    <h2 class="hp-close__head">Open to technical art roles.</h2>
+    <p class="hp-close__line">Principal, lead and senior technical art positions, and studio engagements through <span class="brand-name">FabricatorStudio</span>. Based in Denver, Colorado.</p>
   </div>
   <div class="hp-close__ctas" data-reveal>
     <a class="btn-term btn-term--primary magnetic" href="{{ "/contact/" | relURL }}">Contact →</a>
