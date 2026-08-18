@@ -19,16 +19,31 @@
   <div class="project-list__intro">{{ . }}</div>
   {{ end }}
 
-  {{- /* Year-grouped zig-zag */ -}}
+  {{- /* Year-grouped zig-zag.
+
+     The card index must run CONTINUOUSLY down the whole list rather than restart inside
+     each year. Hugo's `range $i, $page := .Pages` gives an index scoped to the group, and
+     most years hold a single page, so each of those got index 0 and rendered image-left;
+     only years with two or more entries alternated at all. Adrian spotted it on /tools/
+     2026-08-18, where 2026 (Armature, FabricatorStudio) and 2011 (the two reels) zig-zagged
+     while every year between them sat flush left.
+
+     A scratch counter carried across the outer range keeps the alternation unbroken over
+     year boundaries. This partial also backs /projects/, which had the same defect and is
+     corrected by the same change. */ -}}
   {{ $sectionPages := where .Site.RegularPages "Section" $section }}
+  {{ $zig := newScratch }}
+  {{ $zig.Set "i" 0 }}
   {{ range $sectionPages.GroupByDate "2006" }}
   <section class="project-list__year" aria-labelledby="year-{{ .Key }}">
     <header class="project-list__year-heading" id="year-{{ .Key }}">
       <span class="project-list__year-num">{{ .Key }}</span>
       <span class="project-list__year-rule" aria-hidden="true"></span>
     </header>
-    {{ range $i, $page := .Pages }}
+    {{ range $page := .Pages }}
+      {{ $i := $zig.Get "i" }}
       {{ partial "project-card-zig.html" (dict "page" $page "index" $i) }}
+      {{ $zig.Set "i" (add $i 1) }}
     {{ end }}
   </section>
   {{ end }}

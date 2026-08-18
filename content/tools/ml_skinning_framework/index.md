@@ -5,14 +5,16 @@ date = "2025-07-01"
 
 [params]
 role = "Technical Artist"
-studio = "Independent research"
+# Corrected 2026-08-18 (Adrian). This was not independent work: it ran at Activision through
+# Sledgehammer Games, alongside Activision Central's ML engineer.
+studio = "Activision, through Sledgehammer Games"
 shipped_year = "2025"
 status = "in_development"
 +++
 
 Welcome to the **ML Skinning Framework**: Where skinning gets a fresh twist!
 
-What started as a small research project into the world of ML turned into something quite incredible.
+What started as a small research project into the world of ML turned into something quite incredible. I ran it at Activision, through Sledgehammer Games, working alongside Activision Central's ML engineer.
 
 {{< timeline >}}
 

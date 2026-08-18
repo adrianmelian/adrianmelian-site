@@ -10,8 +10,11 @@ aliases = ["/tools/rig_authoring_framework/"]
 [params]
 status = "in_development"
 redirect_to = "https://fabricator.studio/"
+# The no-JS fallback sentence, kept verbatim from when this template served only this
+# page. Pages that do not set it get a generic line instead.
+redirect_note = 'Kinematic Solutions is now <a href="https://fabricator.studio/">FabricatorStudio</a>. Taking you there.'
 # Mark + tagline are generic card slots, not an FS special case: any tool page can set
 # them. They match the featured card on the homepage so the two read as one product.
-tagline = "Human+AI Studio Toolset"
+tagline = "Artist+AI Studio Toolset"
 mark = "fs-mark.png"
 +++
