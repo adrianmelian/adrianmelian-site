@@ -91,7 +91,7 @@
 }
 .timeline-item-shim__header {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-18);
   color: var(--bone);
   text-transform: uppercase;
@@ -175,7 +175,7 @@
 }
 .ks-feature-card__header {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-32);
   color: var(--bone);
   text-transform: uppercase;
@@ -455,7 +455,7 @@
 }
 .section-index__heading {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-18);
   color: var(--ember);
   letter-spacing: 0.08em;
@@ -542,7 +542,7 @@ a.section-index__item:active {
 }
 .prev-next-pager__title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-18);
   color: var(--bone);
   text-transform: uppercase;

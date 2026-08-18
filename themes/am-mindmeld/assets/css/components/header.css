@@ -36,7 +36,9 @@
 .site-header__logo:hover .site-header__mark { transform: scale(1.08); }
 
 .site-header__wordmark {
-  font-family: var(--font-display);
+  /* Chrome, not display: Instrument Serif goes weak at this size in uppercase, so the
+     wordmark keeps its letterspaced rhythm in Archivo. */
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: var(--fs-18);
   letter-spacing: 0.04em;

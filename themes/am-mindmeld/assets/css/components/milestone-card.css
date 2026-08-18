@@ -16,8 +16,8 @@
 }
 
 .milestone-card__title {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: var(--fs-32);
   color: var(--bone);
   text-transform: uppercase;

@@ -15,12 +15,12 @@
   --ember-dim:   #B5532A;
   --ember-glow:  rgba(255, 122, 61, 0.22);
 
-  /* ===== typography (Mindmeld 2.0: ONE family, JetBrains Mono) =====
-     VT323 is RETIRED (brand DNA principles 3 + 4). Display is JBM BOLD, set large, with the
-     outlined tri-color treatment. Body was already JBM, so both aliases now resolve to the
-     same family and no call site has to change. */
-  --font-display: 'JetBrains Mono', 'Consolas', monospace;
-  --font-body:    'JetBrains Mono', 'Consolas', monospace;
+  /* ===== typography (Mindmeld 2.0, revised 2026-08-18) =====
+     Two families. Display = Instrument Serif, ONE weight (400) and no bold cut, so bold
+     always resolves to Archivo. Text = Archivo, body at 300. JetBrains Mono and VT323 are
+     both RETIRED. See assets/css/fonts.css and the brand DNA section 3. */
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-body:    'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --fs-11: 0.6875rem;  /* 11px */
   --fs-12: 0.75rem;    /* 12px */

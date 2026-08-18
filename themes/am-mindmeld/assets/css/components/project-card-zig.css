@@ -49,11 +49,11 @@
 
 .card-zig__title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-32);
   color: var(--bone);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  text-transform: none;
+  letter-spacing: -0.005em;
   line-height: 1;
   margin-bottom: 0;
 }
@@ -63,8 +63,10 @@
    name and tagline read as one unit; the pull-up lives here rather than shrinking the head's
    margin, so cards WITHOUT a tagline keep their original spacing untouched. */
 .card-zig__tagline {
-  font-family: var(--font-display);
-  font-weight: 700;
+  /* The tagline is supporting text, not display: it sits at small size where a display
+     serif goes weak, so it takes the text face. */
+  font-family: var(--font-body);
+  font-weight: 500;
   font-size: var(--fs-14);
   color: var(--plasma);
   margin: calc(var(--sp-3) * -1 + var(--sp-2)) 0 var(--sp-3);

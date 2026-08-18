@@ -7,7 +7,7 @@
 
 .milestone-heading__title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-24);
   line-height: var(--lh-snug);
   color: var(--bone);

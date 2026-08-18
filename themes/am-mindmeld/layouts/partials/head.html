@@ -8,8 +8,9 @@
 
 {{- /* Above-the-fold faces: preload so the giant display type doesn't swap late.
        Mindmeld 2.0: one family. JBM Regular (body) + JBM Bold (display). VT323 retired. */ -}}
-<link rel="preload" href="{{ "fonts/JetBrainsMono-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/JetBrainsMono-Bold.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{- /* Latin subsets only. Instrument Serif carries every heading, Archivo the body. */ -}}
+<link rel="preload" href="{{ "fonts/InstrumentSerif-1.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/Archivo-3.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 {{ with .Description | default .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 
 {{- /* CSS bundle: concat all theme CSS files, minify, fingerprint */ -}}

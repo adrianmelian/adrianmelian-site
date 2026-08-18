@@ -60,7 +60,7 @@
 
 .hero__name {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-display-xl);
   line-height: var(--lh-display);
   letter-spacing: 0.02em;
@@ -278,7 +278,7 @@
 
 .pipe__title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-48);
   line-height: 0.9;
   color: var(--bone);
@@ -289,7 +289,7 @@
    the lockup rather than taking the rail's full gap, so the three lines read as one block. */
 .pipe__tagline {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-18);
   color: var(--plasma);
   margin: calc(var(--sp-4) * -1 + var(--sp-2)) 0 0;
@@ -363,7 +363,7 @@
 .ledger__year { font-family: var(--font-body); font-size: var(--fs-12); color: var(--bone-dim); }
 .ledger__title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-24);
   line-height: 1;
   color: var(--bone);
@@ -481,7 +481,7 @@
 }
 .plugmgr__name {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-24);
   line-height: 1;
   color: var(--bone);
@@ -577,7 +577,7 @@
 }
 .hp-close__big {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-display-xl);
   line-height: var(--lh-display);
   color: var(--bone);
@@ -635,7 +635,7 @@
 .hero__stats li { display: flex; flex-direction: column; gap: 2px; }
 .hero__stat-n {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-32);
   line-height: 1;
   color: var(--plasma);
@@ -700,7 +700,7 @@
 }
 .cs__title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-24);
   line-height: var(--lh-tight);
   margin: 0;
@@ -743,7 +743,7 @@
 .hp-close__ask { display: flex; flex-direction: column; gap: var(--sp-3); }
 .hp-close__head {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(1.75rem, 4.4vw, 3rem);
   line-height: var(--lh-tight);
   color: var(--bone);

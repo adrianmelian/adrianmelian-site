@@ -19,14 +19,14 @@
 }
 .contact__num {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-32);
   color: var(--ember);
   line-height: 1;
 }
 .contact__title {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-32);
   color: var(--bone);
   text-transform: uppercase;
@@ -54,7 +54,7 @@
 }
 .contact__email {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--fs-32);
   color: var(--plasma);
   letter-spacing: 0.02em;

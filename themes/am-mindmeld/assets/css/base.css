@@ -52,14 +52,16 @@ body {
 /* ===== prose defaults (used by fallback templates) ===== */
 main { flex: 1; }
 
-/* Mindmeld 2.0: display is JetBrains Mono BOLD. The old 400 was VT323's only weight; JBM at
-   400 reads as body copy, not display, so headings must carry 700. */
+/* Mindmeld 2.0, revised 2026-08-18: display is Instrument Serif, which ships ONE weight.
+   700 here would make the browser synthesise a fake bold, so headings stay at 400 and get
+   their weight from size instead. Uppercase and positive tracking were tuned for a
+   monospace; a display serif wants sentence case and slightly tight tracking. */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   line-height: var(--lh-tight);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  text-transform: none;
   color: var(--bone);
 }
 h1 { font-size: var(--fs-48); }
