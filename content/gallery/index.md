@@ -1,6 +1,9 @@
 +++
 title = "Art Gallery"
 date = "2025-07-09"
+# The three demo reels moved here from the tools section 2026-08-18. Those URLs have been
+# live for years, so they redirect to this page rather than 404.
+aliases = ["/tools/reel_2010/", "/tools/reel_2011/", "/tools/reel_2014/"]
 
 # Bento — top curated section
 [[params.bento]]
@@ -126,6 +129,19 @@ src = "gallery/04.jpg"
 
 [[params.masonry]]
 src = "gallery/018.jpg"
+# ===== Reels — college-era archive, moved from the tools section 2026-08-18 =====
+[[params.reels]]
+id = "113177391"
+title = "Demo Reel 2014"
+
+[[params.reels]]
+id = "29619590"
+title = "Demo Reel 2011"
+
+[[params.reels]]
+id = "20320425"
+title = "Demo Reel 2010"
+note = "Winner of the Art Institute of California's Best Portfolio Award 2010."
 +++
 
 A collection of my creations. I love exploring ideas across mediums. From sketchbook to canvas, digital to hands-on builds.

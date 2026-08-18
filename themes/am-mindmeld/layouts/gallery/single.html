@@ -44,6 +44,36 @@
     </div>
   </section>
   {{ end }}
+
+  {{- /* Reels. Moved here from the tools section 2026-08-18 (Adrian): the three reels are
+         college-era, more than ten years old, and they sat oddly beside a shipped product.
+         They belong with the rest of the early work. Vimeo ids live in params.reels so this
+         page stays the one place the gallery's contents are listed. */ -}}
+  {{ with .Params.reels }}
+  <hr class="gallery__divider">
+  <section class="gallery__reels-section" aria-labelledby="reels-heading">
+    {{ partial "section-heading.html" (dict "number" "03" "title" "Reels" "id" "reels-heading") }}
+    <div class="gallery__reels">
+      {{ range . }}
+      <figure class="gallery__reel">
+        <div class="video-embed">
+          <iframe
+            src="https://player.vimeo.com/video/{{ .id }}?dnt=1"
+            title="{{ .title }}"
+            loading="lazy"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            allowfullscreen
+            style="width: 100%; aspect-ratio: 16/9; border: 1px solid var(--iron-3); background: var(--carbon);">
+          </iframe>
+        </div>
+        <figcaption class="gallery__reel-caption">
+          <b>{{ .title }}</b>{{ with .note }} {{ . }}{{ end }}
+        </figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
 </article>
 
 {{ partial "lightbox.html" . }}

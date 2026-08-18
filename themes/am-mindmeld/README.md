@@ -35,7 +35,7 @@ design system from AM_MayaTools. Not intended for redistribution.
 
 ## Project / tool front-matter
 
-Each project (`content/projects/*/index.md`) or tool (`content/tools/*/index.md`)
+Each project (`content/projects/*/index.md`) or work (`content/works/*/index.md`)
 supports these optional `[params]` fields. Templates degrade gracefully when
 any field is missing.
 

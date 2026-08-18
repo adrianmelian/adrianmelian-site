@@ -74,3 +74,24 @@
   letter-spacing: 0.04em;
   line-height: 1.4;
 }
+
+/* ===== reels section ===== */
+/* Three archive reels, added 2026-08-18 when they moved out of the works section. A plain
+   grid rather than the masonry columns: a 16/9 embed cannot break across a column. */
+.gallery__reels {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-5);
+}
+@media (min-width: 720px)  { .gallery__reels { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .gallery__reels { grid-template-columns: repeat(3, 1fr); } }
+
+.gallery__reel {
+  margin: 0;
+}
+
+.gallery__reel-caption {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm, 0.875rem);
+  color: var(--bone-dim, inherit);
+}

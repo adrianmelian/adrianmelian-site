@@ -1,0 +1,29 @@
+{{- /* themes/am-mindmeld/layouts/works/redirect.html — external redirect page.
+     Kinematic Solutions grew into FabricatorStudio; this preserves every old
+     inbound link to /tools/kinematic_solutions/ by forwarding to the product
+     site (the section is /works/ since 2026-08-18; the old URL still resolves via an alias).
+     site. Standalone template (no define blocks) so Hugo renders it whole.
+
+     The body line is the no-JS, no-meta-refresh fallback and almost nobody sees
+     it, but it was hardcoded to the Kinematic Solutions story, so a second
+     redirect page (Armature, 2026-08-18) would have shown the wrong sentence.
+     Pages now set `redirect_note`; the Kinematic Solutions page carries its
+     original wording verbatim and the generic fallback covers everything else. */ -}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+  <link rel="canonical" href="{{ .Params.redirect_to }}">
+  <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
+  <meta name="robots" content="noindex">
+  <script>window.location.replace({{ .Params.redirect_to }});</script>
+</head>
+<body>
+  {{ with .Params.redirect_note }}
+  <p>{{ . | safeHTML }}</p>
+  {{ else }}
+  <p>{{ .Title }} lives at <a href="{{ .Params.redirect_to }}">{{ .Params.redirect_to }}</a>. Taking you there.</p>
+  {{ end }}
+</body>
+</html>
