@@ -1,12 +1,12 @@
 +++
 title = "Hen House"
-description = "A backyard chicken coop and run, modelled in Maya to the sixteenth of an inch before a single board was cut, then built by hand over three weeks in December."
+description = "A backyard chicken coop and run, modelled in Maya to the eighth of an inch before a single board was cut, then built by hand over three weeks in December."
 date = "2024-12-31"
 
 [params]
 role = "Design and Construction"
 studio = "Personal"
-tagline = "Maya to Backyard, Built to the 16th of an Inch"
+tagline = "From Maya to My Backyard"
 # Photos run in build order rather than dropping into the auto grid, because the whole point
 # of this page is the sequence. Order comes from EXIF capture times, 7 to 31 December 2024,
 # which is why the roof precedes the door and the second Maya pass sits mid-build.
@@ -16,7 +16,7 @@ wide_body = true
 
 **Personal build | Design and construction | Denver, Colorado**
 
-I built the whole thing in Maya first, to spec, down to the sixteenth of an inch.
+I built the whole thing in Maya first, to spec, down to the eighth of an inch.
 
 {{< figure src="/works/hen_house/01_maya_spec.jpg" alt="The coop modelled in Maya: a framed run with the hen house attached at one end, next to a human figure for scale." >}}
 
