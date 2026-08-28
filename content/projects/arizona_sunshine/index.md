@@ -1,15 +1,15 @@
 +++
 title = "Arizona Sunshine: Contagion Z"
-date = "2019-02-01"
+date = "2018-11-01"
 
 [params]
 role = "Senior Technical Artist"
 studio = "Nomadic VR"
-shipped_year = "2019"
+shipped_year = "2018"
 status = "shipped"
 +++
 
-**Arizona Sunshine: Contagion Z (2019) | Nomadic VR**
+**Arizona Sunshine: Contagion Z (2018) | Nomadic VR**
 
 This was a **location-based VR experience**, where users use advanced, tetherless headsets, haptic gear, and motion tracking to explore virtual worlds.
 
