@@ -1,16 +1,16 @@
 +++
 title = "Broken Age"
-date = "2016-01-22"
+date = "2014-01-28"
 
 [params]
 role = "Technical Artist"
 studio = "Double Fine Productions"
-shipped_year = "2016"
+shipped_year = "2014"
 status = "shipped"
 claim = "Authored the flipbook animation system behind every character in the game, a 2D-on-3D hybrid built to carry a flagship title on a small team."
 +++
 
-**Broken Age | Double Fine Productions | Technical Artist | 2016**
+**Broken Age | Double Fine Productions | Technical Artist | 2014**
 
 On Broken Age, I created the **Flip Book Animation System** used for *all* character animation in the game.
 

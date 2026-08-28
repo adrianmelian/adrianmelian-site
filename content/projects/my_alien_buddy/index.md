@@ -1,5 +1,5 @@
 +++
-title = "My Alien Buddy. DLC for Playroom (PS4)"
+title = "My Alien Buddy (PS4 Launch Title)"
 date = "2013-12-24"
 
 [params]
@@ -9,7 +9,7 @@ shipped_year = "2013"
 status = "shipped"
 +++
 
-**My Alien Buddy (DLC for Playroom PS4) | Double Fine Productions | Technical Artist | 2013**
+**My Alien Buddy (PS4 Launch Title) | Double Fine Productions | Technical Artist | 2013**
 
 This project was **challenging in the best way**, we were working on early PS4 devkits, and **ASOBI Engine** documentation was barely in existence, and in Japanese.
 

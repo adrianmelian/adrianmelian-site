@@ -1,6 +1,6 @@
 +++
 title = "Costume Quest 2"
-description = "Senior Technical Artist on Costume Quest 2 video game."
+description = "Technical Artist on Costume Quest 2 video game."
 date = "2014-09-08"
 
 [params]

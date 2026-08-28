@@ -8,9 +8,9 @@ role = "Senior Technical Artist"
 studio = "Sledgehammer Games"
 shipped_year = "2021"
 status = "shipped"
-claim = "The first of two Call of Duty titles shipped at Sledgehammer, and the one where a modular weapons rigging solution went from architecture to team-wide adoption."
+claim = "The first of two Call of Duty titles shipped at Sledgehammer, joined in the final third of production on the character team."
 +++
-**Call of Duty - Vanguard | Sledgehammer Games | Technical Artist | 2021**
+**Call of Duty - Vanguard | Sledgehammer Games | Senior Technical Artist | 2021**
 
 I joined Vanguard during the final third of production, a phase where priorities shift fast and the character team was ramping up throughput under intense schedule pressure. The team already had solid fundamentals in place. My focus was helping streamline the workflow so we could scale efficiently and reduce repetitive manual steps.
 
