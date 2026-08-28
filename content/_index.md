@@ -1,9 +1,9 @@
 +++
 title = "Adrian Melian"
-description = "Adrian Melian. Lead Technical Artist and founder. 14 years building the technical backbone of AAA game art teams."
+description = "Adrian Melian. Lead Technical Artist and founder. Fourteen years in AAA character rigging, skinning and tools across six proprietary engines."
 
 [params]
-tagline = "Lead/Principal Technical Artist · Founder · Character Pipelines"
+tagline = "Lead/Principal Technical Artist · Founder"
 availability = "Open to technical art roles and studio engagements"
 featured_project = "kinematic_solutions"
 

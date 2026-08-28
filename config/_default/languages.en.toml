@@ -20,8 +20,8 @@ title = "Adrian Melian"
 [params.author]
     name = "Adrian Melian"
     email = "AdrianMelian123@gmail.com"
-    headline = "Lead Technical Artist | Character Pipelines"
-    bio = "Adrian Melian is a Lead Technical Artist with 14 years building the technical backbone of AAA game art teams, at Camouflaj, Sledgehammer Games, Meta, Double Fine, Ubisoft, and NCSoft. He joined Sledgehammer as a Senior Technical Artist on Call of Duty: Vanguard and led the Character and Weapons Tech Art teams through Modern Warfare III, and in 2026 founded FabricatorStudio and shipped a complete Maya to Unreal character pipeline as a public product."
+    headline = "Lead Technical Artist | Founder"
+    bio = "Adrian Melian is a Lead Technical Artist who designs the systems other artists ship through. Fourteen years in AAA character rigging, skinning and tools across six proprietary engines, at Camouflaj, Sledgehammer Games, Meta, Double Fine, Ubisoft, and NCSoft. He was promoted from Senior to Lead at Sledgehammer Games and led Character Tech Art then Weapons Tech Art across two Call of Duty titles. In 2026 he founded FabricatorStudio and launched Armature as a commercial product."
     image = "portrait_face.png"
     links = [
         { LinkedIn = "https://www.linkedin.com/in/adrian-melian-33066423" },
