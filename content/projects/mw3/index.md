@@ -13,7 +13,7 @@ claim = "Led Character Tech Art, then Weapons Tech Art, and grew the discipline 
 
 **Call of Duty - MW3 | Sledgehammer Games | Lead Technical Artist | 2023**
 
-On Modern Warfare III, I led Character Tech Art, then Weapons Tech Art, at Sledgehammer Games. Supporting a high-volume AAA character & weapon pipeline. Where quality, speed, and performance all have to land at the same time.
+On Modern Warfare III, I led Character Tech Art, then Weapons Tech Art, at Sledgehammer Games. Supporting a high-volume character & weapon pipeline. Where quality, speed, and performance all have to land at the same time.
 
 In addition to day-to-day production leadership, I also pushed forward **ML research for auto-skinning** as an exploration into faster, more consistent character deformation workflows.
 

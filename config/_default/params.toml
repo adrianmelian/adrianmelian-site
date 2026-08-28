@@ -3,7 +3,7 @@
 # Adrian's public title is Lead Technical Artist and founder again, matching the resume.
 # The em-dash rule from that pass still stands: outbound copy in Adrian's voice does not
 # carry them.
-description = "Adrian Melian. Lead Technical Artist and founder. Rigging, pipeline, and ML for AAA games."
+description = "Adrian Melian. Lead Technical Artist and founder. Rigging, pipeline, and ML for game development."
 
 # Defaults consumed by the homepage hero (overridable in content/_index.md):
 # tagline, location, availability, currently, recent_studios,

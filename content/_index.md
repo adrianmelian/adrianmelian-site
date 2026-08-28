@@ -1,6 +1,6 @@
 +++
 title = "Adrian Melian"
-description = "Adrian Melian. Lead Technical Artist and founder. Fourteen years in AAA character rigging, skinning and tools across six proprietary engines."
+description = "Adrian Melian. Lead Technical Artist and founder. Fourteen years in game development. Character rigging, skinning and tools across six proprietary engines."
 
 [params]
 tagline = "Lead/Principal Technical Artist · Founder"

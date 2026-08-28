@@ -47,7 +47,7 @@ any field is missing.
 | `status`       | Detail metadata strip status pill     | `"shipped"` or `"in_development"` |
 | `engine`       | Credits panel                        | `"IW Engine"`                 |
 | `platform`     | Credits panel                        | `"PC, PS5, Xbox Series"`      |
-| `team_size`    | Credits panel                        | `"AAA scale"`                 |
+| `team_size`    | Credits panel                        | `"Full production team"`      |
 
 See `content/projects/krazy_kaiju/index.md` for a populated reference example.
 
